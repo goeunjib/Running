@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>max-width+min-width.html</title>
+    <link rel="stylesheet" href="max-width+min-width.css">
+    <style>
+        body {font-family: '맑은 고딕', 'Courier New', Courier, monospace;
+        font-size: 16px;
+        color: #222;
+        line-height: 1.5;}
+
+        table {width: 800px;}
+        /* 각각의 셀들을 개별적으로 제어라지 못하며 셀 안의 컨텐츠 크기에 의해 크기가 정해짐
+        전체 사이즈는 1000을 넘지 않음 */
+
+        table caption {background-color: rgb(58, 80, 60);
+        color: aliceblue;
+        width: 800px;
+        text-align: left;
+        text-indent: 15px;
+        line-height: 40px; /* 보통은 line-hright를 사용하지 않음. 인라인 요소의 위 아래 여백을 만들수 있으나 그 목적으로는 잘 사용하지 않음 */
+        font-family: Georgia, 'Times New Roman', Times, '맑은 고딕', serif; /* serif = 바탕체 */}
+
+        table thead th {background-color: #676e58;
+        color: rgb(255, 255, 255);
+        text-align: left;
+        text-indent: 10px;
+        line-height: 1.7;}
+
+        table tbody td {background-color: rgb(208, 223, 201);
+        vertical-align: top;
+        max-width: 200px; /* 최대 가로값이 200으로 이 값 이상 커지지 않음 */
+        min-width: 100px; /* 최소 가로값이 100으로 이 값 이하로 작아지지 않음 */}
+
+        /* 테이블 셀의 성격:
+            ㄴ 셀 안의 컨텐츠는 세로 중앙 정렬이 기본
+            ㄴ 셀 안의 컨텐츠의 경우 th는 가로 중앙 정렬, td는 가로 왼쪽 정렬이 기본
+            ㄴ table 요소에 width 값 적용시 각 셀의 제어가 어려움
+            ㄴ 셀 하나에 가로, 세로 값을 주면 일반적으로 나머지 셀들도 따라감 */
+
+        table tbody .txt {max-width: 750px;
+        min-width: 400px;}
+        
+    </style>
+</head>
+
+<body>   
+    <table>
+        <caption>최대 최소 너비 max-width + min-width</caption>
+        <thead>
+            <tr class="piano">
+                <th>피아노</th>
+                <th>설명</th>
+                <th>가격</th>
+             </tr>
+        </thead>
+
+        <tbody>
+            <tr class="gray">
+                <td><img src="./img/rhodes.jpg" alt="Rhodes Piano" class="img"></td>
+                <td class="txt">로즈 피아노(Rhodes Piano)는 1942년 해롤드 로즈(Harold Rhodes)에 의해 발명된 전자 기계식 피아노이다. 부상당한 병사들이 병상에 누워서도 연주할 수 있게 고안되었다고 한다. 이후 펜더사에 합류하면서 펜더 로즈라는 이름으로 널리 보급되기 시작한다. 대중음악에서는 60년대를 거치며 허비 행콕, 스티비 원더, 더 도어즈등의 실험적인 키보드 매니아들에 의해 사용되었다. 최근 뮤지션 중에는 디안젤로등이 로즈를 즐겨 사용한다</td>
+                <td>$1,400</td>
+            </tr>
+
+            <tr class="gray">
+                <td><img src="./img/wurlitzer.jpg" alt="wurlitzer" class="img"></td>
+                <td>윌리처 전자 피아노(Wurlitzer electric piano)는 미시시피(Mississippi)에 있는 루돌프 윌리처 사(Rudolph Wurlitzer Company)에 의해 만들어진 전자 기계식 피아노이다. 루돌프 윌리처 사는 미국 회사로 흔히 윌리처(Wurlitzer)라고 부른다. 현악기, 금관악기, 페어그라운드 오르간, 오케스트리언, 전자 오르간, 전자 피아노, 주크박스 등을 생산했다.</td>
+                <td>$1,600</td>
+            </tr>
+        
+            <tr class="gray">
+                <td><img src="./img/clavinet.jpg" alt="clavinet" class="img"></td>
+                <td>Hohner Clavinet D6	클라비아 디지털 뮤지컬 인스트루먼트(Clavia Digital Musical Instruments, Clavia DMI AB)는 스웨덴의 아날로그 신디사이저 및 전자 피아노 제작 회사이다.1983년, Hans Nordelius와 Mikael Carlsson은 스톡홀름에 위치한 그들의 집 지하에서 세계 최초의 상업용 디지털 드럼인 ‘Digital Percussion Plate 1’을 제작하였다. 1994년에는 EPROM을 사용한 네 가지 소리를 재생할 수 있는 ‘ddrum’을 발표하였다.</td>
+                <td>$1,200</td>
+            </tr>
+         </tbody>
+    </table>
+</body>
+</html>

@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>box sizing 연습</title>
+    <style>
+        .box
+        {width: 400px; height: 200px;
+        background-color: aliceblue;
+        margin: 20px auto 30px;
+        padding: 20px 30px ;
+        border: 10px violet solid;
+        border-bottom-width: 5px;}
+
+        .box2
+        {}
+    </style>
+</head>
+<body>
+    <h1>box sizing 연습</h1>
+    <div class="box box1">
+        <h3>box-sizing: content-box</h3>
+        <p>w400+m(0)+P(30+30)+b(10+10)=380px</p>
+    </div>
+    <div class="box box2">
+        <h3>box-sizing: border-box</h3>
+        <p>w400(p40+b15)+m(0)=360px</p>
+    </div>
+</body>
+</html>

@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+	<meta charset="utf-8">
+	<title>form 연습</title>
+</head>
+<body>
+	<h1>form 연습 1</h1>
+	<form>
+	<fieldset>
+		<legend>상세정보 :</legend>
+		<p><label>이름: <input type="text" name="userName"></label></p>
+		<p><label>이메일: <input type="email" name="userEmail"></label></p>
+	</fieldset>
+
+	<fieldset>
+		<legend>리뷰 :</legend>
+		<p><label for="site">사이트를 알게 된 경위는? </label><br>
+			<select name="userSite" id="site">
+			<option value="인터넷검색" selected>인터넷검색</option>
+			<option value="신문광고">신문광고</option>
+			<option value="방송">방송</option>
+		</select>
+		</p>
+		<hr>
+
+		<p>다시 방문하시겠습니까? <br>
+			<label><input type="radio" name="visit" id="yes" value="네" checked>네</label>
+			<label><input type="radio" name="visit" id="no" value="아니오">아니오</label>
+			<label><input type="radio" name="visit" id="don't know" value="모름">모름</label>
+		</p>
+		<hr>
+
+		<p><label>의견 : <br><textarea name="txtbox" cols="20">
+여러 줄의 텍스트 박스</textarea></label></p>
+	<hr>
+
+	<p><input type="checkbox" name="agree" id="email" checked>
+		<label for="email">이메일 업데이트에 가입</label></p>
+	<hr>
+
+	<button type="sumit">리뷰 전송</button>
+	<button type="reset">전송 취소</button>
+	</fieldset>
+</form>
+</body>
+</html>

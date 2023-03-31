@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>요소 그림자 box-shadow</title>
+    <style>
+        .container
+        {background-color: rgb(142, 142, 207);
+        width: 1000px;
+        padding-left: 0;
+        margin: 50px auto;}
+
+        .container li
+        {background-color: white;
+        width: 150px; height: 150px;
+        display: inline-block;
+        margin: 20px;
+        vertical-align: top;}
+
+        .container .box1 
+        {box-shadow: 10px 10px 9px #333;} /*x축 y축 번짐 확장거리 색상 */
+
+        .container .box2 
+        {box-shadow: -10px -10px 10px #333;} /*x축 y축 번짐 색상 */
+
+        .container .box3 
+        {box-shadow: 10px 10px #333;} /*x축 y축 색상 */
+
+        .container .box4 
+        {box-shadow: 10px 10px 9px #333,
+            10px 10px 9px #d87474,
+            10px 10px 9px #ff0000;} /*그림자 중첩, 쉼표로 구분 */
+
+        .container .box5 
+        {box-shadow: 0 0 30px #333 inset;} /*x축 y축 번짐 확장거리 색상 내부 그림자 */
+
+
+        /* h1
+            {margin: 10 auto;}
+        .container
+            {background-color: rgb(196, 235, 250);
+            width: 700px;
+            height: 200px;
+            margin: 0 50px 50px 50px;
+            margin-top: 0 auto;
+            text-align: center;
+            padding-left: 0;}
+
+        li
+            {display: inline-block;
+            margin: 50px auto;
+            padding: 0 auto;
+            }
+
+        .box1
+            {width: 100px; height: 100px;
+            background-color: aliceblue;
+            margin: 20px auto;}
+
+        .box2
+            {width: 100px; height: 100px;
+            background-color: aliceblue;
+            }
+
+        .box3
+            {width: 100px; height: 100px;
+            background-color: aliceblue;
+            }
+
+        .box4
+            {width: 100px; height: 100px;
+            background-color: aliceblue;
+            }
+
+        .box5
+            {width: 100px; height: 100px;
+            background-color: aliceblue;
+            } */
+    </style>
+</head>
+<body>
+    <h1>요소 그림자 box-shadow</h1>
+    <ul class="container">
+        <li class="box1">x축 y축 번짐 확장거리 색상</li>
+        <li class="box2">x축 y축 번짐 색상</li>
+        <li class="box3">x축 y축 색상</li>
+        <li class="box4">x축 y축 번짐 색상</li>
+        <li class="box5">x축 y축 번짐 확장거리 색상 내부 그림자</li>
+    </ul>
+</body>
+</html>

@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>overflow Ex1</title>
+    <style>
+        body
+            {text-align: center;}
+
+        .img
+            {border-radius: 50%; 
+            border: solid 5px #9b1e1e;
+            width: 300px; /*이미지 크기 줄이는 방법! 크기의 제한주기*/
+            margin: 40px auto;}
+
+        .wrapper /*직사각형일 경우 박스 크기를 만들어주기*/
+            {background-color: darkorange;
+            width: 300px; height: 300px;
+            border: solid 5px #333;
+            border-radius: 50%;
+            overflow: hidden;
+            margin: 50px auto;}
+
+        .wrapper img
+            {opacity: 0.4;} /*이미지 불투명도 0~1*/
+    </style>
+</head>
+<body>
+    <img src="./resize-content.jpg" alt="놀이동산 건물" class="img">
+
+    <div class="wrapper"><img src="./resize-content.jpg" alt="놀이동산 건물"></div>
+</body>
+</html>

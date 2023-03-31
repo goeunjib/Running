@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>요소 성격 변경 display+visibility+opacity</title>
+    <style>
+        ul
+            {background-color: rgb(155, 141, 128);
+            color: #e2e2e2;
+            width: 80%;
+            font-size: 20px;
+            text-transform: uppercase;
+            padding-left: 0;
+            margin: 50px auto;}
+
+        ul li
+            {border: 1px solid transparent;
+            background-color: rgb(87, 79, 66);
+            padding: 2px 4px;}
+
+        .menu1
+            {height: 50px;
+            text-align: center;
+            line-height: 50px;}
+
+        .menu1 li/*요소의 기본 성격 변경. 상속x 해당 요소만 적용*/ 
+            {display: inline; /*block -> inline(인라인을 띄어쓰기로 여백이 생김 0o0)*/}
+
+        .menu2
+            {margin: 0 auto;
+            background-color: #66533e;
+        width: 750px;
+        text-align: center;
+        }
+
+        .menu2 li
+            {display: inline-block; 
+            /* width: 150px; */
+                /*인라인, 블록 성격 모두 가짐
+                   ㄴ인라인처럼 띄어쓰기, 줄바꿈 인식
+                   ㄴ인라인처럼 line-height 값을 가짐
+                   ㄴ블록처럼 width, height 값을 가짐
+                   ㄴ가로 중앙 정렬의 경우 인라인, 블록 적용 방식 다 가능.
+                   다만, 띄어쓰기가 있어 인라인 방식으로 정렬하는 것이 좀 더 편함*/
+            /* width: 150px; */}
+
+        .menu1 .none
+            {display: none; /*브라우저 영역에서 사라짐. 코드창에서만 확인 가능하며 레이아웃에 영향을 줌*/ }
+
+        .menu1 .opacity
+            {opacity: 0.1;} /*불투명도 조절. 자식에게 영향을 줌*/
+            /*보다는 background-color에 있는 rgba로 투명도 조절을 더 많이 사용함*/
+
+        .menu2 .hiden
+            {visibility: hidden; /*브라우저 영역은 남으나 컨텐츠가 보이지 않음. visible보임, hidden 숨김*/ }
+
+
+    </style>
+</head>
+<body>
+    <h1>요소 성격 변경 display</h1>
+    <h2>visibility, opacity</h2>
+    <ul class="menu1">
+        <li>홈(home)</li>
+        <li>상품(product)</li>
+        <li class="none">서비스(service)</li>
+        <li class="opacity">소개(about)</li>
+        <li>연락처(contact)</li>
+    </ul>
+
+    <ul class="menu2">
+        <li>홈(home)</li>
+        <li>상품(product)</li>
+        <li class="hiden">서비스(service)</li>
+        <li>소개(about)</li>
+        <li>연락처(contact)</li>
+    </ul>
+</body>
+</html>

@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+	<meta charset="utf-8">
+	<title>열 병합 colspan 속성</title>
+</head>
+<body>
+	<h1>열 병합 colspan 속성</h1>
+	<p>colspan = column + span </p>
+	<p>뒤에 오는 셀(th,td)과 병합. 즉 다른 열column과 합침</p>
+
+	<table border="1">
+	<thead>
+		<tr>
+			<th></th>
+			<td>9am</td>
+			<td>10am</td>
+			<td>11am</td>
+			<td>12pm</td>
+		</tr>
+	</thead>
+
+	<tbody>
+		<tr>
+			<td>월요일</td>
+			<td colspan="2">UI 디자인</td>
+			<td>html</td>
+			<td>css</td>
+		</tr>
+
+		<tr>
+			<td>화요일</td>
+			<td colspan="3">체육</td>
+			<td>디자인</td>
+		</tr>
+	</tbody>
+	</table>
+</body>
+</html>

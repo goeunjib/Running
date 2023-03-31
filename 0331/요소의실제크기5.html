@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>요소의 실제 크기5</title>
+    <style>
+        .box
+        {width: 150px; height: 200px;
+        background-color: rosybrown;
+        margin: 50px auto  0;
+        padding: 10px 50px 50px;
+        border: 4px magenta solid;
+        border-top-width: 10px ;
+        border-bottom-width: 5px;
+
+        /* 어절 기준 줄바꿈 제어 */
+        word-break: normal;
+        word-break: break-all; /*어절에 맞춰 줄바꿈. 영어 한정*/
+        word-break: keep-all; /*어절 유지하며 줄바꿈. 한글 적용*/}
+    </style>
+</head>
+<body>
+    <h1>요소의 실제 크기5</h1>
+    <div class="box">
+        <p>너비: w150+m(0)+p(50+50)+b(4+4)=258px</p>
+        <p>높이: h200+m(50+0)+p(10+50)+b(10+5)=325px</p>
+</div>
+</body>
+</html>

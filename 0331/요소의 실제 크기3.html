@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>요소의 실제 크기3</title>
+    <style>
+        .box
+        {width: 400px; height: 200px;
+        border: solid 2px #333;
+        text-align: center;
+        padding: 30px;
+        margin: 20px auto; /*20px auto 20px auto*/
+        outline: 2px;}
+    </style>
+</head>
+
+<body>
+    <h1>요소의 실제 크기3</h1>
+    <div class="box">
+        <p>너비: w400+m(0)+p(30+30)+b(2+2)=464px</p>
+        <p>높이: h200+m(20+20)+p(30+30)+b(2+2)=304px</p>
+    </div>
+</body>
+</html>
