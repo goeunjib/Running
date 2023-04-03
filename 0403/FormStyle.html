@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>Form Style Ex</title>
+    <style>
+        body
+        {font-family: 함초롬바탕, 함초롱돋움 확장 보통, 휴먼모음T 보통;
+        font-size: 20px;}
+
+        fieldset
+        {width: 500px; height: 200px;
+        border: 3px solid darkblue;
+        border-radius: 20px;
+        margin: auto;
+        margin-top: 50px;}
+
+        legend
+        {background-color: darkblue;
+        color: white;
+        width: 150px; height: 40px;
+        margin: 20px;
+        padding-top: 5px;}
+
+        .blue
+        {text-align: center;
+        margin-left: 0;
+        padding: 3px auto;}
+
+        label:hover
+        {border-bottom: solid 2px #333;}
+
+        p
+        {margin: 5px;
+        margin-right: 130px;
+        text-align: right;}
+
+        button
+        {margin-left: 0;}
+
+    </style>
+</head>
+<body>
+    <form action="회원가입" class="box1">
+        <fieldset>
+            <legend class="blue">회원가입</legend>
+            <p><label>이름: <input type="userName" name="userName"></label></p>
+            <p><label>이메일: <input type="userEmail" name="userEmail"></label></p>
+
+            <button type="sumit">가입</button>
+            <button type="reset">취소</button>
+        </fieldset>
+    </form>
+</body>
+</html>
