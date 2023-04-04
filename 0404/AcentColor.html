@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>acent-color</title>
+    <style>
+        /*acent-color
+            input type= checkbox, radio, range, progress 컨트롤 값 제어*/
+
+        form fieldset{
+            border: 3px solid rgb(32, 138, 32);
+            border-radius: 10px;
+            padding: 20px;
+            max-width: 450px;
+            margin: 10px;
+        }
+
+        form fieldset legend{
+            padding: 2px;
+        }
+
+        form fieldset input[type=radio]{
+            accent-color: rgb(167, 223, 167);
+        }
+
+        form fieldset progress[value]{
+            accent-color: #04e2ab;
+        }
+
+        form fieldset input[type=range]{
+            accent-color: #04e2ab;
+        }
+    </style>
+</head>
+<body>
+    <form>
+        <fieldset>
+            <legend>checkbox, radio</legend>
+            <input type="radio" name="snack" id="cake" value="케이크">
+            <label for="cake">딸기 케이크🍰</label>
+            <input type="radio" name="snack" id="pretzel" value="프리첼">
+            <label for="pretzel">프리첼 🥨</label>
+            <input type="radio" name="snack" id="muffin" value="머핀">
+            <label for="muffin">머핀 🧁</label>
+            <input type="radio" name="snack" id="donut" value="도넛">
+            <label for="donut">도넛🍩</label>
+        </fieldset>
+
+        <fieldset>
+            <legend>progress</legend>
+            <label for="userProgress"></label>
+            <progress id="userProgress" min="0" max="100" value="70"></progress>
+        </fieldset>
+
+        <fieldset>
+            <legend>range</legend>
+            <label for="userRange">range</label>
+            <input type="range" id="userRange">
+        </fieldset>
+    </form>
+</body>
+</html>
