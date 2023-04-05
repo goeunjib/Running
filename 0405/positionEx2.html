@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>position Ex2</title>
+    <style>
+        html{
+            scroll-behavior: smooth; /*부드러운 스트롤*/
+        }
+
+        ::selection{/*문서를 드래그 했을때*/
+        background-color: greenyellow;
+        color: #333;
+        }
+
+        h2::selection{
+            background-color: olivedrab;
+            color: white;
+        }
+
+        p{
+            line-height: 1.5;
+            width: 700px;
+        }
+        .blank{
+            height: 300vh;
+        }
+
+        .box{
+            font: bold;
+            font-size: 20px;
+            background-color: maroon;
+            color: white;
+        }
+
+        a{
+            text-align: center;
+            line-height: 50px;
+            text-decoration: none;
+            width: 50px; height: 50px;
+            background-color: rgb(187, 187, 136);
+            color: white;
+            border-radius: 25px;
+            position: fixed; /*인라인 요소도 다른 흐름을 가지게 되며 가로 세로 값 인식*/
+            bottom: 30px; right: 30px;
+        }
+
+        a:hover{
+            background-color: rgba(181, 255, 69, 0.486);
+            color: #333;
+            bottom: 40px;
+        }
+    </style>
+</head>
+<body>
+    <h2>position Ex2</h2>
+    <p>fixed 값을 사용하는 요소 역시 absolute값을 사용하는 요소처럼 문서 흐름과 상관없이 좌표로 위치를 결정 하지만, 기준이 되는 요소가 <span class="box"><strong>부모 요소가 아니라 브라우저가 기준</strong> </span>이 된다. </p>
+    <p>한번 배치되면 fixed라는 이름처럼 브라우저 창을 스크롤 하더라도 계속 고정되어 표시된다. </p>
+    <div class="blank"></div>
+    <a href="#">위로</a>
+</body>
+</html>

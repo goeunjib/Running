@@ -1,0 +1,142 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>position Ex3</title>
+    <style>
+        html{
+            scroll-behavior: smooth;
+        }
+
+        body{
+            font-family: "Ambawang Signature";
+            font-size: 40px;
+            margin: 0;
+        }
+
+        menu{
+            background-color: white;
+            width: 700px; height: 40px;
+            padding: 0px;
+            border-radius: 0 0 20px 20px;
+            position: fixed;
+            top: 0px; left: 0; right:0; bottom: 0; margin: 0 auto;
+        }
+
+        li{
+            display: inline-block;
+            font-size: 17px;
+            width: 70px;
+            text-align: center;
+            line-height: 40px;
+            margin: auto;
+        }
+
+        article{
+            color: white;
+            margin: auto;
+        }
+
+        a{
+            text-decoration: none;
+        }
+
+        .top{
+            text-align: center;
+            font-size: 17px;
+            font: bold;
+            background-color: rgba(255, 255, 255, 0.863);
+            color: rgb(83, 47, 83);
+            border-radius: 50%;
+            line-height: 60px;
+            position: fixed;
+            bottom: 20px; right: 30px;
+            width: 50px; height: 50px;
+        }
+
+        #article1{
+            background-color: rgb(224, 117, 224);
+            height: 600px;
+            margin: auto;
+            text-align: center;
+            font-size: 50px;
+            font: bold;
+        }
+        .article1{
+            background-color: rgb(224, 117, 224);
+            color: white;
+            margin: 0;
+            width: 150px;
+            position: fixed;
+            top: 0;
+        }
+
+        #article2{
+            background-color: rgb(161, 73, 161);
+            height: 600px;
+            margin: auto;
+            text-align: center;
+            font-size: 50px;
+            font: bold;
+        }
+        .article2{
+            background-color: rgb(161, 73, 161);
+            color: white;
+            margin: 0;
+            width: 150px;
+            position: fixed;
+            top: 0;
+        }
+
+        #article3{
+            background-color: rgb(110, 44, 110);
+            height: 600px;
+            margin: auto;
+            text-align: center;
+            font-size: 50px;
+            font: bold;
+        }
+        .article3{
+            background-color: rgb(110, 44, 110);
+            color: white;
+            margin: 0;
+            width: 150px;
+            position: fixed;
+            top: 0;
+        }
+
+        #article4{
+            background-color: rgb(83, 47, 83);
+            height: 600px;
+            margin: auto;
+            text-align: center;
+            font-size: 50px;
+            font: bold;
+        }
+        .article4{
+            background-color: rgb(83, 47, 83);
+            color: white;
+            margin: 0;
+            width: 150px;
+            position: fixed;
+            top: 0;
+        }
+    </style>
+</head>
+<body>
+    <menu class="gnb">
+        <li><a href="#article1" class="article1">Sec1</a></li>
+        <li><a href="#article2" class="article2">Sec2</a></li>
+        <li><a href="#article3" class="article3">Sec3</a></li>
+        <li><a href="#article4" class="article4">Sec4</a></li>
+    </menu>
+
+    <article id="article1"><h2>Article 1</h2></article>
+    <article id="article2"><h2>Article 2</h2></article>
+    <article id="article3"><h2>Article 3</h2></article>
+    <article id="article4"><h2>Article 4</h2></article>
+
+    <a href="#" class="top">위로</a>
+</body>
+</html>

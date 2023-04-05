@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <title>position_static</title>
+    <title>position_fixed</title>
     <style>
         /*position요소의 배치
             ㄴ static; 기본값, 아무런 특성이 없기 때문에 주로 다른 포지션값이 적용된 요소를 초기화 하고자 할 때 사용
@@ -21,7 +21,10 @@
             background-color: lightblue;
             padding: 4px 10px;
             color: white;
-            width: 700px;
+            position: fixed;
+            top: 0; left: 0;
+            margin: 0;
+            width: 100%;
         }
 
         p{
@@ -31,7 +34,9 @@
 
         .pos{
             background-color: #ddd;
-            position: 
+            /* position: fixed; */
+            top: 0; left: 0;
+            margin: 0;
         }
     </style>
 </head>
