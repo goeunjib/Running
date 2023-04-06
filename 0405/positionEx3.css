@@ -1,0 +1,107 @@
+@charset "UTF-8";
+
+/*import url (); 내,외부 문서를 불러오는 방법*/
+@import url(<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Gowun+Dodum&display=swap" rel="stylesheet">);
+
+html{
+    scroll-behavior: smooth;
+    height: 100%;
+}
+/*스크롤바 가로 크기*/
+body::-webkit-scrollbar{
+    width: 20px;}
+
+/*스크롤바 배경*/
+body::-webkit-scrollbar-track{
+    background-color: rgb(56, 185, 185);
+}
+
+/*스크롤바 핸들*/
+body::-webkit-scrollbar-thumb{
+    background-color: rgb(133, 226, 226);
+    border: white 1px double;
+    border-radius: 5px;}
+
+    /*vender prefix
+    확정되지 않은 기능을 개발자가 미리 사용할 수 있게 만들어 놓은 약속어 브라우저에 내장된 기능을 이 벤더(접두어)를 통해 사용하게 만듦
+    -m- IE
+    -webkit 크롬, 엣지, 웨일
+    -o- 오페라
+    -moz- 파이어폭스*/
+
+body{
+    font-family: 'great vibes', cursive;
+    text-align: center;
+    text-transform: capitalize;
+    height: 100%;
+}
+
+
+
+.article1{
+    background-color: rgb(158, 158, 226);
+    color: white;
+    left: 10%;
+}
+
+.article2{
+    background-color: rgb(106, 106, 192);
+    color: white;
+    left: 30%;
+}
+
+.article3{
+    background-color: rgb(55, 55, 155);
+    color: white;
+    left: 50%;
+}
+
+.article4{
+    background-color: rgb(25, 25, 109);
+    color: white;
+    left: 70%;
+}
+
+/*navigation*/
+.gnb{
+    background-color: white;
+    list-style: none;
+    width: 60%; height: 40px;
+    position:fixed;
+    top: 0; left: 0; right: 0;
+    margin: auto;
+    /*absolute, fixed의 좌우 중앙정렬*/
+
+    box-shadow:
+    13px 7px 3.6px rgba(0, 0, 0, 0.08),
+    20.7px 11.1px 12.1px rgba(0, 0, 0, 0.113),
+    39px 21px 54px rgba(0, 0, 0, 0.17);
+    border-radius: 0 0 20px 20px;
+}
+
+/* .gnb li{
+    display: inline-block;
+    float: left;} */
+
+.gnb li a{
+    color: #ffffff;
+    width: 20%; height: 40px;
+    line-height: 40px;
+    /* display: block; */
+    position: absolute; /*포지션이 적용된 가장 가까운 부모 이상의 요소를 기준으로 위치 지정*/
+    top: 0;
+}
+
+article{
+    /* height: calc(100% - 100px); */
+    height: 100%;
+    box-sizing: border-box;
+    /*position: fixed; 이 값이 들어가면 height의 %가 인식됨
+    100vh 
+    해당요소를 감싸고 있는 부모, 조상 요소의 높이 값을 100%로 설정. 최종html {height: 100%}까지 작성
+    */
+    font-size: 30px;
+    padding-top: 100px;
+}

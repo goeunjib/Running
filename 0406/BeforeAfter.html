@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>BEfore + After</title>
+<style>
+    p{
+        border: 2px solid maroon;
+    }
+
+    p::before{
+        content: "설명: "; /*생략 불가능*/
+        background-color: gainsboro;
+    }
+
+    p::after{
+        content: ""; /*content 특성 자체는 생략 할 수 없으니ㅏ ""안에 아무것도 작성하지 않는 건 가능*/
+        background-color: skyblue;
+    }
+
+    ol .box1::before {
+        content: "https://google.com 주소: ";
+    }
+
+    ol .box2::before {
+        content: "https://naver.com 주소:";
+        background-color: rgb(136, 180, 136);
+        margin-right: 20px;
+        padding-right: 10px;
+    }
+
+    ol .box3::before {
+        content: "https://daum.net 주소";
+        display: inline-block;
+        border-right: 1px solid #333;
+        padding: 5px;
+        margin-right: 5px;
+    }
+
+    ul .box1::after{
+        content: "";
+        display: inline-block;
+        width: 3px; height: 16px;
+        background-color: orange;
+        
+    }
+</style>
+</head>
+<body>
+    <h2>:before, ::before</h2>
+    <p>기준 요소안의 컨텐츠 영역 옆쪽에 적용, 의사 요소</p>
+    <ol>
+        <li class="box1">구글</li>
+        <li class="box2">네이버</li>
+        <li class="box3">카카오</li>
+    </ol>
+
+    <h2>:after, ::after</h2>
+    <p>기준 요소안의 컨텐츠 영역 뒤쪽에 적용</p>
+    <ul>
+        <li class="box1">구글</li>
+        <li class="box2">네이버</li>
+        <li class="box3">카카오</li>
+    </ul>
+</body>
+</html>
