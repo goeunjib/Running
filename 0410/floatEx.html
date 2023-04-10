@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>floaEx</title>
+    <style>
+        .gnb{
+            margin: 0 auto;
+            font-size: 20px;
+            font-weight: bold;
+            list-style: none;
+            padding: 0;
+            text-align: center;
+            margin: 0 auto;
+            width: 425px;
+        }
+
+        .gnb li{
+            float: left;
+        }
+
+        .gnb li a:hover{
+            background-color: rgb(33, 33, 165);
+            color: rgb(255, 255, 255);
+        }
+
+        .gnb a{
+            text-decoration: none;
+            color: inherit;
+            display: block;
+            width: 100px; height: 40px;
+            line-height: 40px;
+            border: rgb(33, 33, 165) 5px solid;
+            border-right: none;
+        }
+
+        .gnb .line a{
+            border-right: 5px solid rgb(33, 33, 165)
+        }
+
+        .gnb .leftRound{
+            border-radius: 40px 0 0 40px;
+        }
+
+        .gnb .rightRound{
+            border-radius: 0 40px 40px 0;
+        }
+    </style>
+</head>
+<body>
+    <menu class="gnb">
+        <li><a href="#" class="leftRound">메뉴1</a></li>
+        <li><a href="#">메뉴2</a></li>
+        <li><a href="#">메뉴3</a></li>
+        <li class="line"><a href="#" class="rightRound">메뉴4</a></li>
+    </menu>
+</body>
+</html>

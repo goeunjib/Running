@@ -38,12 +38,22 @@
         margin-right: 5px;
     }
 
+    ul .box1{position: relative;}  /*.box1::after의 기준값*/
     ul .box1::after{
         content: "";
         display: inline-block;
         width: 3px; height: 16px;
         background-color: orange;
-        
+        position: absolute;   /*position relative와 absolute를 쓰면 box1을 따라다님*/
+        top: 0; bottom: 0; left: 50px; margin: auto; /*위아래 정렬*/
+    }
+
+    ul .box2::after{
+        content: " 🤮";
+    }
+
+    ul .box3::after{ /*값으로 작성되는 부분 ""은 텍스트 컨텐츠의 영역으로 코드값 적용*/
+        content: "&lt;";
     }
 </style>
 </head>

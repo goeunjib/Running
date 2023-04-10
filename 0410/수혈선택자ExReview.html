@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>수혈 선택자 Ex</title>
+    <style>
+        .gnb{
+            font-weight: bold;
+            font-size: 20px;
+            text-align: center;
+            list-style: none;
+            padding: 0;
+            margin: 50px auto;
+            width: 80%;
+            overflow: hidden;
+        }
+
+        .gnb li{
+            float: left;
+            width: 11.111111%; 
+        }
+
+        .gnb li a{
+            text-decoration: none;
+            color: inherit;
+            background-color: gainsboro;
+            display: block;
+            height: 50px;
+            line-height: 50px;
+        }
+
+        .gnb li:first-child a{
+            border-radius: 30px 0 0 30px;
+        }
+
+        .gnb li:nth-child(even) a {
+            background-color: rgb(138, 204, 229);
+            color: white;
+        }
+
+        .gnb li:nth-child(odd) a {
+            background-color: rgb(245, 247, 169);
+            color: rgb(88, 88, 88);
+        }
+
+        .gnb li:nth-child(4n+1) a {
+            background-color: rgb(201, 113, 113);
+            color: white;
+        }
+
+        .gnb li:last-child a{
+            border-radius: 0 30px 30px 0;
+        }
+    </style>
+</head>
+<body>
+    <ul class="gnb">
+        <li><a href="#">1</a></li>
+        <li><a href="#">2</a></li>
+        <li><a href="#">3</a></li>
+        <li><a href="#">4</a></li>
+        <li><a href="#">5</a></li>
+        <li><a href="#">6</a></li>
+        <li><a href="#">7</a></li>
+        <li><a href="#">8</a></li>
+        <li><a href="#">9</a></li>
+    </ul>
+</body>
+</html>

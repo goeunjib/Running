@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>z-indexEx1</title>
+    <style>
+        .wrapper{
+            background-color: rgb(238, 238, 238);
+            width: 500px; height: 500px;
+            margin: 70px auto;
+            padding: 0;
+            position: fixed;
+            top: 0; left: 0; right: 0;
+            font-weight: bold;
+            font-size: 40px;
+            position: relative;
+        }
+
+        .wrapper .box{
+            width: 170px;
+            height: 170px;
+            list-style: none;
+            position: absolute;
+        }
+
+        .wrapper .box1{
+            background-color: rgb(168, 83, 168);
+            color: white;
+            position: relative;
+            top: 15px; left: 15px;
+            text-align: center;
+            line-height: 150px;
+            z-index: 100;
+        }
+
+        .wrapper .box2{
+            background-color: rgb(185, 110, 185);
+            color: white;
+            top: 70px; left: 70px;
+            text-align: center;
+            line-height: 150px;
+            z-index: 10;
+        }
+
+        .wrapper .box3{
+            background-color: rgb(218, 150, 218);
+            color: white;
+            top: 130px; left: 130px;
+            text-align: center;
+            line-height: 150px;
+            z-index: 1;
+        }
+
+        .wrapper .box4{
+            background-color: rgb(240, 210, 240);
+            color: white;
+            top: 190px; left: 190px;
+            text-align: center;
+            line-height: 150px;
+            z-index: 0;
+        }
+
+        .wrapper .box5{
+            background-color: rgb(255, 240, 255);
+            color: white;
+            top: 250px; left: 250px;
+            text-align: center;
+            line-height: 150px;
+        }
+    </style>
+</head>
+<body>
+    <ul class="wrapper">
+        <li class="box box1">box1</li>
+        <li class="box box2">box2</li>
+        <li class="box box3">box3</li>
+        <li class="box box4">box4</li>
+        <li class="box box5">box5</li>
+    </ul>
+</body>
+</html>

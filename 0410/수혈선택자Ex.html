@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>수혈 선택자 Ex</title>
+    <style>
+
+
+        p{
+            height: 40px;
+            line-height: 40px;
+            font-size: 20px;
+            font-weight: bold;
+            text-align: center;
+            float: left;
+            margin: 0;
+        }
+
+        p:first-of-type{
+            border-radius: 50% 0 0 50%;
+        }
+
+        p:nth-child(even){
+            background-color: skyblue;
+            color: white;
+        }
+
+        p:nth-child(odd){
+            background-color: rgb(245, 247, 169);
+            color: white;
+        }
+
+        p:nth-child(4n+1){
+            background-color: rgb(201, 113, 113);
+            color: white;
+        }
+
+        p:last-of-type{
+            border-radius: 0 50% 50% 0;
+        }
+    </style>
+</head>
+<body>
+    <p>1</p>
+    <p>2</p>
+    <p>3</p>
+    <p>4</p>
+    <p>5</p>
+    <p>6</p>
+    <p>7</p>
+    <p>8</p>
+    <p>9</p>
+</body>
+</html>
