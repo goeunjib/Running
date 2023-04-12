@@ -1,0 +1,76 @@
+@charset "utf-8";
+
+body{
+    margin: 0;
+    font-size: 20px;
+    font-weight: bold;
+    text-align: center;
+}
+
+ul{
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+ul li{
+    float: left;
+}
+
+.wrapper{
+    height: 60px;
+    line-height: 60px;
+    margin: 30px auto;
+    width: 940px;
+}
+
+nav.wrapper{
+    background-color: rgb(122, 75, 170);
+}
+
+.wrapper .gnb{
+    margin: 0 auto;
+    width: 600px; /*.gnb a 실제 크기 120*5 */
+}
+
+.wrapper .gnb a{
+    color: white;
+    display: block;
+    width: 120px;
+}
+
+.wrapper .gnb a:hover{
+    background-color: rgb(153, 120, 214);
+}
+
+.wrapper h2{
+    margin: 0;
+}
+
+article.wrapper{
+    background-color: rgb(243, 190, 125);
+    height: 100px;
+    line-height: 100px;
+}
+
+footer.wrapper{
+    background-color: rgb(151, 184, 162);
+}
+
+.listWrapper{
+    width: 940px;
+    margin: 0 auto;
+    overflow: hidden;
+}
+
+.listWrapper li{
+    background-color: rgb(64, 64, 107);
+    color: white;
+    width: 300px;
+    height: 60px;
+    line-height: 60px;
+}
+
+.listWrapper li:nth-child(2){
+    margin: 0 20px;
+}

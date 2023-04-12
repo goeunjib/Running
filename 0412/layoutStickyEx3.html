@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>layout_Sticky Ex3</title>
+    <style>
+        body{
+            margin: 0;
+            text-align: center; 
+        }
+
+        section{
+            position: sticky;
+            width: 100%;
+            /* height: 100%; */
+            height: 100vh; /*창 크기에 따라 이미지 크기가 따라감*/
+        }
+
+        section img{
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+        }
+
+        section h2{
+            background-color:rgb(245, 204, 70);
+            color:white;
+            border: 3px dashed rgb(170, 139, 73);
+            border-radius: 0 0 20px 20px;
+            width: 150px;
+            height: 40px;
+            margin: 0 auto;
+            position: absolute;
+            top: 0;
+            left: 0; right: 0;
+            margin: auto;
+
+        }
+
+        
+    </style>
+</head>
+<body>
+    <section>
+        <h2>tittle1</h2>
+        <img src="./96d443c92059f2b3a240a7ff74692bbf.jpg" alt="안경쓴 사모예드">
+    </section>
+    <section>
+        <h2>tittle2</h2>
+        <img src="./9f1d0688621b2bf538c5bfa85b32b20e.jpg" alt="모자쓴 아기 말티즈">
+    </section>
+    <section>
+        <h2>tittle3</h2>
+        <img src="./069670bf6b9b1b90268838530007b748.jpg" alt="만세">
+    </section>
+    <section>
+        <h2>tittle4</h2>
+        <img src="./a4e8e670e4403352f82926bd445297cc.jpg" alt="간지말티즈">
+    </section>
+    <section>
+        <h2>tittle5</h2>
+        <img src="./c0a15d4cd062a9d06676553926a4ff8e.jpg" alt="만세222">
+    </section>
+
+    <!-- 외부 임시 이미지 불러오기
+     https://via.placeholder.com/가로사이즈x세로사이즈/배경색/글자색?text=image+1
+    https://placekitten.com/가로사이즈/세로사이즈
+    https://picsum.photos/가로사이즈/세로사이즈
+    https://picsum.photos/id/아이디번호/가로사이즈/세로사이즈 -->
+
+    <section>
+        <h2>title1</h2>
+        <img src="https://via.placeholder.com/1200x700/00235B/fff?text=image+1" alt="임시이미지1">
+      </section>
+      <section>
+        <h2>title2</h2>
+        <img src="https://placekitten.com/1100/700" alt="cat">
+      </section>
+      <section>
+        <h2>title3</h2>
+        <img src="https://picsum.photos/id/25/1000/500" alt="tree">
+      </section>
+      <section>
+        <h2>title4</h2>
+        <img src="https://picsum.photos/seed/picsum/1200/700" alt="img">
+      </section>
+      <section>
+        <h2>title5</h2>
+        <img src="https://picsum.photos/id/28/1000/500" alt="img">
+      </section>
+</body>
+</html>

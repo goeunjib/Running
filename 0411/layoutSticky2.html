@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>layout_Sticky2</title>
+    <style>
+        body {
+            margin: 0;
+            color: white;
+        }
+
+        .clearfix::after{
+            content: "";
+            display: block;
+            clear: both;
+        }
+        header{
+            background-color:plum;
+            width: 100%;
+            height: 90px;
+            padding: 15px;
+        }
+
+        header h1, h2{
+            margin: 0;
+        }
+
+        main{
+            border: 10px solid black;
+        }
+
+        main article {
+            background-color: rgb(236, 198, 236);
+            width: 70%;
+            height: 800px;
+            padding: 10px;
+            box-sizing: border-box;
+            float: left;
+            font-weight: bold;
+            font-size: 20px;
+            position: relative;
+        }
+
+        main aside{ 
+            background-color: rgb(243, 220, 243);
+            width: 30%;
+            height: 3000px;
+            padding: 10px;
+            box-sizing: border-box;
+            float: left;
+            position: sticky;
+            top: 0;
+        }
+
+        footer{
+            background-color: plum;
+            width: 100%;
+            height: 50px;
+            padding: 10px;
+        }
+
+        main article .relative{  /*relative와 float를 동시에 적용시 float 인식*/
+            background-color:rgb(50, 50, 153);
+            float: left;
+            position: relative;
+        }
+
+        main article .fixed{  /*fixed와 float를 동시에 적용시 fixed 인식*/
+            background-color:rgb(78, 78, 179);
+            float: left;
+            position: fixed;
+            top: 200px; left: 100px;
+        }
+
+        main article .absolute{  /*absolute와 float를 동시에 적용시 absolute 인식*/
+            background-color:rgb(112, 112, 201);
+            float: left;
+            position: absolute;
+            top: 0; left: 200px;
+        }
+
+        main article .sticky{  /*부모 요소가 스크롤에 따라 화면 밖으로 넘어가면 함께 넘어감*/
+            background-color:rgb(140, 140, 223);
+            float: left;
+            position: sticky;
+            top: 20px; left:360px;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <h1>layout_Stiky2</h1>
+        <h2>header</h2>
+    </header>
+    <main class="clearfix">
+        <article>
+            <div class="relative">relative</div>
+            <div class="fixed">fixed</div>
+            <div class="absolute">absolute</div>
+            <div class="sticky">sticky</div>
+        </article>
+        <aside>
+            <h2>aside</h2>
+        </aside>
+    </main>
+    <footer>
+        <h2>footer</h2>
+    </footer>
+</body>
+</html>
