@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>bgEx4</title>
+    <style>
+        form{
+            border: 3px solid #a1a1a1;
+            border-radius: 10px;
+            width: 400px;
+            margin: 50px auto;
+            padding: 30px;
+        }
+
+        form input{
+            outline: none;
+            display: block;
+            border-radius: 40px;
+            width: 300px;
+            border: 1px solid #ddd;
+            /* padding: 10px 10px 10px 50px; 사용 가능하기도 하지만 */
+            padding: 10px; text-indent: 40px; /*이것도 사용 가능*/
+            font-size: 17px;
+            margin: 10px auto;
+            background: no-repeat 5% 50% / 7%;
+        }
+
+        form input:hover, form input:focus{
+            background-color: #c4c8ca;
+            color: #fff;
+        }
+
+        input[type="text"]{
+            background-image: url(./free-icon-profile-3488569.png);
+        }
+        input[type="email"]{
+            background-image: url(./free-icon-mail-646094.png);
+        }
+        input[type="tel"]{
+            background-image: url(./free-icon-mobile-phone-519184.png);
+        }
+    </style>
+</head>
+<body>
+    <form>
+        <input type="text" name="userName" id="userName" placeholder="이름을 입력하세요.">
+        <input type="email" name="userEmail" id="userEmail" placeholder="이메일을 입력하세요.">
+        <input type="tel" name="userTel" id="userTel" placeholder="연락처를 입력하세요.">
+    </form>
+</body>
+</html>

@@ -1,0 +1,101 @@
+@charset "utf-8";
+
+html{
+    /* background-image: url(./wood.jpeg); */
+    margin: 0;
+    padding: 0;
+}
+
+body{
+    width: 70%;
+    margin: 20px auto;
+    border-radius: 20px;
+    border: 3px solid pink;
+}
+
+.logobar{
+
+    background-color: #f8efef;
+    border-radius: 16px 16px 0 0;
+    background-image: url(./dog.png);
+    background-repeat: no-repeat;
+    background-size: 15%;
+    background-position: 20px;
+}
+
+.logobar h1{
+    padding: 15px 0 0 18%;
+    margin: 0;
+}
+.logobar h2{
+    padding: 0 0 15px 18%;
+    margin: 0;
+}
+
+.menu{
+    margin: 0 0 20px 0;
+    padding: 0;
+    list-style: none;
+}
+
+.top li{
+    background-color: pink;
+    width: 200%;
+}
+
+.top li a{
+    float: left;
+    background-color: pink;
+    color: #f8efef;
+    text-decoration: none;
+    font-weight: bold;
+    display: block;
+    text-align: center;
+    height: 40px;
+    line-height: 40px;
+    padding: 0 100px 0;
+}
+
+.top li a:hover{
+    background-color: #f8efef;
+    color: pink;
+}
+
+section{
+    background-color: #f8efef;
+    padding: 20px;
+}
+
+section .big .blank p, section .small .blank p{
+    margin: 50px;
+    width: 300px; height: 230px;
+    border: pink solid 2px;
+    background-color: white;
+    background-image: url(./big.jpg);
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+    float: left;
+}
+
+section .big p, section .small p{
+    margin-top: 80px;
+    font-size: 20px;
+    float: left;
+    line-height: 2.2;
+}
+
+section .big p .tittle, section .small p .tittle{
+    font-size: 25px;
+    float: left;
+}
+
+section .small .blank p{
+    background-image: url(./small.jpg);
+    float: left;
+}
+
+section .small p .ing{
+    float: left;
+    /* font-size: 15px; */
+}
