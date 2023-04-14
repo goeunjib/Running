@@ -1,0 +1,170 @@
+@charset "utf-8";
+
+body{
+    /* background-image: url(./wood.jpeg); */
+}
+
+.container{
+    background-color: #f8efef;
+    border: 3px pink solid;
+    border-radius: 20px;
+    width: 1000px;
+    height: 850px;
+    margin: 50px auto;
+}
+
+.container .logobar{
+    height: 130px;
+    background-color: #f8efef;
+    border-radius: 16px 16px 0 0;
+    background-image: url(./dog.png);
+    background-repeat: no-repeat;
+    background-size: 10%;
+    background-position: 50px;
+}
+
+.container .logobar h1{
+    padding: 15px 0 0 200px;
+    margin: 0;
+}
+
+.container .menu{
+    background-color: pink;
+    width: 100%;
+    margin: 0 0 20px 0;
+    padding: 0;
+    list-style: none;
+}
+
+.container .menu li a{
+    width: 20%;
+    float: left;
+    background-color: pink;
+    color: #f8efef;
+    text-decoration: none;
+    font-weight: bold;
+    display: block;
+    text-align: center;
+    height: 40px;
+    line-height: 40px;
+}
+
+.menu li a:hover{
+    background-color: white;
+    color: pink;
+}
+
+.container .box1{
+    border: pink solid 2px;
+    background-color: white;
+    width: 250px;
+    height: 280px;
+    margin: 30px 0 0 50px;
+    float: left;
+}
+
+.container .box1 img{
+    margin: 8px 13px;
+    width: 90%;
+}
+
+.container .box1 figcaption{
+    padding: 0 20px 0 0;
+    float: right;
+}
+
+.container .tittle1{
+    font-size: 18px;
+    margin: 30px 0 30px 40px;
+    float: left;
+}
+
+.container .box2{
+    border: 2px pink solid;
+    background-color: white;
+    width: 250px;
+    height: 280px;
+    clear: both;
+    float: left;
+    margin: 30px 0 0 50px;
+}
+
+.container .box2 img{
+    margin: 8px 15px;
+    width: 88%;
+}
+
+.container .box2 figcaption{
+    float: right;
+    padding: 0 20px 0 0;
+}
+
+.container .tittle2{
+    font-size: 18px;
+    float: left;
+    margin: 30px 0 30px 40px;
+}
+
+.sidebar .side{
+    border-left: pink dashed 4px;
+    float: right;
+}
+
+.sidebar .side ul{
+    list-style: none;
+    padding: 0;
+}
+
+.sidebar .side li{
+    padding: 20px 150px 10px 20px;
+    border-bottom:  pink dashed 4px;
+    font-size: 20px;
+}
+
+.sidebar .side h2{
+    margin-top: 30px;
+    padding-left: 20px;
+}
+.sidebar .side p{
+    padding-left: 20px;
+}
+
+.sidebar .side li a{
+    text-decoration: none;
+    color: black;
+}
+
+.sidebar .side li:hover{
+    background-color: pink;
+}
+
+.sidebar .side .blank{
+    padding-top: 30px;
+    padding-bottom: 30px;
+}
+
+.sidebar{
+    float: right;
+}
+
+
+footer {
+    clear: both;
+    background-color: pink;
+    border-radius: 0 0 20px 20px;
+    height: 40px;
+    line-height: 40px;
+    padding: 0 30px
+}
+
+main::after{
+    content: '';
+    display: block;
+    clear: both;
+}
+
+.claerfixed{
+    content: '';
+    display: block;
+    clear: both;
+}
