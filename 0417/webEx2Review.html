@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+
+    <meta property="og:title" content="WebEx2">
+	<meta property=og:description content="WebEx2">
+	<meta property="og:image" content="https://goeunjib.github.io/Home-Work/230414/dog.png">
+	<meta property="og:url" content="https://goeunjib.github.io/Home-Work/230414/webEx2.html">
+	<meta property="og:type" content="website">
+
+    <!-- favicon -->
+    <!-- <link rel="shortcut icon" href="favicon.ico" type="image"> -->
+
+    <!-- 32x32 .ico 예전 브라우저 -->
+    <link rel="icon" href="./images/favicon.ico" sizes="any">
+
+    <!-- 애플 기기용. 20px 정도의 패딩과 배경색을 넣으면 좋음 -->
+    <link rel="apple-touch-icon" sizes="180x180" href="./image/apple-touch-icon.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="./images/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="./images/favicon-16x16.png">
+    <!--
+        .manifest :
+        웹 기술 모읍집의 일부로 앱 스토어를 거치지 않고 장치의 홈 화면에 설치
+        사전 다운로드를 통해 오프라인에서도 동작
+        웹 앱 정보를 json텍스트 파일로 제공
+        주로 아이콘, 작성자, 버전, 설명 드으이 필요한 리소스 등을 작성
+    -->
+
+    <!-- manifest (JSON) PWA 및 안드로이드 기기용 -->
+    <link rel="manifest" href="./images/site.webmanifest">
+    <meta name="theme-color" content="#ffffff">
+
+    <!-- 초기화 css -->
+    <link rel="stylesheet" href="../common/minireset.min.css">
+    <!-- 웹폰트 -->
+    <link rel="stylesheet" href="./fonts.css">
+    <title>webEx2</title>
+    <link rel="stylesheet" href="webEx2.css">
+</head>
+<body>
+    <div class="container">
+        <!-- <header>
+            <h1></h1>
+            <nav></nav>
+        </header> -->
+
+        <h1><em>Dog's kitchen</em> Cooking Class</h1>
+        <ul id="gnb">
+            <li><a href="#">홈</a></li>
+            <li><a href="#">소개</a></li>
+            <li><a href="#">교실</a></li>
+            <li><a href="#">케이터링</a></li>
+            <li><a href="#">연락처</a></li>
+        </ul>
+
+        <main>
+            <article>
+                <figure>
+                    <img src="./big.jpg" alt="멍멍">
+                    <figcaption>멍멍멍</figcaption>
+                </figure>
+                <div class="txt_Box">
+                    <h2 class="txt_Box-tittle1">큰 멍멍이</h2>
+                    <h3 class="txt_Box-tittle2">큰 멍멍이를 위한 5주 코스</h3>
+                    <p>위에도 묻힌 딴은 듯합니다. 무성할 이 위에 무엇인지 별빛이 토끼, 별 슬퍼하는 까닭입니다. 이름자 어머니, 이름자를 이름과 하늘에는 별 그리워 때 옥 버리었습니다.</p>
+                </div>
+
+                <figure>
+                    <img src="./small.jpg" alt="멍멍">
+                    <figcaption>멍멍멍</figcaption>
+                </figure>
+                <div class="txt_Box">
+                    <h2 class="txt_Box-tittle1">작은 멍멍이</h2>
+                    <h3 class="txt_Box-tittle2">작은 멍멍이를 위한 5주 코스</h3>
+                    <p>위에도 묻힌 딴은 듯합니다. 무성할 이 위에 무엇인지 별빛이 토끼, 별 슬퍼하는 까닭입니다. 이름자 어머니, 이름자를 이름과 하늘에는 별 그리워 때 옥 버리었습니다.</p>
+                </div>
+            </article>
+
+            <aside>
+                <h2>인기요리법</h2>
+                <ul class="recipe">
+                    <li><a href="#">후라이드</a></li>
+                    <li><a href="#">고추바사삭</a></li>
+                    <li><a href="#">뿌링클</a></li>
+                    <li><a href="#">간지</a></li>
+                </ul>
+
+                <h2>연락처</h2>
+                <address>경기 수원시 팔달구 매산동</address>
+            </aside>
+        </main>
+
+        <footer>&copy; DOG's kitchen 강아지네 키친</footer>
+    </div>
+</body>
+</html>
