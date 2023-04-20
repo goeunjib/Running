@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>flex8</title>
+    <style>
+        body{margin:0; font-size: 1.5em; text-align: center;}
+
+        .wrapper .item1 {background-color: rgb(245, 245, 220);}
+        .wrapper .item2 {background-color: rgb(212, 212, 184);}
+        .wrapper .item3 {background-color: rgb(168, 168, 140);}
+        .wrapper .item4 {background-color: rgb(122, 122, 98);}
+
+        .wrapper { /*flex-container*/
+        border: 5px solid #555555;
+        width: 80vw; margin: 2vw auto;
+        }
+
+        #container{
+            display: flex; height: 30vh;
+            /*주축 기준 양 끝 여백없이 동일 간격 배치*/
+            justify-content: space-between;
+
+            /*교차축 기준 중앙 정렬*/
+            align-items: center;
+        }
+
+        #container .item1{
+            /*자식인 플렉스 아이템에 적용. align-items 특성의 개별 배치*/
+            align-self: flex-start;
+        }
+        #container .item2{
+            align-self: flex-end;
+        }
+        #container .item3{
+            align-items: center;
+            width: 20vw; height: 15vw;
+        }
+        #container .item4{
+            align-self: stretch;
+        }
+    </style>
+</head>
+<body>
+    <h1>flex : align-self</h1>
+    <div class="wrapper" id="container"> <!--flex-container-->
+        <item class="item item1">item1</item> <!--flex-item-->
+        <item class="item item2">item2</item> <!--flex-item-->
+        <item class="item item3">item3</item> <!--flex-item-->
+        <item class="item item4">item4</item> <!--flex-item-->
+    </div>
+</body>
+</html>

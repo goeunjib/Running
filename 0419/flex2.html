@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>flex-wrap</title>
+    <style>
+        body{margin:0; font-size: 1.5em; text-align: center;}
+
+        .wrapper .item1 {background-color: rgb(247, 247, 223);}
+        .wrapper .item2 {background-color: rgb(212, 212, 184);}
+        .wrapper .item3 {background-color: rgb(168, 168, 140);}
+
+        .wrapper {
+            border: 5px solid #555555;
+            width: 80vw; margin: 2vw auto;
+        }
+
+        #container { /*flex-container*/
+            display: flex;
+            flex-direction: row; /*주축 row(가로,행,x) 교차축 col(세로,열,y)*/
+            /* flex-direction: column; */
+
+            /*플렉스 아이템을 한 줄 또는 여러 줄 배치. 줄바꿈*/
+            flex-wrap: nowrap; /*기본값. 플렉스 아이템 한 줄 배치*/
+            flex-wrap: wrap-reverse; /*역방향 줄바꿈*/
+            flex-wrap: wrap; /*줄바꿈*/
+        }
+
+        #container .item {width: 50%; aspect-ratio: 2/1;}
+    </style>
+</head>
+<body>
+    <h1>flex : flex-wrap</h1>
+    <div class="wrapper" id="container"> <!--flex-container-->
+        <item class="item item1">item1</item> <!--flex-item-->
+        <item class="item item2">item2</item> <!--flex-item-->
+        <item class="item item3">item3</item> <!--flex-item-->
+    </div>
+</body>
+</html>

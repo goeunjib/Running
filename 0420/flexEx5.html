@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>flexEx5</title>
+    <style>
+        body {
+            margin: 0 auto;
+        }
+
+        form{
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            font-size: 20px;
+            font-weight: bold;
+        }
+
+        h1{text-align: center;}
+
+        form label{ /*flex-item & span의 flex-container*/
+            margin: 0.5rem 0;
+            display: flex;
+        }
+        form label span{ /* flex-item & 글자의 flex-container*/
+            background-color: #ddd;
+            width: 11.5rem;
+            margin-right: 0.5rem;
+            display: flex;
+            justify-content: flex-end;
+            align-items: center;
+        }
+        form label input[type=text]{
+            outline: none;
+            border: 1px solid black;
+            width: 200px; height: 1.5rem;
+        }
+        form label:nth-child(2) ~ label [type=text]{
+            height: 7rem;
+        }
+    </style>
+</head>
+<body>
+    <h1>폼 타이틀 세로 중앙정렬</h1>
+    <form>
+        <label>
+            <span>채널 키워드</span>
+            <input type="text" placeholder="플렉스 적용하기">
+        </label>
+
+        <label>
+            <span>채널 키워드</span>
+            <input type="text" placeholder="플렉스 적용하기">
+        </label>
+
+        <label>
+            <span>channel<br>Keyword</span>
+            <input type="text" placeholder="플렉스 적용하기">
+        </label>
+
+        <label>
+            <span>channel<br>Keyword<br>Keyword</span>
+            <input type="text" placeholder="플렉스 적용하기">
+        </label>
+
+        <label>
+            <span>channel</span>
+            <input type="text" placeholder="플렉스 적용하기">
+        </label>
+
+    </form>
+</body>
+</html>
