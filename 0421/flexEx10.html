@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>flexEx10</title>
+    <style>
+        body{
+            margin: 0;
+        }
+
+        h1{
+            background-color: skyblue;
+            color: white;
+            margin: 0;
+            height: 120px;
+            font-size: 35px;
+            line-height: 120px;
+            text-align: center;
+        }
+
+        .container{
+            background-color: rgb(255, 187, 104);
+            font-size: 17px;
+            width: 100%;
+            height: 30px;
+            line-height: 30px;
+            padding: 10px;
+            display: flex;
+            justify-content: space-evenly;
+        }
+
+        
+        .container .BigMenu h3{
+            margin: 0;
+            
+        }
+        
+        .container .BigMenu a{
+            text-decoration: none;
+            color: white;
+            border-right: 3px solid black;
+        }
+        
+        .container .BigMenu a:hover{
+            background-color: rgb(52, 189, 189);
+        }
+    </style>
+</head>
+<body>
+    <h1>Css Navigation</h1>
+    <div class="container">
+        <div class="BigMenu">
+            <h3><a href="#">대메뉴1</a></h3>
+            <ul class="SmallMenu">
+                <!-- <li>소메뉴1-1</li>
+                <li>소메뉴1-2</li> -->
+            </ul>
+        </div>
+        <div class="BigMenu">
+            <h3><a href="#">대메뉴2</a></h3>
+            <ul class="SmallMenu">
+                <!-- <li>소메뉴1-1</li>
+                <li>소메뉴1-2</li> -->
+            </ul>
+        </div>
+        <div class="BigMenu">
+            <h3><a href="#">대메뉴3</a></h3>
+            <ul class="SmallMenu">
+                <!-- <li>소메뉴1-1</li>
+                <li>소메뉴1-2</li> -->
+            </ul>
+        </div>
+        <div class="BigMenu">
+            <h3><a href="#">대메뉴4</a></h3>
+            <ul class="SmallMenu">
+                <!-- <li>소메뉴1-1</li>
+                <li>소메뉴1-2</li> -->
+            </ul>
+        </div>
+    </div>
+</body>
+</html>

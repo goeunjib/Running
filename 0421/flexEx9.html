@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>flex9</title>
+    <style>
+        h1{
+            text-align: center;
+        }
+
+        body{
+
+        }
+
+        .container { /*flex-continer*/
+            border: 3px solid black;
+            width: 80vw; height: 500px;
+            margin: 0 auto;
+            display: flex;
+            flex-flow: column;
+            align-content: space-between;
+            display: flex;
+            flex-flow: wrap;
+            gap: 1rem; /*열과 행에 들어가는 여백*/
+        }
+
+        .container .box{ /*flex-item*/
+            width: 33.333%;
+        }
+
+        .container .box img{ /*flex-item 아님*/
+            background-color: rgb(247, 230, 247);
+            vertical-align: top;
+            width: 100%;
+        }
+
+        .container .box figcaption{ /*flex-item 아님*/
+            color: plum;
+            background-color: rgb(231, 222, 231);
+            text-align: center;
+            font-size: 1.3rem;
+            text-transform: capitalize;
+            padding: 7px;
+        }
+    </style>
+</head>
+<body>
+    <h1>가로 세로 비율을 유지하는 반응형 박스</h1>
+    <div class="container">
+        <figure>
+            <div class="box box1">
+                <img src="./friday.png" alt="firday">
+                <figcaption>tittle1</figcaption>
+            </div>
+            <div class="box box2">
+                <img src="./friday.png" alt="firday">
+                <figcaption>tittle2</figcaption>
+            </div>
+            <div class="box box3">
+                <img src="./friday.png" alt="firday">
+                <figcaption>tittle3</figcaption>
+            </div>
+            <div class="box box4">
+                <img src="./friday.png" alt="firday">
+                <figcaption>tittle4</figcaption>
+            </div>
+            <div class="box box5">
+                <img src="./friday.png" alt="firday">
+                <figcaption>tittle5</figcaption>
+            </div>
+            <div class="box box6">
+                <img src="./friday.png" alt="firday">
+                <figcaption>tittle6</figcaption>
+            </div>
+        </figure>
+    </div>
+</body>
+</html>

@@ -1,0 +1,4 @@
+@charset "utf-8";
+
+/*css 문서 내부에서 다른문서 호출*/
+@import url('./flexEx10ReviewFont.css')

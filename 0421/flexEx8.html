@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>flex8</title>
+    <style>
+        h1 { text-align: center; }
+    .container {
+      background-color: #e4e5ff;
+      margin: 0 auto;
+      width: 70vw; 
+      /* height: 70vw; */
+      aspect-ratio: 1 ;
+
+      display: flex;
+      flex-flow: column wrap;
+      /* align-items: center; */
+      align-content: space-evenly;
+      justify-content: space-evenly;
+    }
+    .container .box {
+      box-sizing: border-box;
+      border:1px solid #363232;
+      margin:0;
+      width: 43%;
+    }
+    .container .box img {
+      vertical-align: top;
+      width: 100%;
+    }
+    .container .box figcaption {
+      background-color: #D14D72;
+      font-weight: bold; text-transform: capitalize; font-size: 1.1rem; text-align: center;
+      padding: 0.4rem;
+    }
+
+        /* body{
+            text-align: center;
+        }
+
+        .container {
+            background-color: rgb(224, 224, 248);
+            width: 70%; height: 500px;
+            margin: 0 auto;
+            display: flex;
+            flex-flow: column;
+        }
+
+        .container .box{
+            width: 30%;
+        }
+
+        .container .box img{
+            background-color: rgba(221, 160, 221, 0.438);
+            margin: 20px 10px 20px 10px;
+        }
+
+        .container .box3{
+
+        } */
+    </style>
+</head>
+<body>
+    <h1>상하 정렬 갤러리</h1>
+    <div class="container">
+        <div class="box box1">
+            <img src="./friday.png">
+            <figcaption>Friday 1</figcaption>
+        </div>
+
+        <div class="box box2">
+            <img src="./friday.png">
+            <figcaption>Friday 2</figcaption>
+        </div>
+
+        <div class="box box3">
+            <img src="./friday.png">
+            <figcaption>Friday 3</figcaption>
+        </div>
+
+        <div class="box box4">
+            <img src="./friday.png">
+            <figcaption>Friday 4</figcaption>
+        </div>
+    </div>
+</body>
+</html>

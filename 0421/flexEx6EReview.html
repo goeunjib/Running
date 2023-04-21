@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>flexEx6</title>
+    <style>
+        body{
+            margin:0;
+            text-align: center;
+            font-size: 1.1rem;
+        }
+
+        .container{
+            background-color: rgb(243, 231, 216);
+            display: flex;
+            /* justify-content: space-between;
+            align-items: center; */
+        }
+        
+        .container h1{
+            background-color: rgb(204, 179, 145);
+            margin: 0;
+            font-size: 1.4rem;
+            width: 4rem;
+            aspect-ratio: 1;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+
+        .container form{ /*Flex item 이자 Flex Container*/
+            display: flex;
+            align-items: center;
+        }
+
+        .container form [type="search"] {
+            border-right: none;
+            margin-left: 10px;
+            width: 200px;
+            padding: 5px;
+            height: 30px;
+        }
+
+        .container form [type="submit"]{
+            height: 30px;
+        }
+
+        .container form [type="submit"]:hover{
+            background-color: #333;
+            color: white; cursor: pointer;
+        }
+        
+        .container form *{
+            outline: none;
+            font-size: 1.1rem;
+            border: 1px solid #333;
+        }
+        
+        .container nav{
+            background-color: rgb(204, 179, 145);
+            width: 4rem;
+            aspect-ratio: 1;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            margin-left: auto; /*플렉스 아이템을 오른쪽으로 배치*/
+        }
+    </style>
+</head>
+<body>
+    <div class="container"> <!-- Flex Container -->
+        <h1>로고</h1> <!-- Flex item -->
+        <form> <!-- Flex item -->
+            <input type="search" name="search" id="search">
+            <button type="submit">검색</button>
+        </form>
+        <nav>메뉴</nav ><!-- Flex item -->
+    </div>
+</body>
+</html>
