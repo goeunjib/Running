@@ -1,0 +1,82 @@
+@charset "utf-8";
+
+/* 'Pretendard Variable', sans-serif */
+@import url('../assets/css/pretendardvariable-dynamic-subset.css');
+
+body {
+  font-family: "Pretendard Variable", Pretendard, -apple-system, BlinkMacSystemFont, system-ui, Roboto, "Helvetica Neue", "Segoe UI", "Apple SD Gothic Neo", "Malgun Gothic", Dotum, sans-serif;
+  font-weight: 400;
+  text-align: center;
+}
+main {
+  background-color: #ddd;
+  height: 200vh;
+  font-size: 2rem;
+  font-weight: 700;
+  padding-top: 100px;
+  color:#000;
+}
+h1 {
+  background-color: #3C486B;
+  color:#fff;
+  font-size: 1.6rem;
+  font-weight: 700;
+  text-transform: capitalize;
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 90px;
+}
+
+nav {
+  background-color: #F45050;
+  width:100%;
+  position: sticky;
+  top:0;
+}
+/* 메뉴 */
+.gnb {
+  width: 480px;
+  margin: 0 auto;
+  height: 40px;
+  display: flex;
+  justify-content: center;  
+}
+
+/* 각 각의 대메뉴 제목 */
+.gnb > li > strong {
+  display: block;
+  font-weight: 600;
+  font-size: 1.2rem;
+  width: 120px;
+  height: 40px;
+  line-height: 40px;
+  cursor: pointer;
+}
+.gnb > li > strong:hover {
+  background-color: #F0F0F0;
+}
+
+.gnb .sub_menu {/* 소메뉴 */
+  display: none;
+  background-color: #F9D949;
+  height: 150px;
+  border-right:1px solid #000;
+}
+.gnb .sub_menu a {
+  display: block;
+  color:#000;
+  height: 30px;
+  line-height: 30px;
+}
+.gnb .sub_menu a:hover {
+  background-color: #F0F0F0;
+}
+.gnb > li:last-child .sub_menu {
+  border-right:none;
+}
+
+.gnb:hover .sub_menu {
+  display: block;
+}
