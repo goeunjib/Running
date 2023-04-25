@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <title>transitionEx3</title>
+  <style>
+    body{margin: 0; height: 100vh; background-color: #ddd; text-transform: capitalize;}
+    .main-menu{
+      list-style: none; margin: 0; padding: 0;
+      background-color: aliceblue;
+      height: 100%;
+
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+    }
+  </style>
+</head>
+<body>
+  <!-- 
+    data- : 사용자 정의 속성
+   -->
+    <menu class="main-menu">
+      <li><a href="#" data-txt="home">home</a></li>
+      <li><a href="#" data-txt="product">product</a></li>
+      <li><a href="#" data-txt="service">service</a></li>
+      <li><a href="#" data-txt="contact">contact</a></li>
+    </menu>
+</body>
+</html>

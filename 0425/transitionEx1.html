@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <title>transitionEx1</title>
+  <style>
+    .box{
+      width: 80px;
+      height: 80px;
+      background-color: pink;
+      margin: 50px auto;
+
+      transition-property: all;
+      transition-duration: 1s;
+      transition-timing-function: ease-in-out;
+    }
+
+    .box:hover{
+      width: 400px; height: 400px;
+      border-radius: 50%;
+      background-color: tomato;
+    }
+  </style>
+</head>
+<body>
+  <div class="box"></div>
+</body>
+</html>

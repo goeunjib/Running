@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <title>transitionBasic</title>
+  <style>
+    .box{width: 100px; height: 100px; background-color: rgb(187, 233, 252); text-align: center;
+
+    /*움직임 속성*/
+    transition-property: width, height, background-color, font-size, font-wight;
+
+    /*움직임 진행시간*/
+      transition-duration: 1s, 3s, 5s, 1s, 1s;
+    }
+
+    .box:hover{
+    width: 500px; height: 500px;
+    background-color: blue; color: white;
+    font-size: 2rem; font-weight: bold;
+  }
+  </style>
+</head>
+<body>
+  <h1>transition-property, transition-duration</h1>
+  <div class="box">{움직인다}</div>
+</body>
+</html>
