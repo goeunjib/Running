@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <title>transformEx4</title>
+  <style>
+    /*
+    input:focus {텍스트 필드에 포커스가 잡히면}
+    input:checked {체크박스에 체크가 되면}
+    input:disabled {비활성}
+
+    input[type=checkbox]:checked {}
+    */
+    .red{width: 30vw; background-color: rgb(240, 163, 163); padding: 10px 0 10px 0;}
+
+    .blue{width: 500px; background-color: skyblue; height: 100px;
+      transition: 1s;
+    }
+
+    input[type=checkbox]:checked .blue{
+      transform: translateY(100px);
+    }
+  </style>
+</head>
+<body>
+  <h1>transform 연습 4</h1>
+  <input type="checkbox" name="check" id="check">
+  <label for="check">체크 박스가 체크되면 박스가 위로 올라와 사라집니다.</label>
+  <div class="red">
+    <h3>:checked</h3>
+    <p>이름을 별에도 강아지, 봅니다. 덮어 비둘기, 묻힌 소녀들의 나는 이네들은 있습니다. 하나에 계집애들의 하나의 별 노새, 밤이 무덤 거외다. 풀이 무엇인지 다 차 별들을 이 남은 이런 보고, 봅니다.</p>
+  </div>
+  <div class="blue">block</div>
+</body>
+</html>

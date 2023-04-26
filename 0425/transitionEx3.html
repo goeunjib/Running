@@ -8,19 +8,66 @@
     body{margin: 0; height: 100vh; background-color: #ddd; text-transform: capitalize;}
     .main-menu{
       list-style: none; margin: 0; padding: 0;
-      background-color: aliceblue;
+      background-color: rgb(226, 232, 236);
       height: 100%;
 
       display: flex;
       flex-direction: column;
       justify-content: center;
       align-items: center;
+
+      z-index: 1;
+      position: relative; /*나타나는 글자 위치 기준*/
+      overflow: hidden;
     }
+
+    .main-menu li{
+      margin: 15px;
+    }
+
+    .main-menu li a{
+      color: rgb(176, 178, 182);
+      text-decoration: none;
+      font-size: 3rem;
+      font-weight: 800;
+      transition: all 0.5s;
+      
+    }
+
+    .main-menu li:hover a{color: #1b1b1b;}
+
+    .main-menu li a::before{
+      content: "";
+      position: absolute;
+      z-index: -1; /*음수값을 주면 제일 아래 배치*/
+      top: 0; left: 0; right: 0; bottom: 0;
+      margin: auto;
+      font-size: 20rem;
+      color:#80808025;
+      opacity: 0;
+
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      transition: 0.5s;
+    }
+
+    .main-menu li a:hover::before{
+      content: attr(data-txt); /*css 함수, html의 속성을 가져옴*/
+      opacity: 1;
+
+      width: 100%; height: 100%;
+    }
+
+    .main-menu li:nth-child(1) a::before {background-color: rgba(224, 166, 95, 0.39);}
+    .main-menu li:nth-child(2) a::before {background-color: rgba(182, 133, 73, 0.192);}
+    .main-menu li:nth-child(3) a::before {background-color: rgba(143, 96, 39, 0.308);}
+    .main-menu li:nth-child(4) a::before {background-color: rgba(85, 56, 20, 0.411);}
   </style>
 </head>
 <body>
   <!-- 
-    data- : 사용자 정의 속성
+    data- : 사용자 정의 속성. 내가 만든 속성
    -->
     <menu class="main-menu">
       <li><a href="#" data-txt="home">home</a></li>

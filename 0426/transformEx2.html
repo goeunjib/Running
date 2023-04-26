@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <title>transformEx2</title>
+  <style>
+    .menu-icon{
+      background-color: rgb(112, 156, 142);
+      width: 100px; height: 100px;
+      font-size: 1.3rem; font-weight: bold; text-align: center;
+      position: fixed; right: 20px; top: 20px;
+    }
+
+    .menu-icon .btn-close{
+      cursor: pointer;
+      transition: 0.6s;
+      color: white;
+      text-indent: -9999px;
+      height: 100%;
+      position: relative;
+    }
+    .menu-icon .btn-close::before, 
+    .menu-icon .btn-close::after{
+      content: "";
+      width: 10%; height: 80%;
+      background-color: beige;
+      position: absolute; 
+      /* top: 0; right: 0; left: 0; bottom: 0; margin: auto; */
+      /* margin-left: -5%; margin-top: -40%; 요소의 크기가 나와있어야지만 가능 */
+      top: 50%; left: 50%;
+      transform: translate(-50%, -50%) rotate(45deg);
+    }
+    .menu-icon .btn-close::after{
+      transform: translate(-50%, -50%) rotate(-45deg);
+    }
+
+    .menu-icon:hover .btn-close{
+      transform: rotate(360deg);
+    }
+  </style>
+</head>
+<body>
+  <h1>transform 연습 2</h1>
+  <!-- 마우스를 위에 올리면 X가 올라감 -->
+  <div class="menu-icon">
+    <div class="btn-close">닫기</div>
+  </div>
+</body>
+</html>
