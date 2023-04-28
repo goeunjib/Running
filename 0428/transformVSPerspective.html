@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <title>transformVSPerspective</title>
+  <style>
+    h1, h2{text-align: center;}
+    ul{list-style: none; padding: 0; margin: 0 auto; border: 2px solid #333; width: 80vw; text-align: center; font-weight: bold; display: flex; flex-wrap: wrap; justify-content: center;}
+
+    ul li{
+      width: 20%; aspect-ratio: 1; 
+      margin: 1vw;
+    }
+
+    /* transform:Perspective() 해당 요소에 직접 적용. 각 요소에 원근값 적용 */
+    .box1 li{
+      background-color: rgb(243, 175, 164);
+      border: 2px solid #333;
+      transform: perspective(30vw) rotateX(45deg);
+    }
+
+    /* Perspective 부모 요소에 적용. 하나의 덩어리로 보고 원근값 적용 */
+    .box2{perspective: 30vw;}
+    .box2 li{
+      background-color: burlywood;
+      border: 2px solid #333;
+      transform: rotateX(45deg);
+    }
+</style>
+</head>
+<body>
+  <h1>transform VS Perspective</h1>
+  <h2>transform:Perspective()</h2>
+  <ul class="box1">
+    <li>1</li>
+    <li>2</li>
+    <li>3</li>
+    <li>4</li>
+    <li>5</li>
+    <li>6</li>
+    <li>7</li>
+    <li>8</li>
+  </ul>
+
+  <h2>Perspective</h2>
+  <ul class="box2">
+    <li>1</li>
+    <li>2</li>
+    <li>3</li>
+    <li>4</li>
+    <li>5</li>
+    <li>6</li>
+    <li>7</li>
+    <li>8</li>
+  </ul>
+</body>
+</html>

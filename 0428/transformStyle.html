@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <title>transform-Style</title>
+  <style>
+    .contianer{
+      width: 256px;
+      padding: 50px;
+      background-color: aliceblue;
+      perspective: 400px; /*자식이 원근값을 가지며 숫자가 적을수록 원근감이 가까워지기 때문에 심한 왜곡이 생김. 숫자가 크면 원근감이 멀어지기 때문에 왜곡이 심하지 않음*/
+    }
+    .contianer .container_inner{
+      border: 3px solid #333;
+      width: 250px;
+      transform: rotateX(-45deg);
+      transform-style: flat; /*기본값*/
+      transform-style: preserve-3d; /*원근값 상속*/
+    }
+    .contianer .container_inner .box{
+      border: 3px solid #333;
+      width: 244px;
+      transition: .4s;
+      transform: rotateY(45deg);
+    }
+    .contianer:hover .box{
+      transform: rotateY(-45deg);
+    }
+    .contianer .container_inner .box img{
+      vertical-align: top;
+      width: 244px;
+    }
+  </style>
+</head>
+<body>
+  <h1>transform-Style 3D 속성 상속</h1>
+  <p>3D 변환 요소의 자식도 3D 값을 사용하지 결정</p>
+  <ul>
+    <li>transform-Style: flat; 기본값</li>
+    <li>transform-Style: perspective-3d; 3D값을 사용</li>
+  </ul>
+
+  <!-- .contianer>.container_inner>.box>img -->
+  <div class="contianer">
+    <div class="container_inner">
+      <div class="box">
+        <img src="./images.jfif" alt="img">
+      </div>
+    </div>
+  </div>
+</body>
+</html>

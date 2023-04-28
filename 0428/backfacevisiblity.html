@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <title>backface-visiblity</title>
+  <style>
+    .box{
+      border: 3px solid #333;
+      margin: 50px auto;
+      width: 200px;
+    }
+    img {width: 200px; vertical-align: top; transition: 1s; transform: perspective(800px) rotateY(0);}
+
+    .box1 img{backface-visibility: hidden;} /*뒷면 숨김*/
+    .box2 img{backface-visibility: visible;} /*기본값 뒷면 숨기지 않음*/
+
+    .box:hover img{
+      transform: rotateY(180deg);
+    }
+  </style>
+</head>
+<body>
+  <h1>backface-visiblity 요소 뒷면 제어</h1>
+  <!-- .box.box$*2>img -->
+  <div class="box box1"><img src="./images.jfif" alt="img"></div>
+  <div class="box box2"><img src="./다운로드 (1).jfif" alt="img"></div>
+</body>
+</html>

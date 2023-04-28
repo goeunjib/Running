@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <title>transformEx7</title>
+  <style>
+    h1{text-align: center;}
+    .product{
+      background-color: rgb(214, 165, 165);
+      text-align: center;
+      list-style: none;
+      padding: 0; margin: 0 auto;
+      border: 2px solid antiquewhite;
+      
+      display: flex;
+      justify-content: center;
+      /*gap: 1vw; /*행과 열의 여백*/
+    }
+    .product li{
+      min-width: 150px;
+      max-width: 400px;
+      flex-basis: 400px;
+      margin: 1vw;
+      overflow: hidden;
+      aspect-ratio: 1;
+    }
+    .product li img{
+      width: 100%;
+      vertical-align: top; /*이미지 아래 여백은 당연히 생김. 지우려면 vertical-align 또는 blpck으로*/
+    }
+    .product li .box{
+      background-color: #333333b9;
+      color: white;
+      transition: .4s;
+      padding: 1vw;
+      aspect-ratio: 1;
+    }
+
+    .product li:hover .box{
+      transform: translateY(-100%);
+    }
+  </style>
+</head>
+<body>
+  <h1>transform 7 연습</h1>
+  <!-- 아래에서 위로 올라오는 설정 레이어 -->
+  <ul class="product">
+    <li>
+      <img class="img" src="./images.jfif" alt="case1">
+      <div class="box box1">
+        <h3>Casetify Case1</h3>
+        <p class="desc">설명~설명~설명~설명</p>
+        <p class="price">가격: 2억 5000만원</p>
+      </div>
+    </li>
+
+    <li>
+      <img src="./다운로드.jfif" alt="case2">
+      <div class="box box2">
+        <h3>Casetify Case2</h3>
+        <p class="desc">설명~설명~설명~설명</p>
+        <p class="price">가격: 2억 5000만원</p>
+      </div>
+    </li>
+
+    <li>
+      <img src="./다운로드 (1).jfif" alt="case3">
+      <div class="box box3">
+        <h3>Casetify Case3</h3>
+        <p class="desc">설명~설명~설명~설명</p>
+        <p class="price">가격: 2억 5000만원</p>
+      </div>
+    </li>
+  </ul>
+</body>
+</html>

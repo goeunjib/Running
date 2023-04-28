@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <title>transformEx7</title>
+  <style>
+    .product{
+      list-style: none;
+    }
+    .product li{
+    }
+    .product li .img{
+      border: 1px solid antiquewhite;
+      /* overflow: hidden; */
+      position: relative;
+      transition: .4s;
+    }
+
+    .product li .box{
+      background-color: #333333c2;
+      color: white;
+      width: 224px; height: 224px;
+      text-align: center;
+    }
+
+    .product li .box1{
+      position: absolute; top: 350px;
+    }
+
+    .product li .img:hover .box1{
+      transform: translateY(86px);
+    }
+
+    /* .product li .box2{
+      position: absolute; top: 86px;
+    }
+    .product li .box3{
+      position: absolute; top: 86px;
+    } */
+
+
+  </style>
+</head>
+<body>
+  <h1>transform 7 연습</h1>
+  <!-- 아래에서 위로 올라오는 설정 레이어 -->
+  <ul class="product">
+    <li>
+      <img class="img" src="./images.jfif" alt="case1">
+      <div class="box box1">
+        <h3>Casetify Case1</h3>
+        <p>설명~설명~설명~설명</p>
+        <p>가격: 2억 5000만원</p>
+      </div>
+    </li>
+
+    <li>
+      <img src="./다운로드.jfif" alt="case1">
+      <div class="box box2">
+        <h3>Casetify Case2</h3>
+        <p>설명~설명~설명~설명</p>
+        <p>가격: 2억 5000만원</p>
+      </div>
+    </li>
+
+    <li>
+      <img src="./다운로드 (1).jfif" alt="case1">
+      <div class="box box3">
+        <h3>Casetify Case3</h3>
+        <p>설명~설명~설명~설명</p>
+        <p>가격: 2억 5000만원</p>
+      </div>
+    </li>
+  </ul>
+</body>
+</html>
