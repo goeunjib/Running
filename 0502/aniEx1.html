@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <title>aniEx1</title>
+  <link rel="stylesheet" href="./keyframes.css">
+  <style>
+    body{
+      margin: 0; height: 100vh;
+      display: flex;
+      background-size: 400%;
+      background-image: linear-gradient(-225deg, rgb(252, 252, 154), rgb(115, 160, 115));
+      
+      animation: ani1 10s infinite ease-in-out;
+    }
+    .box{
+      width: 100px; height: 50px;
+      border: 2px #333 solid;
+      font-size: 1.5rem; font-weight: bold;
+      line-height: 50px; text-align: center;
+      margin: auto;
+      transition: .3s;
+    }
+    .box:hover{
+      border-radius: 20px;
+    }
+  </style>
+</head>
+<body>
+  <div class="box">aniEx1</div>
+</body>
+</html>

@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <title>aniEx3</title>
+  <style>
+    body{margin: 0; text-align: center;}
+    .container{
+      height: 100vh;
+      display: flex;
+      align-items: center;
+      overflow: hidden;
+    }
+    .container .img{
+      animation: ;
+      position: relative; /*wheel 기준*/
+      /* border: 1px solid #333; */
+      animation: move 5s infinite linear;
+    }
+    .container .img .wheel{
+      position: absolute;
+      bottom: -90px; left: -90px;
+      /* transform: translate(-50%, 50%); */
+
+      animation: spin infinite linear 1s;
+    }
+    .container .img .wheel:last-child{
+      left: auto; /*기본의 left 무력화*/
+      right: -95px;
+      /* transform: translate(50%, 50%); */
+    }
+@keyframes spin {
+  100%{transform: rotate(360deg);}
+}
+@keyframes move {
+  0%{opacity: 0; left: -10%;}
+  10%{opacity: 1; left: 0;}
+  80%{opacity: 1;}
+  100%{opacity: 0; left: 110%;}
+}
+
+.fireworks1{
+  position: absolute;
+  top: 30px; right: 50px;
+  transform: scale(.5);
+
+  animation: scale 1s ease-in-out infinite alternate;
+}
+.fireworks2{
+  position: absolute;
+  top: 100px; left: 90px;
+  transform: scale(.5);
+
+  animation: scale 1s ease-in-out infinite alternate;
+}
+
+@keyframes scale {
+  0%/*100%*/{transform: scale(.5); opacity: 0;}
+  50%{transform: scale(.8); opacity: 1;}
+}
+
+    /* .img{
+      animation: ani1 3s ease-in-out .5s alternate forwards;
+    }
+    .img img:nth-child(1){
+      position: relative;
+      display: inline-block;
+      top: 150px;
+    }
+    .img img:nth-child(2){
+      position: absolute;
+      display: inline-block;
+      bottom: -180px; left: -85px;
+      transition: .3s;
+    }
+    .img img:nth-child(3){
+      position: absolute;
+      display: inline-block;
+      bottom: 0; left: 390px;
+      transition: .3s;
+    }
+    @keyframes ani1 {
+      0%{
+        transform: translateX(10px);
+      }
+      100%{
+        transform: translateX(300px);
+      }
+    } */
+</style>
+</head>
+<body>
+  <div class="container">
+    <div class="img">
+      <img src="./bicycle.png" alt="자전거" class="bicycle">
+      <img src="./wheel.png" alt="바퀴" class="wheel">
+      <img src="./wheel.png" alt="바퀴" class="wheel">
+    </div>
+    <img src="./fireworks.png" alt="fireworks" class="fireworks1">
+    <img src="./fireworks.png" alt="fireworks" class="fireworks2">
+  </div> 
+</body>
+</html>

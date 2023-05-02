@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <title>animationShort</title>
+  <style>
+    .block{
+      width: 200px; height: 100px;
+      background-color: orange;
+      float: left;
+    }
+    .box{
+      width: 200px; height: 200px;
+      border-radius: 50%; float: left;
+      text-align: center; font-weight: bold; font-size: 1.3rem; 
+      color: white; line-height: 80px;
+      background-image: linear-gradient(rgb(156, 172, 224), rgb(142, 109, 151));
+
+      /* 순서에 상관없이 띄어쓰기로 구분. 두번째 나오는 s는 대기시간으로 생략가능 */
+      animation: ani 1s .5s 3 cubic-bezier(0.68, -0.55, 0.265, 1.55) alternate forwards;
+
+      /*animation-name: ani2;
+      animation-duration: 1s;
+      animation-delay: .5s;
+      animation-iteration-count: 1;
+      animation-timing-function: cubic-bezier(0.68, -0.55, 0.265, 1.55);
+      animation-direction: alternate;
+      animation-fill-mode: forwards;*/
+
+      /* position: absolute; */
+    }
+    .box p{margin: 0;}
+    .box:hover{
+      animation-play-state: paused; /*일시멈춤. running 실행*/
+    }
+
+    @keyframes ani1 {
+      0%{
+        left: 0%;
+      }
+      100%{
+        background-image: linear-gradient(rgb(231, 142, 119), rgb(104, 127, 170));
+        transform: rotate(360deg);
+        left: 90%;
+      }
+    }
+
+    @keyframes ani2 {
+      100%{
+        margin-left: 70vw;
+      }
+    }
+
+    @keyframes ani3 {
+      100%{
+        transform: rotate(360deg) translateX(360deg); 
+      }
+    }
+  </style>
+</head>
+<body>
+  <!-- .box>p{축약형}^.block -->
+  <h1>ani축약형</h1>
+  <div class="box">
+    <p>축약형</p>
+  </div>
+  <div class="block">block</div>
+</body>
+</html>

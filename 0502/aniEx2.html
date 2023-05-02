@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <title>aniEx1</title>
+  <style>
+  @import url('https://fonts.googleapis.com/css2?family=Anton&display=swap');
+    body{
+      background-color: #333;
+      color: white;
+      font-size: 5rem;
+      font-family: 'Anton', sans-serif;
+    }
+    h1{
+      display: flex;
+      justify-content: center;
+      margin: 0 auto;
+    }
+    h1 span:hover{
+      animation: neon infinite .4s;
+    }
+
+    @keyframes neon {
+      0%{text-shadow: 5px 5px yellow, -5px -6px rgb(255, 94, 0);}
+      25%{text-shadow: -5px -1px yellow, 5px 6px rgb(255, 94, 0);}
+      50%{text-shadow: 5px 4px red, -8px 6px orange;}
+      75%{text-shadow: -8px -4px red, -5px -4px orange;}
+      100%{text-shadow: -5px 0px greenyellow, ;}
+    }
+  </style>
+</head>
+<body>
+  <h1>
+    <span>C</span>
+    <span>S</span>
+    <span>S</span>
+    <span>3</span>
+  </h1>
+</body>
+</html>

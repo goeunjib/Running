@@ -1,0 +1,140 @@
+@charset "UTF-8";
+
+body{
+  background-color: #FAFAF0;
+  margin: 0;
+}
+
+article{
+  height: 30vh;
+  min-height: 300px;
+  width: 60vw;
+  margin: 30px auto;
+}
+article h1{font-size: 2.5rem;}
+article p:last-child{
+  width: 120px; height: 30px;
+  line-height: 30px;
+  text-align: center;
+  border: solid 1px burlywood;
+  border-radius: 20px;
+}
+article p:last-child:hover{
+  background-color: burlywood;
+  color: white;
+  border: solid 1px white;
+}
+
+main .main1{
+  height: 40vh;
+  min-height: 300px;;
+  background-color: rgb(247, 239, 231);
+  position: relative;
+}
+main .main1 .txt{
+  min-width: 25vh;
+  min-height: 25vh;
+  width: 35vw;
+  padding: 3vh 0 3vh 8vw;
+}
+main .main1 .txt p:last-child{
+  width: 120px; height: 30px;
+  line-height: 30px;
+  text-align: center;
+  border: burlywood solid 1px;
+  border-radius: 20px;
+}
+main .main1 .txt p:last-child:hover{
+  background-color: burlywood;
+  color: white;
+  border: solid 1px white;
+}
+main .main1 img{
+  position: absolute;
+  bottom: 0;
+  right: 0;
+  height: 100%;
+}
+
+main .main2{
+  width: 500px;
+  min-width: 25vh;
+  min-height: 25vh;
+  display: flex;
+  margin: 0 auto;
+}
+main .main2 span{
+  padding: 3vh;
+}
+main .main2 span p:last-child{
+  width: 120px; height: 30px;
+  line-height: 30px;
+  text-align: center;
+  border: burlywood solid 1px;
+  border-radius: 20px;
+}
+main .main2 span p:last-child:hover{
+  background-color: burlywood;
+  color: white;
+  border: solid 1px white;
+}
+
+main .main3{
+  height: 40vh;
+  min-height: 300px;
+  background-color: rgb(247, 239, 231);
+  position: relative;
+}
+main .main3 .txt{
+  width: 35vw;
+  min-width: 25vh;
+  min-height: 25vh;
+  padding: 3vh 8vw 3vh 0;
+  position: absolute;
+  right: 0;
+}
+main .main3 .txt p:last-child{
+  width: 120px; height: 30px;
+  line-height: 30px;
+  text-align: center;
+  border: burlywood solid 1px;
+  border-radius: 20px;
+}
+main .main3 .txt p:last-child:hover{
+  background-color: burlywood;
+  color: white;
+  border: solid 1px white;
+}
+main .main3 img{
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  height: 100%;
+}
+
+footer{
+  width: 60vw;
+  margin: 30px auto;
+  padding: 5vw;
+}
+footer .Email{
+  width: 40vw; height: 30px;
+  min-width: 300px;
+  border: 1px solid #000;
+  border-radius: 20px;
+  line-height: 30px;
+  padding-left: 15px;
+}
+footer .submit{
+  width: 140px; height: 30px;
+  border: 1px solid #000;
+  border-radius: 20px;
+  line-height: 30px;
+  margin-left: 10px;
+}
+footer .icon img{
+  opacity: .7;
+  width: 30px;
+  border: solid 1px #333;
+  border-radius: 50%;
+}
