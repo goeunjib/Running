@@ -1,0 +1,53 @@
+@charset "UTF-8";
+/* common.css */
+
+body{
+  background-color: rgb(232, 237, 240);
+  color: #828386;
+  text-transform: capitalize;
+  line-height: 1.6;
+  font-family: var(--font);
+
+  /* 한글 기준 줄바꿈. 문장이 자동 줄바꿈 될 때 단어를 기준으로 줄바꿈 */
+  word-break: keep-all;
+  overflow-wrap: break-word;
+}
+a{color: #828386;}
+
+.wrapper{
+  width: 64%;
+  min-width: 600px;
+  margin: var(--margin-basic) auto;
+}
+
+.italic{
+  font-style: italic;
+}
+
+/* 고스트 버튼 */
+.ghost-btn, button[type=submit]{
+  background-color: transparent;
+  font-size: 1rem;
+  text-transform: uppercase;
+  margin: var(--margin-btn) 0;
+  border: 1px solid rgb(57, 86, 148);
+  border-radius: 20px;
+  padding: 5px 20px;
+  letter-spacing: 2px;
+  color: var(--point-color);
+  cursor: pointer;
+  transition: .2s;
+
+  /* 이미지와 텍스트 정렬 */
+  display: inline-flex;
+  align-items: center;
+}
+
+/* == .ghost-btn:hover, button[type=submit]:hover */
+:is(.ghost-btn, button[type=submit]):hover {
+  background-color: var(--point-color);
+  border-color: var(--point-color);
+  color: rgb(232, 237, 240);
+  transition: .3s;
+  margin-left: 6px;
+}

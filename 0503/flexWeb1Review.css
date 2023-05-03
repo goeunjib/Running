@@ -1,0 +1,104 @@
+@charset "UFT-8";
+
+  @import url('https://fonts.googleapis.com/css2?family=Roboto+Slab:wght@100;200;300;400;500&display=swap');
+
+  /* font-family: 'Roboto Slab', serif; */
+
+  /* css 변수 선언 */
+  @import url(./cssVariable.css);
+
+  /* common */
+  @import url(./common.css);
+
+  /* header */
+  html{ /*rem 기준*/
+    font-size: 18px;
+  }
+  header h1{
+    font-size: var(--h1-size);
+  }
+  header p{
+    width: 90%;
+  }
+
+  /* section */
+  section{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+  section h3{
+    font-size: var(--h3-size);
+  }
+  section:nth-child(even){
+    background-color: rgb(217, 224, 228);
+  }
+  section .txt-box{
+    margin: auto;
+    padding: 20px;
+    /* flex: 36; */
+    width: 36%;
+  }
+  section .bg-box1{
+    /* flex: 64; */
+    width: 64%;
+    padding: 3%;
+    aspect-ratio: 64/36;
+    text-indent: -9999px;
+    background: url(./Sky_Simple.jpg) no-repeat 50% / cover;
+  }
+  section .txt-box a{margin: 15px 0 0 0;}
+  section .bg-box2{
+    /* flex: 64; */
+    width: 64%;
+    padding: 3%;
+    aspect-ratio: 64/36;
+    text-indent: -9999px;
+    background: url(./sky.png) no-repeat 50% / cover;
+  }
+  .box2{flex-direction: row-reverse;}
+
+  section .inner-box{
+    width: 40%;
+    margin: 0 var(--margin-btn);
+  }
+  section .inner-box h2{margin: 10px;}
+
+  /* footer */
+  footer{padding: 5vw;}
+  footer h2{
+    font-size: var(--h1-size);
+  }
+  footer form{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+  }
+  footer form input[type=email]{
+    flex: 1;
+    margin-right: 20px;
+    border-radius: 20px;
+    border: 1px solid rgb(57, 86, 148);
+    background-color: transparent;
+    padding: 3px 20px;
+    font-size: 1.1rem;
+    font-family: var(--font);
+  }
+
+  footer .sns-group{
+    display: flex;
+  }
+  footer .sns-group li a{
+    opacity: 50%;
+    border: 2px solid rgba(57, 86, 148, 0.486);
+    border-radius: 50%;
+    margin: 0 10px;
+    width: 40px; height: 40px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+  footer .sns-group li{transition: .3s;}
+  footer .sns-group li:last-child a svg{width: 55%;}
+  footer .sns-group li:hover{transform: translateY(-10px);}
+  footer .sns-group li a svg{width: 70%;}
