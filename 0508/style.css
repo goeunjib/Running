@@ -1,0 +1,41 @@
+@charset "UTF-8";
+
+/******* common *******/
+body {
+  font-family: "Play", "spoqa", sans-serif;
+  text-transform: capitalize;
+  text-align: center;
+  word-break: break-all; /*한글 기준*/
+  overflow-wrap: break-word; /*한글 기준*/
+}
+img {
+  width: 100%;
+}
+
+/******* header *******/
+header {
+  position: fixed;
+  border-bottom: 1px solid rgb(255, 255, 255);
+  width: 100%;
+  background-color: #33333338;
+}
+header .header-wrapper {
+  background-color: orange;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+header .header-wrapper h1 {
+}
+header .header-wrapper .global-nav {
+}
+header .header-wrapper .global-utiil {
+}
+/******* content *******/
+/******* main-vide *******/
+/******* glance *******/
+/******* business *******/
+/******* location *******/
+/******* contact *******/
+
+/******* footer *******/
