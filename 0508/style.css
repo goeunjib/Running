@@ -1,5 +1,16 @@
 @charset "UTF-8";
 
+/* 변수선언 */
+:root {
+  --fontSize13: 0.813rem;
+  --fontSize14: 0.875rem;
+  --fontSize15: 0.938rem;
+  --fontSize17: 1.0625rem;
+  --fontSize18: 1.125rem;
+  --fontSizeCount: 4.125rem;
+  --fontSizeTiitle: 2.875rem;
+}
+
 /******* common *******/
 body {
   font-family: "Play", "spoqa", sans-serif;
@@ -11,31 +22,138 @@ body {
 img {
   width: 100%;
 }
+a {
+  color: inherit;
+}
+.lower-case {
+  text-transform: lowercase;
+}
+.flex {
+  display: flex;
+}
 
 /******* header *******/
 header {
   position: fixed;
   border-bottom: 1px solid rgb(255, 255, 255);
   width: 100%;
-  background-color: #33333338;
+  background-color: #33333396;
+  color: white;
 }
 header .header-wrapper {
-  background-color: orange;
-  display: flex;
   justify-content: space-between;
   align-items: center;
+  max-width: 1800px;
+  /* min-width: 1100px; */
+  width: 96%;
+  height: 98px;
+  margin: 0 auto;
 }
 header .header-wrapper h1 {
+  background: url(./img/logo_main.png) no-repeat 0 50% / contain;
+  text-indent: -9999px;
+  width: 204px;
+  height: 100%;
 }
 header .header-wrapper .global-nav {
+  /* background-color: orange; */
+  font-weight: 600;
+  font-size: var(--fontSize18);
+  width: 60%;
+  /* flex: 0 0 60%; */
+}
+header .header-wrapper .global-nav li {
+  width: 20%;
+}
+header .header-wrapper .global-nav li:hover {
+  color: orange;
 }
 header .header-wrapper .global-utiil {
+  text-transform: uppercase;
+  font-size: var(--fontSize14);
+  width: 15%;
+  justify-content: space-between;
+  align-items: center;
+  /* gap: 0.5vw; */
 }
+header .header-wrapper .global-utiil li a {
+  display: block;
+}
+header .header-wrapper .global-utiil li:first-child a {
+  padding: 8px 16px 8px 40px;
+  border-radius: 20px;
+  background: orange url(./img/boat.png) no-repeat 11% 50% / 15%;
+}
+
 /******* content *******/
-/******* main-vide *******/
-/******* glance *******/
+/******* main-video *******/
+.main-video {
+  overflow: hidden;
+  aspect-ratio: 16 / 9;
+  background: url(./img/main_diag1.png) no-repeat 2% 0,
+    url(./img/main_diag3.png) no-repeat 0 45%,
+    url(./img/main_diag2.png) no-repeat 0 10%,
+    url(./img/main_diag4.png) no-repeat 0 100%,
+    url(./img/main_diag5.png) no-repeat 0 100%,
+    url(./img/main_diag6.png) no-repeat 100% 100%,
+    url(./img/main_diag7.png) no-repeat 100% 100%, url(./img/main_bg_check.png);
+  position: relative;
+}
+.main-video .youtube {
+  aspect-ratio: 16 / 9;
+  width: 100%;
+  z-index: -1;
+  position: relative;
+}
+.main-video .main-video-text {
+  color: white;
+  position: absolute;
+  left: 5vw;
+  top: 50%;
+  transform: translateY(-50%);
+}
+.main-video .main-video-text h2 {
+  font-size: 4.25rem; /*68px*/
+  font-style: italic;
+  font-weight: 600;
+  text-shadow: 1px 1px #000000;
+  line-height: 1.2;
+}
+.main-video .main-video-text h2 span {
+  display: block;
+  font-size: 3.75rem; /*60px*/
+  font-weight: 300;
+  text-indent: 5px;
+}
+.main-video .main-video-text p {
+}
+.main-video {
+}
+.main-widget; /******* glance *******/
 /******* business *******/
 /******* location *******/
 /******* contact *******/
 
 /******* footer *******/
+
+/* 
+.bg-icon_mg_calendar {
+    width: 33px; height: 32px;
+    background: url('css_sprites.png') -10px -10px;
+}
+
+.bg-icon_mg_clock {
+    width: 28px; height: 29px;
+    background: url('css_sprites.png') -63px -55px;
+}
+
+.bg-icon_mg_ship {
+    width: 31px; height: 34px;
+    background: url('css_sprites.png') -10px -62px;
+}
+
+.bg-icon_mg_user {
+    width: 40px; height: 25px;
+    background: url('css_sprites.png') -63px -10px;
+} 
+*/
