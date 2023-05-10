@@ -1,0 +1,33 @@
+@charset "UTF-8";
+
+/******* common *******/
+body {
+  font-family: "Play", "spoqa", sans-serif;
+  text-transform: capitalize;
+  text-align: center;
+  word-break: break-all; /*한글 기준*/
+  overflow-wrap: break-word; /*한글 기준*/
+}
+img {
+  width: 100%;
+}
+a {
+  color: inherit;
+}
+.lower-case {
+  text-transform: lowercase;
+}
+.flex {
+  display: flex;
+}
+.more-btn {
+  transition: 0.3s;
+  background-color: orange;
+  padding: 10px 25px;
+  color: white;
+  font-size: var(--fontSize14);
+  display: inline-block;
+}
+.more-btn:hover {
+  border-radius: 20px;
+}

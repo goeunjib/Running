@@ -1,0 +1,13 @@
+@charset "UTF-8";
+
+/* 변수선언 */
+:root {
+  --fontSize13: 0.813rem;
+  --fontSize14: 0.875rem;
+  --fontSize15: 0.938rem;
+  --fontSize17: 1.0625rem;
+  --fontSize18: 1.125rem;
+  --fontSize20: 1.25rem;
+  --fontSizeCount: 4.125rem;
+  --fontSizeTiitle: 2.875rem;
+}

@@ -1,36 +1,9 @@
 @charset "UTF-8";
 
 /* 변수선언 */
-:root {
-  --fontSize13: 0.813rem;
-  --fontSize14: 0.875rem;
-  --fontSize15: 0.938rem;
-  --fontSize17: 1.0625rem;
-  --fontSize18: 1.125rem;
-  --fontSizeCount: 4.125rem;
-  --fontSizeTiitle: 2.875rem;
-}
-
-/******* common *******/
-body {
-  font-family: "Play", "spoqa", sans-serif;
-  text-transform: capitalize;
-  text-align: center;
-  word-break: break-all; /*한글 기준*/
-  overflow-wrap: break-word; /*한글 기준*/
-}
-img {
-  width: 100%;
-}
-a {
-  color: inherit;
-}
-.lower-case {
-  text-transform: lowercase;
-}
-.flex {
-  display: flex;
-}
+@import url(./veriable.css);
+/* common */
+@import url(./common.css);
 
 /******* header *******/
 header {
@@ -39,6 +12,7 @@ header {
   width: 100%;
   background-color: #33333396;
   color: white;
+  z-index: -9999px;
 }
 header .header-wrapper {
   justify-content: space-between;
@@ -78,11 +52,18 @@ header .header-wrapper .global-utiil {
 }
 header .header-wrapper .global-utiil li a {
   display: block;
+  /* margin: 0.5vw; */
 }
 header .header-wrapper .global-utiil li:first-child a {
   padding: 8px 16px 8px 40px;
   border-radius: 20px;
   background: orange url(./img/boat.png) no-repeat 11% 50% / 15%;
+}
+header .header-wrapper .global-utiil li:nth-child(2) a {
+  width: 80px;
+}
+header .header-wrapper .global-utiil li:nth-child(3) a {
+  width: 30px;
 }
 
 /******* content *******/
@@ -111,6 +92,7 @@ header .header-wrapper .global-utiil li:first-child a {
   left: 5vw;
   top: 50%;
   transform: translateY(-50%);
+  font-style: italic;
 }
 .main-video .main-video-text h2 {
   font-size: 4.25rem; /*68px*/
@@ -126,34 +108,214 @@ header .header-wrapper .global-utiil li:first-child a {
   text-indent: 5px;
 }
 .main-video .main-video-text p {
+  width: 30vw;
+  line-height: 1.6;
+  margin: 20px 0 0 40px;
 }
-.main-video {
+.main-video .main-widget {
+  position: absolute;
+  right: 1.563vw;
+  top: 50%;
+  transform: translateY(-50%);
+  color: white;
+  font-size: var(--fontSize13);
 }
-.main-widget; /******* glance *******/
+.main-video .main-widget li {
+  width: 100px;
+  height: 100px;
+  border-radius: 50%;
+  background-color: rgba(255, 255, 255, 0.3);
+}
+.main-video .main-widget li a {
+  display: block;
+  background: no-repeat 50% 25%;
+  /* display: flex;
+  justify-content: center;
+  align-items: flex-end;
+  padding-bottom: 17px; */
+  padding-top: 50px;
+  margin: 10px 0;
+}
+.main-video .main-widget li:nth-child(1) a {
+  background-image: url(./img/main_reserve_icon1_2108.png);
+  background-position: 50% 20%;
+}
+.main-video .main-widget li:nth-child(2) a {
+  background-image: url(./img/main_reserve_icon2_2108.png);
+}
+.main-video .main-widget li:hover {
+  background-image: linear-gradient(45deg, rgb(97, 97, 97), rgb(255, 219, 151));
+}
+
+/******* article 공통 *******/
+article > h2 {
+  font-size: var(--fontSizeTiitle);
+  font-weight: 600;
+}
+article > h2::before {
+  content: "/";
+  display: block;
+  color: orange;
+  font-size: 2rem;
+  margin: 110px 0 30px;
+}
+article > h2 + p {
+  width: 40%;
+  margin: 25px auto;
+  line-height: 1.6;
+}
+
+/******* glance *******/
+.glance .glance-list {
+  justify-content: center;
+  margin: 70px auto;
+  max-width: 1600px;
+  min-width: 1520px;
+}
+.glance .glance-list li {
+  border-right: #ddd solid 1px;
+  width: 20%;
+  padding: 80px 0 10px;
+  background: no-repeat 50% 10%;
+}
+.glance .glance-list li:nth-child(1) {
+  background-image: url(./img/icon_mg_calendar.png);
+}
+.glance .glance-list li:nth-child(2) {
+  background-image: url(./img/icon_mg_user.png);
+}
+.glance .glance-list li:nth-child(3) {
+  background-image: url(./img/icon_mg_clock.png);
+}
+.glance .glance-list li:nth-child(4) {
+  background-image: url(./img/icon_mg_ship.png);
+}
+.glance .glance-list li:last-child {
+  border: none;
+}
+.glance .glance-list li h3 {
+  font-weight: 300;
+}
+.glance .glance-list li h3::after {
+  content: "";
+  display: block;
+  width: 20px;
+  height: 1px;
+  background-color: #333;
+  margin: 10px auto;
+}
+.glance .glance-list li h3 strong {
+  font-size: var(--fontSizeCount);
+}
+.glance .glance-list li h4 {
+  color: rgb(84, 105, 175);
+  font-size: var(--fontSize20);
+  font-weight: 400;
+}
+.glance .glance-list li p {
+  font-weight: 300;
+}
 /******* business *******/
+.business .block-line {
+  display: block;
+}
+.business .business-wrapper {
+  position: relative;
+  color: #464646;
+}
+.business .business-wrapper .business-text {
+  background-color: rgb(241, 241, 241);
+  width: 50%;
+  position: relative;
+}
+.business .business-wrapper .business-text h3 {
+  font-size: 2rem;
+  color: #333;
+}
+.business .business-wrapper .business-text p {
+  font-size: var(--fontSize13);
+  color: #333;
+  width: 60%;
+  margin: 20px auto;
+}
+.business .business-wrapper .business-text::after {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 100%;
+  background-color: rgb(241, 241, 241);
+  width: 60px;
+  height: 100%;
+}
+.business .business-wrapper .business-text .business-menu {
+  margin: 40px 0;
+}
+.business .business-wrapper .business-text .business-menu li {
+  margin: 0 auto;
+}
+.business .business-wrapper .business-text .business-menu a {
+  margin: 10px;
+  position: relative;
+}
+.business .business-wrapper .business-text .business-menu a.active {
+  color: orange;
+}
+.business .business-wrapper .business-text .business-menu a.active::after {
+  content: "";
+  width: 100%;
+  height: 3px;
+  background-color: orange;
+  position: absolute;
+  top: -10px;
+  left: 50%;
+  transform: translateX(-50%);
+}
+.business .business-wrapper .business-text .business-img-list {
+  justify-content: center;
+}
+.business .business-wrapper .business-text .business-img-list li {
+  margin: 4vw 15px 0;
+}
+.business .business-wrapper .business-img {
+  width: 50%;
+  position: relative;
+  top: 40px;
+}
+.business .business-wrapper .business-img img {
+  height: 100%;
+  object-fit: cover;
+  object-position: 30%;
+}
+.business .more-btn {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  z-index: 10;
+}
 /******* location *******/
+.location {
+  background: url(./img/bg_worldmap.png) no-repeat 50% 0;
+}
+.location .location-list {
+  justify-content: center;
+}
+.location .location-list a {
+  display: block;
+  margin: 30px 10px;
+  font-weight: bold;
+  font-size: var(--fontSize18);
+}
+.location .location-list a.on {
+  color: orange;
+}
+.location .location-map {
+  width: 100%;
+  background-color: #ddd;
+  aspect-ratio: 3 / 1;
+}
+/* https://apis.map.kakao.com/web/guide/ */
+
 /******* contact *******/
 
 /******* footer *******/
-
-/* 
-.bg-icon_mg_calendar {
-    width: 33px; height: 32px;
-    background: url('css_sprites.png') -10px -10px;
-}
-
-.bg-icon_mg_clock {
-    width: 28px; height: 29px;
-    background: url('css_sprites.png') -63px -55px;
-}
-
-.bg-icon_mg_ship {
-    width: 31px; height: 34px;
-    background: url('css_sprites.png') -10px -62px;
-}
-
-.bg-icon_mg_user {
-    width: 40px; height: 25px;
-    background: url('css_sprites.png') -63px -10px;
-} 
-*/
