@@ -698,6 +698,7 @@ header .nowStarting ul li a {
 .Integrations {
   width: 990px;
   margin: 0 auto;
+  text-align: center;
 }
 .Integrations h2 {
   text-align: center;
@@ -716,6 +717,7 @@ header .nowStarting ul li a {
   width: 989px;
   height: 160px;
   justify-content: space-between;
+  position: relative;
 }
 .Integrations .surportLogo p {
   border: solid 2px var(--main-color);
@@ -723,8 +725,84 @@ header .nowStarting ul li a {
   width: 177px;
   height: 134px;
 }
-.Integrations .surportLogo img {
-  width: 46px;
+.Integrations .surportLogo p img {
+  width: 90%;
+}
+.Integrations .surportLogo .iaf {
+  width: 177px;
+  height: 134px;
+  background-image: url(./img/logo1.jpg);
+  background-repeat: no-repeat;
+  background-size: 90%;
+  background-position: 50% 50%;
+}
+.Integrations .surportLogo .woo {
+  width: 177px;
+  height: 134px;
+  background-image: url(./img/logo2.jpg);
+  background-repeat: no-repeat;
+  background-size: 70%;
+  background-position: 50% 50%;
+}
+.Integrations .surportLogo .s {
+  width: 177px;
+  height: 134px;
+  background-image: url(./img/logo3.jpg);
+  background-repeat: no-repeat;
+  background-size: 65%;
+  background-position: 50% 50%;
+}
+.Integrations .surportLogo .aa {
+  width: 177px;
+  height: 134px;
+  background-image: url(./img/logo4.jpg);
+  background-repeat: no-repeat;
+  background-size: 60%;
+  background-position: 50% 50%;
+}
+.Integrations .surportLogo .shop {
+  width: 177px;
+  height: 134px;
+  background-image: url(./img/logo5.jpg);
+  background-repeat: no-repeat;
+  background-size: 75%;
+  background-position: 50% 50%;
+}
+
+footer {
+  background-color: var(--main-color);
+}
+footer .DHL-group {
+  width: 1263px;
+  margin: 0 auto 10px;
+  justify-content: space-between;
+}
+footer .DHL-group p {
+  font-size: var(--font-size-15);
+  margin: 18px 0 10px 0;
+}
+footer .settings {
+  width: 650px;
+  justify-content: space-between;
+  font-size: var(--font-size-13);
+}
+footer .copy {
+  font-size: var(--font-size-13);
+}
+footer .cookie {
+  width: 1263px;
+  justify-content: space-between;
+  margin: 0 auto;
+}
+footer .cookie .SNSicon {
+  width: 165px;
+  justify-content: space-between;
+}
+footer .up {
+  width: 40px;
+  position: fixed;
+  bottom: 10px;
+  right: 10px;
 }
 
 /* https://web-development.space/tools/px-to-vw/ */
