@@ -371,6 +371,21 @@ header .nowStarting ul li a {
   margin-bottom: 24px;
   padding-left: 14px;
 }
+.solution h5 {
+  font-size: var(--font-size-20);
+  font-weight: bold;
+  padding-left: 30px;
+  margin-bottom: 29px;
+  color: #656565;
+}
+.solution p {
+  margin-bottom: 13px;
+}
+.solution p a {
+  padding-left: 30px;
+  color: #656565;
+  font-size: var(--font-size-20);
+}
 .solution .solution-box1 {
   margin: 14px;
 }
@@ -384,5 +399,56 @@ header .nowStarting ul li a {
   border-radius: 20px;
 }
 
+.customer {
+  background-color: #f8f9fa;
+  margin: 0 auto;
+}
+.customer h2 {
+  text-align: center;
+  font-size: var(--font-size-tittle-40);
+  color: rgba(0, 0, 0, 0.65);
+  font-weight: bold;
+  padding-top: 41px;
+  margin-bottom: 18px;
+}
+.customer p {
+  text-align: center;
+  font-size: var(--font-size-20);
+  color: rgba(0, 0, 0, 0.65);
+  margin-bottom: 32px;
+}
+.customer .customer-box {
+  flex-wrap: wrap;
+}
+.customer .customer-box h5 {
+  margin: 19px 0 34px 0;
+  font-size: var(--font-size-25);
+  font-weight: bold;
+}
+.customer .customer-box img {
+  width: 35px;
+}
+.customer .customer-box .customer-box-yellow {
+  background-color: var(--main-color);
+  width: 360px;
+  height: 435px;
+  padding: 37px 0 0 37px;
+  margin: 0 22px 23px 158px;
+  border-radius: 10px;
+}
+.customer .customer-box .customer-box-yellow h5 {
+  color: white;
+}
+.customer .customer-box .customer-box-yellow a {
+  font-size: var(--font-size-15);
+  color: white;
+  margin-bottom: 17px;
+}
+.customer .customer-box .customer-box-yellow li {
+  margin-bottom: 17px;
+}
+.customer .customer-box .customer-box-white2 {
+  flex-wrap: wrap;
+}
 /* https://web-development.space/tools/px-to-vw/ */
 /* https://nekocalc.com/px-to-rem-converter */
