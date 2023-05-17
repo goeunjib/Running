@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <title>gridBasic4</title>
+  <style>
+    .box {
+      width: 90%;
+      margin: 50px auto;
+      border: 6px solid rgb(238, 132, 113);
+
+      display: grid;
+
+    }
+
+    .box .item {
+      background-color: rgb(190, 212, 144);
+    }
+
+    .box1 {
+      gap: 1ch;
+      /* 2행 7열 */
+      grid-template: 100px 100px / 1fr 1fr 1fr 1fr 1fr 1fr 1fr;
+      grid-template: 100px 100px / repeat(7, 1fr);
+    }
+
+    .box2 {
+      gap: .7vw;
+      /* 3행 6열 */
+      grid-template: repeat(3, 80px) / repeat(6, 1fr);
+      grid-template: repeat(3, 80px) / 200px repeat(5, 1fr);
+      grid-template: repeat(3, 80px) / 200px repeat(4, 1fr) minmax(auto, 150px);
+      grid-template: repeat(3, 80px) / 200px repeat(3, 1fr) 16em minmax(auto, 150px);
+    }
+  </style>
+</head>
+
+<body>
+  <h1>gird 기본 4</h1>
+  <h2>repeat (반복횟수); 행과 열의 값 반복</h2>
+  <!-- .box.box$*2>.item{item$}*12 -->
+  <div class="box box1">
+    <div class="item">item1</div>
+    <div class="item">item2</div>
+    <div class="item">item3</div>
+    <div class="item">item4</div>
+    <div class="item">item5</div>
+    <div class="item">item6</div>
+    <div class="item">item7</div>
+    <div class="item">item8</div>
+    <div class="item">item9</div>
+    <div class="item">item10</div>
+    <div class="item">item11</div>
+    <div class="item">item12</div>
+  </div>
+  <div class="box box2">
+    <div class="item">item1</div>
+    <div class="item">item2</div>
+    <div class="item">item3</div>
+    <div class="item">item4</div>
+    <div class="item">item5</div>
+    <div class="item">item6</div>
+    <div class="item">item7</div>
+    <div class="item">item8</div>
+    <div class="item">item9</div>
+    <div class="item">item10</div>
+    <div class="item">item11</div>
+    <div class="item">item12</div>
+    <div class="item">item13</div>
+    <div class="item">item14</div>
+  </div>
+</body>
+
+</html>

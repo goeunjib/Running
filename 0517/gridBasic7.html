@@ -1,0 +1,219 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <title>gridBasic7</title>
+  <style>
+    .box {
+      width: 90%;
+      margin: 50px auto;
+      border: 6px solid rgb(238, 132, 113);
+
+      display: grid;
+      gap: 1ch;
+    }
+
+    .box .item {
+      background-color: rgb(190, 212, 144);
+    }
+
+    .box1 {
+      /* 4행 2열 */
+      grid-template: repeat(4, 70px) / repeat(2, 1fr);
+      /*
+      기본 구조 
+      grid-template-areas:
+      "" 1행
+      "" 2행
+      "" 3행
+      ""; 4행
+      
+      grid-template-areas:
+      "" 인용 부호 안의 값은 띄어쓰기로 구분. 하나의 띄어쓰기가 하나의 열
+      "사용자지정이름1 사용자지정이름2" 2번째행 2열
+      ". . " 3번째행 비움
+      "none none" 4번째행 비움
+      ;
+    */
+      /* 4행 2열 정의 */
+      grid-template-areas:
+        "header header"
+        "main aside"
+        "none ."
+        "footer footer";
+    }
+
+    .box1 .item1 {
+      background-color: rgb(255, 99, 71);
+      /* grid-row: 1/2;
+      grid-column: 1/span 2; */
+      grid-row: header;
+      grid-column: header;
+    }
+
+    .box1 .item2 {
+      background-color: rgb(255, 131, 109);
+      grid-row: main;
+      grid-column: main;
+    }
+
+    .box1 .item3 {
+      background-color: rgb(255, 170, 155);
+      grid-row: aside;
+      grid-column: aside;
+    }
+
+    .box1 .item4 {
+      background-color: rgb(255, 196, 186);
+    }
+
+    .box1 .item5 {
+      background-color: rgb(255, 230, 225);
+    }
+
+    .box1 .item6 {
+      background-color: rgb(255, 241, 241);
+      grid-row: footer;
+      grid-column: footer;
+    }
+
+    .box2 {
+      /* 3행 2열 */
+      grid-template: repeat(3, 1fr) / 1fr 1fr;
+      grid-template-areas:
+        "header header"
+        "content1 content2"
+        "footer footer";
+    }
+
+    .box2 .item1 {
+      background-color: rgb(107, 131, 56);
+      grid-row: content1;
+      grid-column: content1;
+    }
+
+    .box2 .item2 {
+      background-color: rgb(154, 177, 106);
+      grid-row: header;
+      grid-column: header;
+    }
+
+    .box2 .item3 {
+      background-color: rgb(195, 212, 158);
+      /* grid-row: content2;
+      grid-column: content2; */
+      grid-area: content2;
+    }
+
+    .box2 .item4 {
+      background-color: rgb(214, 226, 187);
+    }
+
+    .box3 {
+      /* 5행 3열 */
+      grid-template-columns: repeat(2, 1fr) 150px;
+      grid-auto-rows: 70px;
+
+      grid-template-areas:
+        "h1 h1 h1"
+        "m1 m1 a1"
+        "m1 m1 a1"
+        "m1 m1 a1"
+        "f1 f1 f1"
+      ;
+    }
+
+    .box3 .item1 {
+      grid-area: h1;
+      background-color: rgb(37, 118, 194);
+    }
+
+    .box3 .item2 {
+      grid-area: m1;
+      background-color: rgb(70, 147, 219);
+    }
+
+    .box3 .item3 {
+      grid-area: a1;
+      background-color: rgb(117, 176, 231);
+    }
+
+    .box3 .item4 {
+      grid-area: f1;
+      background-color: rgb(189, 217, 243);
+    }
+
+    .box4 {
+      /* 4행 4열 */
+      grid-template: repeat(4, 70px) / repeat(4, 1fr);
+      grid-template-areas:
+        "h1 h1 h1 m1"
+        "m2 m2 m2 m1"
+        "m2 m2 m2 m1"
+        "f1 f1 f1 m1"
+      ;
+    }
+
+    .box4 .item1 {
+      background-color: rgb(226, 152, 14);
+      grid-area: h1;
+    }
+
+    .box4 .item2 {
+      background-color: rgb(235, 178, 73);
+      grid-area: f1;
+    }
+
+    .box4 .item3 {
+      background-color: rgb(231, 195, 127);
+      grid-area: m2;
+    }
+
+    .box4 .item4 {
+      background-color: rgb(231, 215, 186);
+      grid-area: m1;
+      /*grid-item / flex-comtainer*/
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      /* text-align: center;
+      line-height: 280px; */
+    }
+  </style>
+</head>
+
+<body>
+  <h1>gird 기본 7</h1>
+  <h2>grid-template-area 그리드 영역 이름 지정</h2>
+  <!-- .box.box$*4>.item.item${item$}*4 -->
+  <div class="box box1">
+    <div class="item item1">item1-header</div>
+    <div class="item item2">item2-content</div>
+    <div class="item item3">item3-aside</div>
+    <div class="item item4">item4</div>
+    <div class="item item5">item5</div>
+    <div class="item item6">item6-footer</div>
+  </div>
+  <div class="box box2">
+    <div class="item item1">item1</div>
+    <div class="item item2">item2</div>
+    <div class="item item3">item3</div>
+    <div class="item item4">item4</div>
+  </div>
+  <div class="box box3">
+    <div class="item item1">item1</div>
+    <div class="item item2">item2</div>
+    <div class="item item3">item3</div>
+    <div class="item item4">item4</div>
+  </div>
+  <div class="box box4">
+    <div class="item item1">item1</div>
+    <div class="item item2">item2</div>
+    <div class="item item3">item3</div>
+    <div class="item item4">item4</div>
+  </div>
+</body>
+
+</html>
