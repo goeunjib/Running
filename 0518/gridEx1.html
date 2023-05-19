@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <title>gridEx1</title>
+  <style>
+    .box {
+      font-weight: bold;
+      font-size: 1.2rem;
+      border: 6px solid #000;
+      margin: 50px auto;
+      width: 80%;
+      height: 60vh;
+
+      display: grid;
+      grid-template-columns: minmax(200px, 25%) 1fr;
+    }
+
+    .box .item:nth-of-type(1) {
+      background-color: #B799FF;
+    }
+
+    .box .item:nth-of-type(2) {
+      background-color: #ACBCFF;
+    }
+  </style>
+</head>
+
+<body>
+  <div class="box">
+    <div class="item">min:200px / max:25%</div>
+    <div class="item">item2</div>
+  </div>
+</body>
+
+</html>

@@ -1,0 +1,136 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <title>girdEx10review</title>
+  <style>
+    .container {
+      width: 90%;
+      margin: 30px auto;
+
+      display: grid;
+      /* 3열 */
+      grid-template-columns: 3.12rem 1fr 3.12rem;
+      grid-template-rows: 3.1rem minmax(150px, 30vh) minmax(200px, 300px) 3.1rem;
+    }
+
+    :is(.container) header,
+    footer {
+      /*grid-item, grid-container*/
+      height: 3rem;
+
+      /* 텍스트 정렬 */
+      display: grid;
+      place-content: center;
+      /* display: flex;
+      justify-content: center;
+      align-items: center; */
+
+      /* text-align: center;
+      line-height: 3rem; */
+
+      background-color: #000;
+      color: white;
+      border: 3px solid #000;
+
+      grid-column: span 3;
+      /* grid-column: 1 / -1; */
+    }
+
+    .container .verticla-txt {
+      writing-mode: vertical-lr;
+      /* 상속 */
+      text-orientation: upright;
+      /* writing-mode 작성시 영어의 글자 방향 */
+      letter-spacing: 3px;
+    }
+
+    .container .menu {
+      list-style: none;
+      margin: 0;
+      padding: 0;
+      background-color: rgb(165, 203, 253);
+      border: 3px solid #000;
+      border-top: none;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+
+      grid-column: 1/2;
+    }
+
+    .container .blank {
+      background-color: rgb(235, 241, 173);
+      border: 3px solid #000;
+      border-top: none;
+      border-bottom: none;
+
+      grid-column: 1/2;
+    }
+
+    .container .viede-wrapper {
+      grid-column: 2/3;
+      grid-row: 2/4;
+      position: relative;
+      overflow: hidden;
+    }
+
+    .container video {
+      object-fit: cover;
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+    }
+
+    .container .viede-wrapper h1 {
+      background-color: #000;
+      color: white;
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+      padding: 7px 20px;
+    }
+
+    .container aside {
+      background-color: rgb(148, 220, 230);
+      /* grid-column: 3/4; */
+      grid-column: -1/-2;
+      grid-row: 2/3;
+
+      display: grid;
+      place-items: center;
+      border: 3px solid #000;
+      border-top: none;
+    }
+
+    .container .item2 {
+      grid-row: 3/4;
+      border-bottom: none;
+    }
+  </style>
+</head>
+
+<body>
+  <div class="container">
+    <header>HEADER</header>
+    <ul class="menu verticla-txt">
+      <li>menu1</li>
+      <li>menu2</li>
+      <li>menu3</li>
+    </ul>
+    <div class="blank"></div>
+    <div class="viede-wrapper">
+      <video src="./sampleV.mp4" autoplay muted loop></video>
+      <h1>GRID</h1>
+    </div>
+    <aside class="item1 verticla-txt">item1</aside>
+    <aside class="item2 verticla-txt">item2</aside>
+    <footer>FOOTER</footer>
+  </div>
+</body>
+
+</html>

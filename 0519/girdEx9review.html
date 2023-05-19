@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <title>girdEx9review</title>
+  <style>
+    .container {
+      border: 1px solid #000;
+      width: 80%;
+      margin: 70px auto;
+      box-shadow: 5px 5px 15px 5px #80bbff, -9px 5px 15px 5px #4bdadf, -7px -5px 15px 5px #8bff85, 12px -5px 15px 5px #80C7FF, 12px 10px 15px 7px #E488FF, -10px 10px 15px 7px #e77e85, -10px -7px 27px 1px #8E5CFF, 5px 5px 30px 30px rgba(0, 0, 0, 0);
+
+      padding: 20px;
+      box-sizing: border-box;
+    }
+
+    .container .layout-top {
+      padding-bottom: 10px;
+      border-bottom: 1px solid #000;
+      display: grid;
+      grid-template-columns: 1fr 1fr 2fr;
+      /* align-items: end;
+      justify-items: center; */
+      place-items: end center;
+    }
+
+    .container .layout-top ul {
+      margin: 0;
+    }
+
+    .container .layout-top address {
+      text-align: right;
+      align-self: end;
+    }
+
+    .container .layout-bottom {
+      background-color: #ddd;
+      list-style: none;
+      padding: 0;
+
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      /* gap: 2vw; */
+    }
+
+    .container .layout-bottom .item {
+      margin: 20px;
+      border-radius: 50%;
+      width: calc(100% - 40px);
+      aspect-ratio: 1;
+      display: grid;
+      place-items: center;
+    }
+
+    .container .layout-bottom li:nth-child(odd) {
+      background-color: #80bbff;
+    }
+
+    .container .layout-bottom li:nth-child(even) {
+      background-color: #8082ff;
+    }
+  </style>
+</head>
+
+<body>
+  <div class="container">
+    <div class="layout-top">
+      <ul>
+        <li>list1</li>
+        <li>list2</li>
+        <li>list3</li>
+        <li>list4</li>
+      </ul>
+      <ul>
+        <li>list1</li>
+        <li>list2</li>
+        <li>list3</li>
+        <li>list4</li>
+      </ul>
+      <address>
+        경기도 화성시 팔달구 더조은컴퓨터아카데미</address>
+    </div>
+    <ul class="layout-bottom">
+      <li class="item">item1</li>
+      <li class="item">item2</li>
+      <li class="item">item3</li>
+      <li class="item">item4</li>
+      <li class="item">item5</li>
+      <li class="item">item6</li>
+    </ul>
+  </div>
+</body>
+
+</html>

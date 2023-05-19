@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <title>girdEx9</title>
+  <style>
+    body {
+      padding: 100px;
+    }
+
+    .box {
+      border: 1px solid #000;
+      box-shadow:
+        -10.1px -10.1px 21.1px rgba(0, 0, 0, 0.031),
+        -9.9px -9.9px 33.4px rgba(0, 0, 0, 0.06),
+        14.9px 14.9px 43px rgba(0, 0, 0, 0.076),
+        100px 100px 80px rgba(0, 0, 0, 0.07);
+      padding: 20px;
+    }
+
+    .box .top {
+      border-bottom: 1px solid #000;
+      display: grid;
+      grid-template: repeat(1, 1fr) / repeat(3, 1fr);
+      align-items: end;
+    }
+
+    .box .top p span {
+      background-color: orange;
+    }
+
+    .box .item-box {
+      background-color: #ddd;
+      margin-top: 20px;
+      padding: 20px;
+      display: grid;
+      grid-template: repeat(2, 1fr) / repeat(3, 1fr);
+      justify-items: center;
+      align-items: center;
+    }
+
+    .box .item-box .item {
+      width: 150px;
+      height: 150px;
+      border-radius: 50%;
+      font-weight: bold;
+      line-height: 150px;
+      text-align: center;
+      margin: 10px;
+    }
+
+    .box .item-box .green {
+      background-color: rgb(151, 211, 161);
+    }
+
+    .box .item-box .yellow {
+      background-color: rgb(245, 245, 99);
+    }
+  </style>
+</head>
+
+<body>
+  <div class="box">
+    <div class="top">
+      <ul>
+        <li>list-1</li>
+        <li>list-2</li>
+        <li>list-3</li>
+        <li>list-4</li>
+      </ul>
+      <ul>
+        <li>list-1</li>
+        <li>list-2</li>
+        <li>list-3</li>
+        <li>list-4</li>
+      </ul>
+      <p>경기도 화성시 팔달구 <span>더조은컴퓨터아카데미</span></p>
+    </div>
+    <div class="item-box">
+      <div class="item yellow">itme1</div>
+      <div class="item green">itme2</div>
+      <div class="item yellow">itme3</div>
+      <div class="item green">itme4</div>
+      <div class="item yellow">itme5</div>
+      <div class="item green">itme6</div>
+    </div>
+  </div>
+</body>
+
+</html>
