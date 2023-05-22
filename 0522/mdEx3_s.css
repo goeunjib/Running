@@ -1,0 +1,24 @@
+@charset "utf-8";
+
+body {
+  margin: 0;
+}
+.container {
+  background-color: rgb(8, 90, 8);
+  height: 300px;
+  font-size: 1.5rem;
+  padding: 5vw;
+  font-weight: bold;
+  text-align: center;
+  display: flex;
+  flex-wrap: wrap;
+}
+.txt {
+  width: calc(45% - 1%);
+  padding: 10px;
+  background-color: yellow;
+  margin: 1%;
+}
+.txt4 {
+  display: none;
+}

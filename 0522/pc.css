@@ -1,0 +1,21 @@
+@charset "utf-8";
+
+/* html link 속성으로 media 연결시 css 문서내의 @media() {} 필요없음 */
+h1 {
+  background-color: rgb(241, 219, 12);
+  padding: 50px;
+}
+
+h2 {
+  display: none;
+}
+
+.container {
+  flex-direction: row;
+}
+
+.container .box {
+  /* flex-grow: 1; */
+  width: 33.333333%;
+  /* aspect-ratio: 1; */
+}

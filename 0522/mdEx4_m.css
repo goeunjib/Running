@@ -1,0 +1,13 @@
+@charset "utf-8";
+
+.container {
+  display: flex;
+  margin-left: 100px;
+}
+.container img {
+  width: 50%;
+}
+.container .p {
+  margin-left: -150px;
+  margin-top: 50px;
+}

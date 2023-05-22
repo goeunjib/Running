@@ -1,0 +1,15 @@
+@charset "utf-8";
+@media (min-width: 768px) {
+  h1 strong {
+    display: inline;
+  }
+
+  h2 {
+    background-color: rgb(232, 156, 255);
+  }
+
+  .container {
+    width: 70%;
+    margin: 0 auto;
+  }
+}

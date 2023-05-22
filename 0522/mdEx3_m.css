@@ -1,0 +1,8 @@
+@charset "utf-8";
+/* 3열 */
+.container .txt {
+  width: calc(28% - 1%);
+}
+.container .txt:last-child {
+  display: none;
+}

@@ -1,0 +1,21 @@
+@charset "utf-8";
+@media (min-width: 1200px) {
+  h1 {
+    background-color: rgb(241, 219, 12);
+    padding: 50px;
+  }
+
+  h2 {
+    display: none;
+  }
+
+  .container {
+    flex-direction: row;
+  }
+
+  .container .box {
+    /* flex-grow: 1; */
+    width: 33.333333%;
+    /* aspect-ratio: 1; */
+  }
+}

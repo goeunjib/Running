@@ -1,0 +1,15 @@
+@charset "utf-8";
+
+body {
+  margin: 0;
+}
+.container {
+  padding: 20px 200px 0 0;
+  transition: 0.3s;
+}
+.container img {
+  width: 80%;
+}
+.container p {
+  padding-left: 80px;
+}
