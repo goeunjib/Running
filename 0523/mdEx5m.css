@@ -1,0 +1,41 @@
+@charset "utf-8";
+
+@import url("https://fonts.googleapis.com/css2?family=Dosis:wght@200;300;400;500;600;700&display=swap");
+/* font-family: 'Dosis', sans-serif; */
+
+@import url("https://fonts.googleapis.com/css2?family=El+Messiri:wght@400;500;600;700&display=swap");
+/* font-family: 'El Messiri', sans-serif; */
+
+body {
+  background: url(./176DCE484E95190E19.jfif) no-repeat 50% 20%;
+  margin: 0;
+  font-family: "El Messiri", sans-serif;
+}
+
+ul {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+li {
+  font-size: 2rem;
+  font-weight: bold;
+  text-transform: uppercase;
+  border-bottom: solid white 1px;
+  padding: 5px 20px 5px 15px;
+}
+li a {
+  color: white;
+  text-decoration: none;
+}
+li:last-child {
+  background-color: rgba(248, 188, 109, 0.582);
+  justify-content: space-between;
+  align-items: center;
+}
+li img {
+  width: 7%;
+}
+.flex {
+  display: flex;
+}

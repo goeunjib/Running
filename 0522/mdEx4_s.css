@@ -9,7 +9,19 @@ body {
 }
 .container img {
   width: 80%;
+  /* animation: mov1 1s infinite alternate linear; */
+  animation: mov2 3s infinite;
+  aspect-ratio: auto 4 / 3;
+  /* 원래 비율이 있으면 그 값이 적용되고 없으면 4:3의 비율 유지
+  min-, max- 특성이 적용된 경우, flex에서도 일부, 컨텐츠가 넘치는 경우 동작되지 않음 */
+  width: min(100%, 400px);
+  /* 
+  min(n1, n2):최소값 두개 중 가장 작은 값 적용
+  max(n1, n2, n3):최대값 최대 세개중 가장 큰 값 적용
+  */
 }
 .container p {
   padding-left: 80px;
 }
+
+@key;

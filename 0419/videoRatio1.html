@@ -1,11 +1,17 @@
 <!DOCTYPE html>
 <html lang="ko">
+
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <title>videoRatio1</title>
     <style>
-        .container {width: 100%; padding-top: 75%; position: relative;}
+        .container {
+            width: 100%;
+            padding-top: 75%;
+            position: relative;
+        }
+
         /*
         유투브 16 : 9 == 9 / 16 * 100 = 56.25%
         일반 비디오 4 : 3 == 3 / 4 *100 = 75%
@@ -13,15 +19,24 @@
         8 : 5 == 5 / 8 * 100 = 62.5%
         1 : 1 == 100%
         */
-        .container .youtube{
-            width: 100%; height: 100%;
+        .container .youtube {
+            width: 100%;
+            height: 100%;
             position: absolute;
-        top: 0; left: 0; bottom: 0; right: 0;}
+            top: 0;
+            left: 0;
+            bottom: 0;
+            right: 0;
+        }
     </style>
 </head>
+
 <body>
     <div class="container">
-        <iframe src="https://www.youtube.com/embed/dVYl5ImNjow?start=1" title="비디오 비율 조정" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen class="youtube"></iframe>
+        <iframe src="https://www.youtube.com/embed/dVYl5ImNjow?start=1" title="비디오 비율 조정" frameborder="0"
+            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+            allowfullscreen class="youtube"></iframe>
     </div>
 </body>
+
 </html>

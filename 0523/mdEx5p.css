@@ -1,0 +1,18 @@
+@charset "utf-8";
+ul {
+  display: flex;
+  justify-content: center;
+}
+li {
+  width: 10%;
+  text-align: center;
+  border-bottom: none;
+  border-right: 1px solid white;
+  padding: 5px 50px;
+}
+li:first-child {
+  border-left: 1px solid white;
+}
+li:hover {
+  background-color: rgba(248, 188, 109, 0.582);
+}

@@ -1,0 +1,20 @@
+@charset "utf-8";
+
+ul {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  border-bottom: 3px solid white;
+  margin: 0;
+}
+li:nth-child(1),
+li:nth-child(3),
+li:nth-child(5) {
+  border-right: 1px solid white;
+}
+
+li:nth-child(5) {
+  border-bottom: none;
+}
+li:last-child {
+  display: none;
+}
