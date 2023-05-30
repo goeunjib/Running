@@ -8,8 +8,17 @@
   <title>DYAMI 반응형 웹 연습</title>
   <link rel="stylesheet" href="../common/minireset.min.css">
   <link rel="stylesheet" href="../assets/pretendardvariable-dynamic-subset.css">
+  <!-- jauri -->
+  <script src="https://cdn.jsdelivr.net/npm/jquery@3.7.0/dist/jquery.min.js"></script>
+  <!-- kakao map -->
+  <script src="//dapi.kakao.com/v2/maps/sdk.js?appkey=e09522dd769ca9b997eda96662313f66"></script>
 
+  <!-- 스타일 공통 -->
   <link rel="stylesheet" href="style.css">
+  <!-- index.html 문서만 들어가는 스타일 -->
+  <link rel="stylesheet" href="index.css">
+  <!-- pc 버전 -->
+  <link rel="stylesheet" href="pc.css" media="(width >=1200px)">
 </head>
 
 <body>
@@ -136,7 +145,7 @@
   <!-- main-service -->
   <article class="main-service layout-wrapper">
     <h2 class="tittle">Our Service</h2>
-    <ul class="sevice-gallery">
+    <ul class="service-gallery">
       <li><a href="#"><img src="./img/article4-1.jpg" alt="Branding"></a>
         <div class="service-gallery-txt">
           <h4>Branding</h4>
@@ -174,10 +183,12 @@
   <article class="main-location layout-wrapper">
     <h2 class="tittle">Location</h2>
     <ul class="location-menu">
-      <li class="location-office">
+      <li class="location-office active">
         <h3>OFFICE</h3>
-        <div class="location-map">
-          <div class="kakao-map"></div>
+        <div class="location-map tab-box">
+          <div class="kakao-map" id="kakao-map">
+
+          </div>
           <ul class="location-info">
             <li>
               <strong>ADDRESS</strong>
@@ -216,7 +227,8 @@
   <article class="main-talk">
     <div class="color-layer">
       <h2>Let's talk</h2>
-      <p>하나에 피어나듯이 비둘기, 이름자 별들을 같이 위에 어머니, 거외다.</p>
+      <p>하나에 피어나듯이 비둘기, 이름자 별들을 같이 위에 어머니, 거외다.하나에 피어나듯이 비둘기, 이름자 별들을 같이 위에 어머니, 거외다.하나에 피어나듯이 비둘기, 이름자 별들을 같이 위에 어머니,
+        거외다.</p>
       <a href="#" class="ghost-btn">CONTACT US</a>
     </div>
   </article>
@@ -225,32 +237,52 @@
   <footer>
     <div class="footer-info">
       <h2>로고</h2>
-      <div class="footer-contact">
-        <h2>CONTACT</h2>
+      <div class="footer-info-list">
+        <h3>CONTACT</h3>
         <p>02 1234 5678<br>from.yami@gmail.com</p>
       </div>
-      <div class="footer-location">
-        <h2>LOCATION</h2>
+      <div class="footer-info-list">
+        <h3>LOCATION</h3>
         <p>795 Folsom Ave, Suite 600<br>San Francisco, CA 94107</p>
       </div>
-      <div class="footer-social">
-        <h2>SOCIAL</h2>
+      <div class="footer-info-list">
+        <h3>SOCIAL</h3>
         <ul class="footer-social-icon">
-          <li><a href="#">faecbook</a></li>
-          <li><a href="#">instagram</a></li>
-          <li><a href="#">youtube</a></li>
-          <li><a href="#">twitter</a></li>
+          <li><a href="#"><img src="./img/facebook-app-symbol.png" alt="facebook-app-symbol"></a></li>
+          <li><a href="#"><img src="./img/instagram.png" alt="instagram"></a></li>
+          <li><a href="#"><img src="./img/youtube.png" alt="youtube"></a></li>
+          <li><a href="#"><img src="./img/vimeo.png" alt="vimeo"></a></li>
         </ul>
       </div>
     </div>
-    <div class="copyrights">Copyrights © 2020 All Rights Reserved by DYAMI.</div>
-    <ul>
-      <li><a href="#">Terms of Use</a></li>
-      <li><a href="#">Privacy Policy</a></li>
-    </ul>
+    <div class="copyrights">Copyrights © 2020 All Rights Reserved by DYAMI.
+      <ul>
+        <li><a href="#">Terms of Use</a></li>
+        <li><a href="#">Privacy Policy</a></li>
+      </ul>
+    </div>
   </footer>
 
   <a href="#" class="upTop">위로</a>
+
+  <script>
+    $('a[href="#"]').on('click', (e) => e.preventDefault());
+
+    //kakao map
+    var mapContainer = document.getElementById('kakao-map'), // 지도를 표시할 div
+      mapOption = {
+        center: new kakao.maps.LatLng(37.56682, 126.97865), // 지도의 중심좌표
+        level: 3, // 지도의 확대 레벨
+        mapTypeId: kakao.maps.MapTypeId.ROADMAP // 지도종류
+      };
+
+    // 지도를 생성한다 
+    var map = new kakao.maps.Map(mapContainer, mapOption);
+
+    // 마우스 휠과 모바일 터치를 이용한 지도 확대, 축소를 막는다
+    map.setZoomable(false);
+
+  </script>
 </body>
 
 </html>
