@@ -119,3 +119,20 @@ header nav .global-nav a:hover {
 .main-service .service-gallery li {
   width: 20vw;
 }
+/*** main-location ***/
+.main-location
+  .location-menu
+  .location-office
+  .location-map
+  .location-info
+  li
+  strong {
+  display: inline-block;
+  width: max(150px, 13%);
+}
+.main-slide .main-img {
+  height: 100%;
+  font-weight: bold;
+  font-size: 2rem;
+  background-color: orange;
+}
