@@ -54,8 +54,13 @@
   console.log(fn);
 
   console.log('---- 배열 Array ----');
+  let arr = [`배열`, 2, obj, function () { }, boo,];
+  console.log(arr);
 
   console.log('---- 심볼 Symbol ----');
+  // 변경 불가능한 원사타입 값. 주로 유일한 객체 프로퍼티 키를 만들기 위해 사용
+  let sym = Symbol('심볼');
+  console.log(sym);
 
   console.log('---- typeof 연산자: 데이터 타입을 문자열로 반환 ----');
   console.log(typeof str);
