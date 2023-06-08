@@ -1,0 +1,41 @@
+<html>
+<style>
+  img {
+    width: 98vw;
+  }
+</style>
+
+<body>
+  <script>
+    /* 1~4 사이의 숫자를 입력하면 해당 번호 이미지 출력
+    취소 버튼 클릭시 취소했습니다 출력
+    그 외는 해당 번호만 입력해주세요 출력 */
+
+    let num = prompt('1~4 사이의 숫자를 입력하세요');
+    let img = '';
+
+    switch (num) {
+      case null:
+        img = '<h2>취소했습니다.</h2>';
+        break;
+      case "1":
+        img = '<img src="img1.jpg" alt="img1">';
+        break;
+      case "2":
+        img = '<img src="img2.jpg" alt="img2">';
+        break;
+      case "3":
+        img = '<img src="img3.jpg" alt="img3">';
+        break;
+      case "4":
+        img = '<img src="img4.jpg" alt="img4">';
+        break;
+      default:
+        img = '<h2>해당 번호만 입력해주세요</h2>';
+    }
+
+    document.body.innerHTML = img;
+  </script>
+</body>
+
+</html>
