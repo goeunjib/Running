@@ -1,0 +1,35 @@
+<script>
+  // 조건문을 이용해 오늘이 요일을 한글로 출력
+  // if(), switch()
+  /*
+  const today = new Date().getDay();
+  let day = '';
+  switch (today) {
+    case 0:
+      day = '일';
+      break;
+    case 1:
+      day = '원';
+      break;
+    case 2:
+      day = '화';
+      break;
+    case 3:
+      day = '수';
+      break;
+    case 4:
+      day = '목';
+      break;
+    case 5:
+      day = '금';
+      break;
+    default:
+      day = '토';
+  }
+*/
+
+  const today = new Date().getDay();
+  const day = ['일', '월', '화', '수', '목', '금', '토'];
+
+  console.log(`오늘은 ${day[today]}요일입니다`);
+</script>

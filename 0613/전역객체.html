@@ -22,6 +22,28 @@
 
     // 터미널 node
     // this === global;
+
+    /*
+      전역 객체의 자식 객체(document 객체)를 사용할 때는 전역 객체인 window 생략가능
+      window.document.getElementById('id');
+      document.getElementByClassName('class'); 클래스 선택자 탐색. 제일 처음 탐색한 클래스만 배열로 반환
+
+      window.alert();
+      alert();
+      */
+
+    function naver(url) {
+      const location = { // 객체 생성
+        href: '이동할 사이트는 ',
+      }
+
+      alert(location.href + url);
+      location.href = url;
+      console.log(location);
+      window.location.href = url; // window 객체 안에 location객체가 가지고 있는 href 속성이 적용되어 해당 페이지로 이동
+    }
+
+    naver('https://naver.com');
   </script>
 </body>
 
