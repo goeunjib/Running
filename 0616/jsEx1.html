@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+  <meta charset="utf-8">
+  <title>유자차</title>
+</head>
+
+<body>
+  <h1>유자차</h1>
+  <p><em>손쉽게 마시는 천연 비타민 c 유자차, 유자를 깨끗이 씻어 건더기까지 간 후 설탕을 섞어 만들어보세요.</em>
+    <br>향도 좋고 만드는 법도 간단하답니다.
+  </p>
+
+  <dl>
+    <dt>유자차란?</dt>
+    <dd>유자를 가늘게 채 썰어 설탕에 절여 두었다가 뜨거운 물에 타서 마시는 차.</dd>
+  </dl>
+
+  <section>
+    <h2>요리 재료</h2>
+    <ul>
+      <li>유자 700g (4개)</li>
+      <li>설탕 700g (4컵)</li>
+    </ul>
+
+    <h2>요리 과정</h2>
+    <ol>
+      <li>유자는 깨끗이 씻어 4등분 한 후 반으로 갈라 속의 씨앗을 뺀다.</li>
+      <li>손질한 유자는 믹서나 핸드믹서로 곱게 간다.</li>
+      <li>유자와 동량의 설탕을 넣고 고루 섞은 후 통에 담는다.</li>
+      <li>하루가 지난 후부터 끓는 물에 유자를 넣고 잘 섞어 마신다.</li>
+    </ol>
+  </section>
+  <script>
+    // DOM 탐색 style
+
+    // h1 : color
+    const h1 = document.querySelector('h1');
+    h1.style.color = 'rgb(245, 185, 73)';
+
+    // p : border
+    const p = document.querySelector('p');
+    p.style.border = '2px dashed rgb(218, 112, 41)';
+
+    // dl : backgroundcolor
+    const dl = document.querySelector('dl');
+    dl.style.backgroundColor = 'rgb(245, 185, 73)';
+
+    // section : border
+    const section = document.querySelector('section');
+    section.style.border = '6px rgb(218, 112, 41) double';
+
+    // h2 : color
+    const h2 = document.querySelectorAll('h2');
+    h2.forEach((h2s) => {
+      h2s.style.color = 'rgb(218, 112, 41)';
+    });
+
+    // li : lineHeight, fontweight
+    const lis = document.querySelectorAll('li');
+    lis.forEach((lis) => {
+      lis.style.lineHeight = '2rem';
+      lis.style.fontWeight = 'bold';
+    });
+
+    // ol > li : backgroundcolor
+    const olli = document.querySelectorAll('ol > li');
+    olli.forEach((item, idx) => {
+      item.style.backgroundColor = 'rgb(245, 185, 73)';
+    })
+  </script>
+</body>
+
+</html>
