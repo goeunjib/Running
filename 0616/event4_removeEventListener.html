@@ -75,14 +75,42 @@
     });*/
 
     /* + 클릭시 count 안의 숫자가 1씩 증가 */
+    const listener = () => count.textContent = ++sum;
+
     let sum = 0;
-    links[0].addEventListener('click', () => {
+    /* links[0].addEventListener('click', () => {
       count.textContent = sum++;
-    });
+    }); */
+    links[0].addEventListener('click', listener);
 
     // 초기화 버튼을 클릭하면 숫자가 다시 0으로 연산의 시작도 0부터
-    document.querySelectorAll('.btn_style');
+    // document.querySelectorAll('.flex_btn > a');
+    console.log(links[1]);
+    links[1].addEventListener('click', () => {
+      console.log(sum);
+      sum = 0;
+      count.textContent = sum;
+    });
 
+    // removeEvent
+    links[2].addEventListener('click', () => { // 버튼을 클릭하면
+      count.textContent = '이벤트 리스너 제거';
+      links[0].removeEventListener('click', listener);
+    });
+    /* links[2].addEventListener('click', () => { // 버튼을 클릭하면
+      count.textContent = '이벤트 리스너 제거';
+      links[0].removeEventListener('click', () => {// 카운트 버튼이 가진 이벤트리스너가 제거되어 카운트 버튼을 클릭해도 작동 x
+        count.textContent = ++sum;
+      });
+    }); */
+
+
+    // addEvent
+    links[3].addEventListener('click', () => {
+      count.textContent = '이벤트 리스너 연결';
+      links[0].addEventListener('click', listener);
+      // sum = 0;
+    });
   </script>
 
 </body>
