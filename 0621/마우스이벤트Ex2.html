@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <title>마우스이벤트Ex2</title>
+  <style>
+    .btn_group {
+      display: flex;
+    }
+
+    .btn_group .btn {
+      border: 3px solid #333;
+      padding: 5px 20px;
+    }
+
+    .btn_group .btn:hover {
+      background-color: #333;
+      color: white;
+    }
+
+    .box {
+      width: 200px;
+      height: 200px;
+      border: 3px solid #333;
+      margin: 40px 10px;
+      transition: .3s;
+    }
+  </style>
+  <script src="../common/jquery-3.7.0.min.js"></script>
+</head>
+
+<body>
+  <div class="btn_group">
+    <div class="btn">버튼</div>
+  </div>
+
+  <div class="box" id="box1">버튼 클릭시 박스 배경색 변경</div>
+  <div class="box" id="box2">바스 위에 마우스를 올리면 원으로 변하고 벗어나면 원래대로 돌아옴</div>
+
+  <script>
+    // 문서 준비 이벤트 $(function() {}); DOM 함께 실행
+    $(function () {
+      $('.btn').on('click', () => {
+        $('#box1').css({ backgroundColor: 'lightpink' });
+      });
+
+      /* $('#box2').on('mouseenter', () => {
+        $('#box2').css({ borderRadius: '50%' });
+      });
+      $('#box2').on('mouseleave', () => {
+        $('#box2').css({ borderRadius: '0' });
+      }); */
+
+      /* $('#box2').on({
+        'mouseenter': (e) => {
+          $(e.target).css({ borderRadius: '50%' });
+        },
+        'mouseleave': (e) => {
+          $(e.target).css({ borderRadius: '0' });
+        }
+      }) */
+
+      $('#box2').hover((e) => {
+        $(e.target).css({ borderRadius: '50%' });
+      }, (e) => {
+        $(e.target).css({ borderRadius: '0px' });
+      });
+    });
+  </script>
+</body>
+
+</html>

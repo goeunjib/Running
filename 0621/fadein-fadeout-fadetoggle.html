@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <title>fadein-fadeout-fadetoggle</title>
+  <style>
+    .btn_group {
+      display: flex;
+      gap: 10px;
+    }
+
+    .btn_group .btn {
+      border: 3px solid #333;
+      padding: 5px 20px;
+    }
+
+    .btn_group .btn:hover {
+      background-color: #333;
+      color: white;
+    }
+
+    .box {
+      list-style: none;
+      padding: 0;
+      margin: 0;
+      color: white;
+      font-weight: bold;
+      text-align: center;
+    }
+
+    .box li:nth-child(1) {
+      background-color: rgba(0, 128, 128);
+      width: 150px;
+      height: 150px;
+    }
+
+    .box li:nth-child(2) {
+      background-color: rgb(39, 155, 155);
+      width: 150px;
+      height: 150px;
+    }
+
+    .box li:nth-child(3) {
+      background-color: rgb(84, 190, 190);
+      width: 150px;
+      height: 150px;
+    }
+
+    .box li:nth-child(4) {
+      background-color: rgb(125, 224, 224);
+      width: 150px;
+      height: 150px;
+    }
+  </style>
+  <script src="../common/jquery-3.7.0.min.js"></script>
+</head>
+
+<body>
+  <h1>fadeIn()서서히 사라짐 .fadeOut()서서히 나타남 .fadeToggle()</h1>
+  <div class="btn_group">
+    <div class="btn" id="btn1">서서히 사라짐</div>
+    <div class="btn" id="btn2">서서히 나타남</div>
+    <div class="btn" id="btn3">In, Out 순자 반복</div>
+  </div>
+  <ul class="box">
+    <li>box1</li>
+    <li>box2</li>
+    <li>box3</li>
+    <li>box4</li>
+  </ul>
+
+  <script>
+    $('#btn1').on('click', () => {
+      //  == display : none
+      $('li').eq(0).fadeOut();
+      $('li').eq(1).fadeOut(500); // .5s
+      $('li').eq(2).fadeOut('slow');
+      $('li').eq(3).fadeOut(2500); // 2.5s
+    });
+    $('#btn2').on('click', () => {
+      //  == display : block
+      $('li').eq(0).fadeIn();
+      $('li').eq(1).fadeIn('fast');
+      $('li').eq(2).fadeIn('slow');
+      $('li').eq(3).fadeIn(3000);
+    });
+    $('#btn3').on('click', () => {
+      $('li').eq(0).fadeToggle();
+      $('li').eq(1).fadeToggle(600);
+      $('li').eq(2).fadeToggle(1200);
+      $('li').eq(3).fadeToggle(1800);
+    });
+  </script>
+</body>
+
+</html>

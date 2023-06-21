@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <title>fadeTo</title>
+  <style>
+    .btn_group {
+      display: flex;
+      gap: 10px;
+    }
+
+    .btn_group .btn {
+      border: 3px solid #333;
+      padding: 5px 20px;
+    }
+
+    .btn_group .btn:hover {
+      background-color: #333;
+      color: white;
+    }
+
+    .box {
+      list-style: none;
+      padding: 0;
+      margin: 0;
+      color: white;
+      font-weight: bold;
+      text-align: center;
+    }
+
+    .box li:nth-child(1) {
+      background-color: rgba(0, 128, 128);
+      width: 150px;
+      height: 150px;
+    }
+
+    .box li:nth-child(2) {
+      background-color: rgb(39, 155, 155);
+      width: 150px;
+      height: 150px;
+    }
+
+    .box li:nth-child(3) {
+      background-color: rgb(84, 190, 190);
+      width: 150px;
+      height: 150px;
+    }
+
+    .box li:nth-child(4) {
+      background-color: rgb(125, 224, 224);
+      width: 150px;
+      height: 150px;
+    }
+  </style>
+  <script src="../common/jquery-3.7.0.min.js"></script>
+  <script>
+    $(function () {
+      $('#btn1').on('click', () => {
+        $('.box li').eq(0).fadeTo(500, 0); // (속도, 불투명도 0~1)
+        $('.box li').eq(1).fadeTo(2500, 0.7);
+        $('.box li').eq(2).fadeTo(800, 0.2);
+        $('.box li').eq(3).fadeTo(1500, 0.4);
+      });
+    });
+  </script>
+</head>
+
+<body>
+  <h1>.fadeTo()</h1>
+  <p>불투명도 조절. 서서히 사라짐 == opasity</p>
+  <div class="btn_group">
+    <div class="btn" id="btn1">서서히 사라짐</div>
+  </div>
+
+  <ul class="box">
+    <li>box1</li>
+    <li>box2</li>
+    <li>box3</li>
+    <li>box4</li>
+  </ul>
+</body>
+
+</html>
