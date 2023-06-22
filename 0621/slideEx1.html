@@ -5,11 +5,110 @@
   <meta charset="UTF-8">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <title>slideEx1</title>
+  <style>
+    body {
+      margin: 0;
+    }
+
+    header {
+      width: 100%;
+      height: 500px;
+      background-color: lightblue;
+      margin: 0;
+    }
+
+    h2 {
+      text-align: center;
+      margin: 0 auto;
+      position: absolute;
+      top: 30%;
+      left: 50%;
+    }
+
+    ul {
+      list-style: none;
+      padding: 0;
+      margin: 0 auto;
+      justify-content: space-around;
+    }
+
+    li {
+      padding: 5px;
+    }
+
+    .flex {
+      display: flex;
+    }
+
+    .padding {
+      background-color: rgb(255, 187, 0);
+    }
+
+    .yellow {
+      width: 70%;
+      padding: 10px 0;
+    }
+
+    .Smenu {
+      width: 70%;
+      padding: 10px 0;
+      margin: 0 auto;
+      background-color: rgba(255, 255, 255, 0.5);
+    }
+
+    .Smenu li:hover {
+      background-color: lightskyblue;
+      color: white;
+    }
+  </style>
   <script src="../common/jquery-3.7.0.min.js"></script>
 </head>
 
 <body>
+  <header>
+    <div class="padding">
+      <ul class="flex yellow">
+        <li>대메뉴1</li>
+        <li>대메뉴2</li>
+        <li>대메뉴3</li>
+        <li>대메뉴4</li>
+      </ul>
+    </div>
+    <div class="flex Smenu">
+      <ul class="slide">
+        <li>소메뉴1-1</li>
+        <li>소메뉴1-2</li>
+        <li>소메뉴1-3</li>
+      </ul>
+      <ul class="slide">
+        <li>소메뉴2-1</li>
+        <li>소메뉴2-2</li>
+        <li>소메뉴2-3</li>
+        <li>소메뉴2-4</li>
+        <li>소메뉴2-5</li>
+      </ul>
+      <ul class="slide">
+        <li>소메뉴3-1</li>
+        <li>소메뉴3-2</li>
+        <li>소메뉴3-3</li>
+        <li>소메뉴3-4</li>
+      </ul class="slide">
+      <ul>
+        <li>소메뉴4-1</li>
+        <li>소메뉴4-2</li>
+      </ul>
+    </div>
+    <h2>header</h2>
+  </header>
 
+  <script>
+    $('.padding').on('mouseenter', () => {
+      $('.Smenu').slideToggle(200);
+    });
+    $('.Smenu').on('mouseleave', () => {
+      $('.Smenu').slideUp(200);
+    });
+  </script>
 </body>
 
 </html>

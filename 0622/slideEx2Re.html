@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <title>slideEx2</title>
+  <style>
+    body {
+      margin: 0;
+      text-transform: capitalize;
+    }
+
+    .slide_menu {
+      list-style: none;
+      margin: 0;
+      padding: 0;
+      width: 300px;
+      background-color: #efefef;
+    }
+
+    .slide_menu h3 {
+      margin: 0;
+      padding: 10px;
+      background-color: rgba(255, 160, 122, 1);
+      color: white;
+      cursor: pointer;
+      border-bottom: 1px solid #ac7b65;
+    }
+
+    .slide_menu h3:hover {
+      background-color: rgba(255, 160, 122, .7);
+    }
+
+    .slide_menu p {
+      padding: 0 16px 10px;
+      display: none;
+    }
+  </style>
+  <script src="../common/jquery-3.7.0.min.js"></script>
+  <script>
+    $(function () {
+      // 첫번째 제목을 클릭하면 첫번째 p가 내려가고 다른 p는 모두 올라감
+      /* $('.slide_menu li').eq(0).children('h3').on('click', () => {
+        $('.slide_menu li').eq(0).children('p').slideToggle();
+        $('.slide_menu li').eq(1).children('p').slideUp();
+        $('.slide_menu li').eq(2).children('p').slideUp();
+        $('.slide_menu li').eq(3).children('p').slideUp();
+      });
+      $('.slide_menu li').eq(1).children('h3').on('click', () => {
+        $('.slide_menu li').eq(1).children('p').slideToggle();
+        $('.slide_menu li').eq(0).children('p').slideUp();
+        $('.slide_menu li').eq(2).children('p').slideUp();
+        $('.slide_menu li').eq(3).children('p').slideUp();
+      });
+      $('.slide_menu li').eq(2).children('h3').on('click', () => {
+        $('.slide_menu li').eq(2).children('p').slideToggle();
+        $('.slide_menu li').eq(0).children('p').slideUp();
+        $('.slide_menu li').eq(1).children('p').slideUp();
+        $('.slide_menu li').eq(3).children('p').slideUp();
+      });
+      $('.slide_menu li').eq(3).children('h3').on('click', () => {
+        $('.slide_menu li').eq(3).children('p').slideToggle();
+        $('.slide_menu li').eq(0).children('p').slideUp();
+        $('.slide_menu li').eq(1).children('p').slideUp();
+        $('.slide_menu li').eq(2).children('p').slideUp();
+      }); */
+
+      // 내가 클릭한 h3의
+      $('.slide_menu h3').on('click', (e) => {
+        const target = $(e.target);
+        // 바로 뒤에 있는 형제 관계의 p가 열림
+        target.next('p').slideToggle();
+        // 내가 선택한 h3의 형제 관계로 있는 p제외 모든 p를 닫음
+        target.parent().siblings().find('p').slideUp();
+      });
+    });
+  </script>
+</head>
+
+<body>
+  <ul class="slide_menu">
+    <li>
+      <h3>menu1</h3>
+      <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Duis ultricies risus eget elit convallis feugiat nec
+        ut
+        urna. Etiam a sem ultrices, ornare odio non, consectetur mauris. Duis arcu risus, ullamcorper et egestas ut,
+        consectetur pretium eros. Phasellus consequat vel eros eget fermentum.</p>
+    </li>
+    <li>
+      <h3>menu2</h3>
+      <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Duis ultricies risus eget elit convallis feugiat nec
+        ut
+        urna. Etiam a sem ultrices, ornare odio non, consectetur mauris. Duis arcu risus, ullamcorper et egestas ut,
+        consectetur pretium eros. Phasellus consequat vel eros eget fermentum.</p>
+    </li>
+    <li>
+      <h3>menu3</h3>
+      <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Duis ultricies risus eget elit convallis feugiat nec
+        ut
+        urna. Etiam a sem ultrices, ornare odio non, consectetur mauris. Duis arcu risus, ullamcorper et egestas ut,
+        consectetur pretium eros. Phasellus consequat vel eros eget fermentum.</p>
+    </li>
+    <li>
+      <h3>menu4</h3>
+      <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Duis ultricies risus eget elit convallis feugiat nec
+        ut
+        urna. Etiam a sem ultrices, ornare odio non, consectetur mauris. Duis arcu risus, ullamcorper et egestas ut,
+        consectetur pretium eros. Phasellus consequat vel eros eget fermentum.</p>
+    </li>
+  </ul>
+</body>

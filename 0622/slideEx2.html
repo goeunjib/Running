@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <title>slideEx2</title>
+  <script src="../common/jquery-3.7.0.min.js"></script>
+</head>
+<style>
+  body {
+    margin: 0;
+  }
+
+  .menu {
+    width: 30vw;
+  }
+
+  h4 {
+    background-color: lightcoral;
+    color: white;
+    margin: 0;
+    padding: 10px 50px 10px 10px;
+    border-bottom: 1px solid white;
+  }
+
+  p {
+    margin: 0;
+    padding: 10px;
+    background-color: #eee;
+    display: none;
+  }
+</style>
+
+<body>
+  <div class="menu menu1">
+    <h4>Menu 1</h4>
+    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Duis ultricies risus eget elit convallis feugiat nec ut
+      urna. Etiam a sem ultrices, ornare odio non, consectetur mauris. Duis arcu risus, ullamcorper et egestas ut,
+      consectetur pretium eros. Phasellus consequat vel eros eget fermentum.</p>
+  </div>
+  <div class="menu menu2">
+    <h4>Menu 2</h4>
+    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Duis ultricies risus eget elit convallis feugiat nec ut
+      urna. Etiam a sem ultrices, ornare odio non, consectetur mauris. Duis arcu risus, ullamcorper et egestas ut,
+      consectetur pretium eros. Phasellus consequat vel eros eget fermentum.</p>
+  </div>
+  <div class="menu menu3">
+    <h4>Menu 3</h4>
+    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Duis ultricies risus eget elit convallis feugiat nec ut
+      urna. Etiam a sem ultrices, ornare odio non, consectetur mauris. Duis arcu risus, ullamcorper et egestas ut,
+      consectetur pretium eros. Phasellus consequat vel eros eget fermentum.</p>
+  </div>
+  <div class="menu menu4">
+    <h4>Menu 4</h4>
+    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Duis ultricies risus eget elit convallis feugiat nec ut
+      urna. Etiam a sem ultrices, ornare odio non, consectetur mauris. Duis arcu risus, ullamcorper et egestas ut,
+      consectetur pretium eros. Phasellus consequat vel eros eget fermentum.</p>
+  </div>
+</body>
+
+<script>
+  $('.menu1 > h4').on('click', () => {
+    $('.menu1 > p').slideDown();
+    $('.menu2 > p').slideUp();
+    $('.menu3 > p').slideUp();
+    $('.menu4 > p').slideUp();
+  });
+  $('.menu2 > h4').on('click', () => {
+    $('.menu1 > p').slideUp();
+    $('.menu2 > p').slideDown();
+    $('.menu3 > p').slideUp();
+    $('.menu4 > p').slideUp();
+  });
+  $('.menu3 > h4').on('click', () => {
+    $('.menu1 > p').slideUp();
+    $('.menu2 > p').slideUp();
+    $('.menu3 > p').slideDown();
+    $('.menu4 > p').slideUp();
+  });
+  $('.menu4 > h4').on('click', () => {
+    $('.menu1 > p').slideUp();
+    $('.menu2 > p').slideUp();
+    $('.menu3 > p').slideUp();
+    $('.menu4 > p').slideDown();
+  });
+
+
+</script>
+
+</html>

@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <title>attr2</title>
+  <style>
+    .btn_group {
+      display: flex;
+      gap: 10px;
+    }
+
+    .btn_group .btn {
+      border: 3px solid #333;
+      padding: 5px 20px;
+    }
+
+    .btn_group .btn:hover {
+      background-color: #333;
+      color: white;
+    }
+
+    .box {
+      width: 200px;
+      height: 200px;
+      border: 3px solid #333;
+      margin: 40px 10px;
+      transition: .3s;
+    }
+  </style>
+  <script src="../common/jquery-3.7.0.min.js"></script>
+  <script>
+    $(document).ready(function () {
+      $('#btn2').on('click', () => {
+        // .attr(); html의 속성 변경
+        $('img').attr({ src: './img2.jpg', alt: 'img2' });
+      });
+      $('#btn1').on('click', () => {
+        // .attr(); html의 속성 변경
+        $('img').attr({ src: './img1.jpg', alt: 'img1' });
+      });
+    });
+  </script>
+</head>
+
+<body>
+  <div class="btn_group">
+    <div class="btn" id="btn1">이미지 1</div>
+    <div class="btn" id="btn2">이미지 2</div>
+  </div>
+
+  <img src="./img1.jpg" alt="img1">
+</body>
+
+</html>

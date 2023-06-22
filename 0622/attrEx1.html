@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <style>
+    .btn_group {
+      display: flex;
+      gap: 10px;
+    }
+
+    .btn_group .btn {
+      border: 3px solid #333;
+      padding: 5px 20px;
+    }
+
+    .btn_group .btn:hover {
+      background-color: #333;
+      color: white;
+    }
+
+    .box {
+      width: 200px;
+      height: 200px;
+      border: 3px solid #333;
+      margin: 40px 10px;
+      transition: .3s;
+    }
+
+    p {
+      border: 2px solid #333;
+      padding: 6px;
+      width: 80vw;
+    }
+  </style>
+  <title>attrEx1</title>
+  <script src="../common/jquery-3.7.0.min.js"></script>
+  <script>
+    $(function () {
+      $('#btn1').on('click', () => {
+        const src = $('img').attr('src')
+        $('p').text(src).css({ backgroundColor: 'lightsalmon', color: 'white' });
+      });
+      $('#btn2').on('click', () => {
+        const alt = $('img').attr('alt')
+        $('p').text(alt).css({ backgroundColor: 'lightpink', color: 'white' });
+      });
+      $('#btn3').on('click', () => {
+        // img가 가진 속성 중 width 속성이 존재하지 않기 때문에 불러오지 못함
+        const wt1 = $('img').attr('width')
+        const wt2 = $('img').css('width')
+        $('p').text(wt2).css({ backgroundColor: 'lightcoral', color: 'white' });
+      });
+    });
+  </script>
+</head>
+
+<body>
+  <div class="btn_group">
+    <div class="btn" id="btn1">경로 확인</div>
+    <div class="btn" id="btn2">대체 텍스트</div>
+    <div class="btn" id="btn3">가로 값</div>
+  </div>
+  <img src="./img1.jpg" alt="img1">
+  <p>이 곳에 출력됩니다.</p>
+</body>
+
+</html>
