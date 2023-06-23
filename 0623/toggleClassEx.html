@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <title>toggleClassEx</title>
+  <style>
+    .btn_group {
+      display: flex;
+      gap: 10px;
+    }
+
+    .btn_group .btn {
+      border: 3px solid #333;
+      padding: 5px 20px;
+    }
+
+    .btn_group .btn:hover {
+      background-color: #333;
+      color: white;
+    }
+
+    #box {
+      width: 90%;
+      height: 30vw;
+      border: 1px solid #333;
+      margin: 50px auto;
+      transition: .3s;
+    }
+
+    #box.style {
+      width: 15vw;
+      height: 15vw;
+      background-color: rgb(101, 194, 189);
+    }
+  </style>
+  <script src="../common/jquery-3.7.0.min.js"></script>
+</head>
+
+<body>
+  <div class="btn_group">
+    <div class="btn">토글</div>
+  </div>
+  <div id="box">
+  </div>
+
+  <script>
+    $('.btn').on('click', () => {
+      $('#box').toggleClass('style');
+    });
+  </script>
+</body>
+
+</html>

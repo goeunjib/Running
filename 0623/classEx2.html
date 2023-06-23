@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <title>classEx2</title>
+  <style>
+    .container {
+      position: relative;
+    }
+
+    .container .txt_wrapper {
+      padding-top: 100px;
+      position: absolute;
+      top: 0;
+      left: 0;
+    }
+
+    .container .txt_wrapper span {
+      font-size: 2rem;
+      font-weight: bold;
+      color: lightcoral;
+      text-transform: uppercase;
+      display: block;
+      transition: .3s;
+      transform: translateY(20px);
+      opacity: 0;
+    }
+
+    .container .txt_wrapper h2 {
+      margin: 0;
+      font-size: 4rem;
+      color: lightseagreen;
+      text-transform: uppercase;
+      transition: 1s .8s;
+      /* 진행시간 대기시간 */
+      transform: translateY(40px);
+      opacity: 0;
+    }
+
+    .container .txt_wrapper.active span,
+    .container .txt_wrapper.active h2 {
+      transform: translateY(0);
+      opacity: 1;
+    }
+  </style>
+  <script src="../common/jquery-3.7.0.min.js"></script>
+</head>
+
+<body>
+  <div class="container">
+    <div class="txt_wrapper active">
+      <span>about</span>
+      <h2>think & <br>solution</h2>
+    </div>
+  </div>
+  <div class="container">
+    <div class="txt_wrapper">
+      <span>skill</span>
+      <h2>html5 & <br>css3</h2>
+    </div>
+  </div>
+  <div class="container">
+    <div class="txt_wrapper">
+      <span>contact</span>
+      <h2>jQuery</h2>
+    </div>
+  </div>
+
+  <script>
+    // setInterval()
+    // setTimeout(함수, 시간)
+    // 숫제에ㅔ~
+  </script>
+</body>
+
+</html>

@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <title>classEx1</title>
+  <style>
+    .tab_menu {
+      list-style: none;
+      margin: 50px auto;
+      padding: 0;
+      padding-top: 50px;
+      width: 598px;
+      position: relative;
+    }
+
+    /* 각 영역의 제목 */
+    .tab_menu .tab_btn {
+      margin: 0;
+      padding: 10px 20px;
+      border-radius: 20px 20px 0 0;
+      background-color: lightblue;
+      text-align: center;
+      box-sizing: border-box;
+      width: 198px;
+      height: 50px;
+      position: absolute;
+      top: 0;
+      left: 0;
+      cursor: pointer;
+    }
+
+    .tab_menu #tab2 .tab_btn {
+      left: 200px;
+    }
+
+    .tab_menu #tab3 .tab_btn {
+      left: 400px;
+    }
+
+    /* 각 영역의 문단 */
+    /* .tab_menu li {
+      overflow: hidden;
+    } */
+
+    .tab_menu p {
+      margin: 0;
+      box-sizing: border-box;
+      padding: 20px;
+      display: none;
+    }
+
+    .tab_menu p strong {
+      display: block;
+      margin: 10px 0;
+    }
+
+    .tab_menu li.active h2,
+    .tab_menu li.active p {
+      background-color: rgb(116, 170, 204);
+      display: block;
+    }
+  </style>
+  <script src="../common/jquery-3.7.0.min.js"></script>
+</head>
+
+<body>
+  <ul class="tab_menu">
+    <li id="tab1" class="active">
+      <h2 class="tab_btn">html</h2>
+      <p>
+        <strong>html5</strong>
+        <span>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse condimentum eget felis et auctor.
+          Maecenas
+          imperdiet sit amet elit in suscipit. Nam ac nulla lorem.</span>
+      </p>
+    </li>
+    <li id="tab2">
+      <h2 class="tab_btn">css3</h2>
+      <p>
+        <strong>css3</strong>
+        <span>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse condimentum eget felis et auctor.
+          Maecenas
+          imperdiet sit amet elit in suscipit. Nam ac nulla lorem.</span>
+      </p>
+    </li>
+    <li id="tab3">
+      <h2 class="tab_btn">javascript</h2>
+      <p>
+        <strong>javascript</strong>
+        <span>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse condimentum eget felis et auctor.
+          Maecenas
+          imperdiet sit amet elit in suscipit. Nam ac nulla lorem.</span>
+      </p>
+    </li>
+
+  </ul>
+
+  <script>
+    /* $('.tab_menu li:first-child').on('click', () => {
+      $('.tab_menu li').removeClass('active');
+      $('.tab_menu li:first-child').addClass('active');
+    });
+    $('.tab_menu li').eq(1).on('click', () => {
+      $('.tab_menu li').removeClass('active');
+      $('.tab_menu li').eq(1).addClass('active');
+    });
+    $('.tab_menu li').eq(2).on('click', () => {
+      $('.tab_menu li').removeClass('active');
+      $('.tab_menu li').eq(2).addClass('active');
+    }); */
+
+    $('.tab_menu li .tab_btn').on('click', (e) => {
+      $('.tab_menu li').removeClass('active');
+      $(e.currentTarget).parent().addClass('active');
+    });
+  </script>
+</body>
+
+</html>
