@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <title>animate2</title>
+  <style>
+    .btn_group {
+      display: flex;
+      gap: 10px;
+    }
+
+    .btn_group .btn {
+      border: 3px solid #333;
+      padding: 5px 20px;
+    }
+
+    .btn_group .btn:hover {
+      background-color: #333;
+      color: white;
+    }
+
+    .box {
+      width: 100px;
+      height: 100px;
+      background-color: lightcoral;
+      color: white;
+      position: relative;
+    }
+  </style>
+  <script src="../common/jquery-3.7.0.min.js"></script>
+  <script src="../common/jquery-ui.min.js"></script>
+</head>
+
+<body>
+  <div class="btn_group">
+    <div class="btn" id="btn1">실행</div>
+    <div class="btn" id="btn2">순차 실행1</div>
+    <div class="btn" id="btn3">순차 실행2</div>
+  </div>
+
+  <div class="box">애니메이션</div>
+
+  <script>
+    $('#btn1').on('click', () => {
+      $('.box').animate({
+        width: 300,
+        height: 300,
+        marginTop: 100,
+        left: 300
+      }, 300, 'linear');
+    });
+
+    $('#btn2').on('click', () => {
+      $('.box').animate({ width: 300 }, 300, 'linear', () => {
+        $('.box').animate({ height: 300 }, 400, 'easeInBounce', () = {
+          $('.box').animate({ marginTop: 100 }, 500, 'easeOutBounce', () => {
+            $('.box').animate({ transform: 'translateX(300)' }, 1000, 'easeInElastic');
+          });
+        });
+      });
+    });
+
+    $('#btn3').on('click', () => {
+      $('.box').animate({ width: 300 }, 300, 'linear').animate({ height: 300 }, 400, 'easeInBounce').animate({ marginTop: 100 }, 500, 'easeOutBounce').animate({ left: 300 }, 1000)
+    });
+  </script>
+</body>
+
+</html>

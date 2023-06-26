@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <title>prependTo+appendToEx2</title>
+  <style>
+    .container {
+      width: 500px;
+      height: 450px;
+      margin: 0 auto;
+      position: relative;
+      border: #333 solid 3px;
+      overflow: hidden;
+    }
+
+    ul {
+      list-style: none;
+      padding: 0;
+      margin: 0;
+    }
+
+    .btn_group {
+      display: flex;
+      justify-content: space-between;
+
+    }
+
+    .btn_group li {
+      background-color: rgba(0, 0, 0, .5);
+      color: white;
+      width: 50px;
+      height: 50px;
+      line-height: 45px;
+      text-align: center;
+      font-weight: bold;
+      font-size: 2rem;
+      cursor: pointer;
+      position: absolute;
+    }
+
+    .btn_group li:hover {
+      background-color: rgba(0, 0, 0, .8);
+    }
+
+    .btn_group li:first-child {
+      top: 45%;
+      left: 0;
+    }
+
+    .btn_group li:last-child {
+      top: 45%;
+      right: 0;
+    }
+
+    .grallery li img {
+      width: 100%;
+    }
+  </style>
+  <script src="../common/jquery-3.7.0.min.js"></script>
+</head>
+
+<body>
+  <div class="container">
+    <ul class="btn_group">
+      <li>&lt;</li>
+      <li>&gt;</li>
+    </ul>
+    <ul class="grallery">
+      <li><img src="./img1.jpg" alt="img1"></li>
+      <li><img src="img2.jpg" alt="img2"></li>
+      <li><img src="img3.jpg" alt="img3"></li>
+      <li><img src="img4.jpg" alt="img4"></li>
+    </ul>
+  </div>
+
+  <script>
+    // 왼쪽, 이전 버튼
+    $('.btn_group li:first-child').on('click', () => {
+      $('.grallery li').last().prependTo('.grallery'); // 제일 처음으로 보냄
+    });
+
+    // 오른쪽, 다음 버튼
+    $('.btn_group li').last().on('click', () => {
+      $('.grallery li').first().appendTo('.grallery'); // 제일 마지막으로 보냄
+    });
+  </script>
+</body>
+
+</html>

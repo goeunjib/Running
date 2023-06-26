@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <title>animateEx2</title>
+  <style>
+    .container {
+      width: 50vw;
+      height: 490px;
+      margin: 30px auto;
+      border: 3px solid #333;
+      position: relative;
+      overflow: hidden;
+    }
+
+    ul {
+      list-style: none;
+      padding: 0;
+      margin: 0;
+    }
+
+    .btn_group {
+      display: flex;
+      justify-content: center;
+      position: absolute;
+      bottom: 10px;
+      width: 100%;
+    }
+
+    .btn_group li {
+      text-indent: -999px;
+      border: 2px solid rgb(5, 66, 5);
+      background-color: rgba(42, 110, 42, 0.6);
+      width: 13px;
+      height: 13px;
+      border-radius: 50%;
+      margin: 4px;
+      cursor: pointer;
+    }
+
+    .btn_group li:hover {
+      background-color: rgba(133, 189, 133, 0.9);
+    }
+
+    .slider {
+      display: flex;
+      outline: 3px solid #333;
+      width: 220vw;
+    }
+
+    .slider li {
+      flex-grow: 1;
+    }
+
+    img {
+      width: 100%;
+      vertical-align: top;
+    }
+  </style>
+  <script src="../common/jquery-3.7.0.min.js"></script>
+</head>
+
+<body>
+  <!-- .container>ul.btn_group>li*4^ul.slider>li*4>img -->
+  <div class="container">
+    <ul class="btn_group">
+      <li>1</li>
+      <li>2</li>
+      <li>3</li>
+      <li>4</li>
+    </ul>
+    <ul class="slider">
+      <li><img src="img1.jpg" alt="img"></li>
+      <li><img src="img2.jpg" alt="img"></li>
+      <li><img src="img3.jpg" alt="img"></li>
+      <li><img src="img4.jpg" alt="img"></li>
+    </ul>
+  </div>
+
+  <script>
+    /* $('.btn_group li').eq(0).on('click', () => {
+      $('.slider').animate({ marginLeft: 0 }, 300)
+    });
+    $('.btn_group li').eq(1).on('click', () => {
+      $('.slider').animate({ marginLeft: '-51vw' }, 300)
+    });
+    $('.btn_group li').eq(2).on('click', () => {
+      $('.slider').animate({ marginLeft: '-108vw' }, 300)
+    });
+    $('.btn_group li').eq(3).on('click', () => {
+      $('.slider').animate({ marginLeft: '-169vw' }, 300)
+    }); */
+
+    $('.btn_group li').on('click', (e) => {
+      let idx = $(e.target).index(); // 인덱스 값을 가져오거나 리턴
+      $('.slider').animate({ marginLeft: -55 * idx + 'vw' }, 300);
+    });
+  </script>
+</body>
+
+</html>
