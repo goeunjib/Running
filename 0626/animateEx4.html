@@ -6,9 +6,46 @@
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <title>animateEx3</title>
   <style>
-    .global_nav {
+    body {
+      margin: 0;
+      font-size: 1.2rem;
+      font-weight: bold;
+    }
+
+    nav {
+      color: white;
+      width: 250px;
+      height: 100%;
+      position: fixed;
+      left: -200px;
+    }
+
+    nav .global_nav {
+      background-color: orange;
+      margin: 0;
+      padding: 50px 0 0 0;
       list-style: none;
-      padding: 0;
+      width: 200px;
+      height: 100%;
+      text-align: center;
+      line-height: 2;
+      box-sizing: border-box;
+    }
+
+    nav .btn {
+      width: 60px;
+      height: 60px;
+      position: absolute;
+      top: 0;
+      left: 200px;
+      text-indent: -9999px;
+      cursor: pointer;
+      border-radius: 0 10px 10px 0;
+      background: orange url('./lock.svg') no-repeat 50% / 50%;
+    }
+
+    nav .btn.opened {
+      background-image: url(./unlock.svg);
     }
   </style>
   <script src="../common/jquery-3.7.0.min.js"></script>
@@ -22,9 +59,17 @@
       <li>menu3</li>
       <li>menu4</li>
     </ul>
-    <div class="btn" id="close"><img src="lock.svg" alt="자물쇠"></div>
-    <div class="btn" id="close"><img src="unlock.svg" alt="자물쇠"></div>
+    <div class="btn">버튼</div>
   </nav>
+
+  <script>
+    $('.btn').on('click', () => {
+      $('nav').animate({
+        left: $('nav').css('left') == '0px' ? '-200px' : '0px'
+      }, 300);
+      $('.btn').toggleClass('opened');
+    });
+  </script>
 </body>
 
 </html>
