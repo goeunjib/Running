@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+  <meta charset="UTF-8">
+  <title>scrollEx1</title>
+  <style>
+    /* html {scroll-behavior: smooth;} */
+
+    .box {
+      height: 300vh;
+    }
+
+    a {
+      font-size: 4rem;
+      text-decoration: none;
+    }
+
+    .btn {
+      position: fixed;
+      right: 30px;
+      bottom: 30px;
+      transition: .3s;
+      opacity: 0;
+      animation: up infinite 3s ease-in-out;
+      pointer-events: none;
+      /* 마우스 성격 변경. none; 아무 표시 없음 */
+    }
+
+    @keyframes up {
+
+      0%,
+      100% {
+        transform: translateY(0) translateX(5px) rotate(-10deg);
+      }
+
+      50% {
+        transform: translateY(-30px) translateX(0) rotate(5deg);
+      }
+    }
+  </style>
+  <script src="../common/jquery-3.7.0.min.js"></script>
+</head>
+
+<body>
+  <div class="box">
+    <h1>top</h1>
+  </div>
+
+  <a href="#" class="btn">🪂</a>
+
+  <script>
+    $('.btn').on('click', (e) => {
+      e.preventDefault();
+      scrollTo({
+        top: 0,
+        behavior: "smooth"
+      });
+    });
+
+    $(window).on('scroll', () => {
+      let scrollHt = $(document).scrollTop();
+
+      /* 조건식 ? true: false;
+      if (scrollHt > 300) {
+        $('.btn').css({ opacity: 1, pointerEvents: 'all' })
+      } else {
+        $('.btn').css({ opacity: 0, pointerEvents: 'none' });
+      }
+    });*/
+
+      // scrollY y축으로 스크롤한 거리
+      if (scrollY > 300) {
+        $('.btn').css({ opacity: 1, pointerEvents: 'all' })
+      } else {
+        $('.btn').css({ opacity: 0, pointerEvents: 'none' });
+      }
+    });
+
+
+  </script>
+</body>
+
+</html>

@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+  <meta charset="UTF-8">
+  <title>좌표Ex1</title>
+  <style>
+    body {
+      margin: 0;
+    }
+
+    .container {
+      height: 80vh;
+      background-color: #ddd;
+      overflow: hidden;
+      position: relative;
+    }
+
+    .face {
+      position: absolute;
+      font-size: 3rem;
+    }
+  </style>
+  <script src="../common/jquery-3.7.0.min.js"></script>
+</head>
+
+<body>
+  <div class="container">
+    <div class="face">🧚🏻</div>
+  </div>
+  <script>
+    // 마우스를 누르면 움직이고 마우스를 떼면 멈춤
+
+    // const face = document.querySelector('.face');
+
+    /* 
+    js: const all = document.querySelectorAll('a'); -> foreach(); 
+    jQuery: $('a')
+    */
+
+    /* const moving = e => {
+      face.style.transform = `traslate(${e.clientX - 60}px, ${e.clientY - 55}px)`
+    }; */
+
+    /* addEventListener('mousedown', () => {
+      addEventListener('mousemove', moving);
+      addEventListener('mouseup', () => {
+        removeEventListener('mousemove', moving)
+      })
+    });
+ */
+
+    /* addEventListener('mousedown', () => {
+
+      addEventListener('mousemove', (e) => {
+        console.log(e.clientX, e.clientY);
+        face.style.transform = `translate(${e.clientX - 60
+          }px, ${e.clientY - 55}px)`
+      });
+    }); */
+
+    const moving = e => {
+      $('.face').css({
+        left: e.clientX - 60,
+        top: e.clientY - 55
+      });
+    }
+
+    $(document).on('mousedown', () => {
+      $(document).on('mousemove', moving);
+      $(document).on('mouseup', () => {
+        $(document).off('mousemove', moving);
+      });
+    })
+  </script>
+</body>
+
+</html>

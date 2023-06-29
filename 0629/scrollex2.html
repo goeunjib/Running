@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+  <meta charset="UTF-8">
+  <title>scrollex2</title>
+  <style>
+    body {
+      margin: 0;
+    }
+
+    header {
+      position: fixed;
+      top: 0;
+      z-index: 999;
+      width: 100%;
+      height: 100px;
+      transition: .4s;
+      background-color: #efefef;
+      border-bottom: 2px solid #ffffff;
+      display: flex;
+      justify-content: space-between;
+      border-bottom: 2px solid #333;
+    }
+
+    header .global_nav {
+      list-style: none;
+      padding: 0;
+      margin: 0 0 0 auto;
+      padding: 20px;
+      width: 500px;
+      display: flex;
+      justify-content: flex-end;
+      align-items: center;
+    }
+
+    header .global_nav a {
+      color: inherit;
+      font-size: 1.5rem;
+      padding: 20px;
+      transition: .3s;
+    }
+
+    header .global_nav a:hover {
+      background-color: lightcoral;
+      color: white;
+    }
+
+    header.active {
+      /* opacity: 0; */
+    }
+
+    main {
+      height: 300vh;
+    }
+  </style>
+  <script src="../common/jquery-3.7.0.min.js"></script>
+</head>
+
+<body>
+  <header>
+    <menu class="global_nav">
+      <li><a href="#">menu1</a></li>
+      <li><a href="#">menu2</a></li>
+      <li><a href="#">menu3</a></li>
+      <li><a href="#">menu4</a></li>
+    </menu>
+  </header>
+  <main>
+    <h2>main</h2>
+  </main>
+
+  <script>
+    // addEventListener('scroll', () => {})
+
+    // 브라우저를 열면 바로 읽음. 보통은 0
+    let prevScroll = window.scrollY;
+    console.log(prevScroll);
+
+    $(window).on('scroll', () => {
+      // 스크롤시 변수에 저장
+      let currentScroll = window.scrollY;
+      console.log('currentScroll: ', currentScroll);
+
+      // 이전 스크롤 값이 크면 true, 스크롤을 올리면 header 보임
+      if (prevScroll > currentScroll) {
+        // $('header').show()
+        $('header').css({ top: 0 });
+      } else { // 이후 스크롤 값이 크면 false, 스크롤을 내리면 header 숨김
+        // $('header').hide()
+        $('header').css({ top: -100 })
+      }
+
+      // prev에 현재 스크롤 값 대입. 현재 좌표에서 
+      prevScroll = currentScroll;
+      console.log('prevScroll: ', prevScroll);
+
+    });
+  </script>
+</body>
+
+</html>

@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <style>
+    body {
+      margin: 0;
+      width: 100%;
+      height: 100vh;
+    }
+
+    .container {
+      background: rgb(8, 57, 80) url(./bg2.png) no-repeat 50% / 40%;
+      height: 100%;
+      position: relative;
+      overflow: hidden;
+    }
+
+    img {
+      position: absolute;
+    }
+
+    .img1 {
+      top: -10px;
+      left: 0;
+    }
+
+    .img2 {
+      bottom: -20px;
+      left: 10px;
+    }
+
+    .img3 {
+      top: 0;
+      right: -20px;
+    }
+  </style>
+  <title>좌표Ex2</title>
+</head>
+
+<body>
+  <div class="container">
+    <img src="./quinoa.png" alt="quinoa" class="img1">
+    <img src="./speculoos-left.png" alt="speculoos-left" class="img2">
+    <img src="./speculoos-right.png" alt="speculoos-right" class="img3">
+  </div>
+
+  <script>
+    const img1 = document.querySelector('.img1');
+    const img2 = document.querySelector('.img2');
+    const img3 = document.querySelector('.img3');
+
+    addEventListener('mousemove', evt => {
+      let x = evt.clientX, y = evt.clientY;
+      console.log(x, y);
+
+      img1.style.transform = `translate(${x / 60}px, ${-y / 50}px)`;
+      img2.style.transform = `translate(${x / -50}px, ${-y / 70 + 10}px)`;
+      img3.style.transform = `translate(${30 - x / 60}px, ${40 - y / 50}px)`;
+    });
+  </script>
+</body>
+
+</html>
