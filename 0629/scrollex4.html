@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+  <meta charset="UTF-8">
+  <title>scrollex4</title>
+  <style>
+    body {
+      margin: 0;
+    }
+
+    p {
+      margin: 0;
+    }
+
+    header {
+      background-color: lightpink;
+      display: flex;
+      padding: 20px;
+      width: calc(100% - 40px);
+    }
+
+    p:nth-child(1) {
+      width: 10%;
+    }
+
+    p:nth-child(1) {
+      width: 20%;
+    }
+
+    header ul {
+      width: 40%;
+      list-style: none;
+      padding: 0;
+      margin: 0;
+      display: flex;
+      justify-content: flex-end;
+    }
+
+    header ul li {
+      padding: 0 20px;
+    }
+  </style>
+  <script src="../common/jquery-3.7.0.min.js"></script>
+</head>
+
+<body>
+  <header>
+    <p>로고</p>
+    <p>부드럽게 이동해 봅시다</p>
+    <ul>
+      <li>box1</li>
+      <li>box2</li>
+      <li>box3</li>
+      <li>box4</li>
+    </ul>
+  </header>
+  <main>header</main>
+  <p>box1</p>
+  <p>box2</p>
+  <p>box3</p>
+</body>
+
+</html>
