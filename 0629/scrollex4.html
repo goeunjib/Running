@@ -3,62 +3,73 @@
 
 <head>
   <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>scrollex4</title>
-  <style>
-    body {
-      margin: 0;
-    }
+  <!-- open graph -->
+  <!-- favicon -->
+  <!-- <link rel="stylesheet" href="favicon"> -->
 
-    p {
-      margin: 0;
-    }
+  <!-- reset은 무조건 처음 -->
+  <link rel="stylesheet" href="../common/minireset.min.css">
+  <!-- font 링크 -->
+  <!-- <link rel="stylesheet" href="font"> -->
+  <!-- 내가 작성한 style. common style -->
+  <link rel="stylesheet" href="common.css">
+  <!-- 내가 작성한 style. 개별, 이 페이지에만 들어가는 style -->
+  <link rel="stylesheet" href="scrollex4.css">
 
-    header {
-      background-color: lightpink;
-      display: flex;
-      padding: 20px;
-      width: calc(100% - 40px);
-    }
-
-    p:nth-child(1) {
-      width: 10%;
-    }
-
-    p:nth-child(1) {
-      width: 20%;
-    }
-
-    header ul {
-      width: 40%;
-      list-style: none;
-      padding: 0;
-      margin: 0;
-      display: flex;
-      justify-content: flex-end;
-    }
-
-    header ul li {
-      padding: 0 20px;
-    }
-  </style>
   <script src="../common/jquery-3.7.0.min.js"></script>
+  <script defer src="./scrollex4.js"></script>
 </head>
 
 <body>
   <header>
-    <p>로고</p>
-    <p>부드럽게 이동해 봅시다</p>
-    <ul>
-      <li>box1</li>
-      <li>box2</li>
-      <li>box3</li>
-      <li>box4</li>
-    </ul>
+    <nav class="transit">
+      <h1 class="tittle flex_wrap">
+        <strong class="tittle_logo">로고</strong>
+        <span class="tittle_text transit">부드럽게 이동해 봅시다</span>
+      </h1>
+      <div class="menu_wrapper flex_wrap">
+        <!-- 모바일 메뉴 -->
+        <div id="toggle_btn" class="flex_wrap">
+          <div class="mobile_icon">
+            <span class="bar1 transit"></span>
+            <span class="bar2 transit"></span>
+            <span class="bar3 transit"></span>
+          </div>
+        </div>
+
+        <!-- pc 메뉴 -->
+        <menu id="global_nav" class="flex_wrap transit showMenu">
+          <li><a href="#content1">box1</a></li>
+          <li><a href="#content2">box2</a></li>
+          <li><a href="#content3">box3</a></li>
+          <li><a href="#content4">box4</a></li>
+        </menu>
+      </div>
+    </nav>
+    <div id="slider_box">slider</div>
   </header>
-  <main>header</main>
-  <p>box1</p>
-  <p>box2</p>
-  <p>box3</p>
+
+  <article id="content1" class="box1">
+    <h3>box1</h3>
+  </article>
+
+  <article id="content2" class="box2">
+    <h3>box2</h3>
+  </article>
+
+  <article id="content3" class="box3">
+    <h3>box3</h3>
+  </article>
+
+  <article id="content4" class="box4">
+    <h3>box4</h3>
+  </article>
+
+  <script>
+
+  </script>
 </body>
 
 </html>
