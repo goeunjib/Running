@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+  <meta charset="UTF-8">
+  <title>Pixabay-ajax3</title>
+  <style>
+    .result-container {
+      border: 2px solid #333;
+      margin-top: 20px;
+    }
+  </style>
+  <script src="../common/jquery-3.7.0.min.js"></script>
+</head>
+
+<body>
+  <form>
+    <input type="serch" id="serch-item">
+    <button type="submit" id="serch-btn">검색</button>
+  </form>
+  <div class="result-container">
+
+  </div>
+
+  <script>
+    const searchPixbay = (value) => {
+      const API_KEY = '38167227-4320349c69e552cb863970136';
+      const URL = `https://pixabay.com/api/?key=${API_KEY}&q=${encodeURIComponent(value)}`;
+
+      $.ajax({
+        url: URL,
+
+
+
+        dataType: "json",
+        method: "GET",
+        success: function (data.hits);
+
+
+    },
+      error: function (error) {
+        console.log('에러', error);
+      }
+    
+    
+    
+      )
+
+
+    $('#serch-btn').on('click', function (e) {
+      e.preventDefalut();
+
+      searchPixbay();
+    });
+  </script>
+</body>
+
+</html>

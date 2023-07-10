@@ -1,0 +1,194 @@
+@charset 'utf-8';
+
+@import url("https://fonts.googleapis.com/css2?family=Agdasima:wght@400;700&family=Orbit&display=swap");
+/* 
+font-family: 'Agdasima', sans-serif;
+font-family: 'Orbit', sans-serif;
+*/
+
+/* body::-webkit-scrollbar {
+  display: none;
+} */
+
+body {
+  font-family: "Agdasima", Arial, Helvetica, serif;
+  font-size: 1.1rem;
+  text-transform: capitalize;
+  font-weight: normal;
+}
+
+a {
+  color: inherit;
+}
+
+/* header */
+header {
+  display: flex;
+  justify-content: space-between;
+  width: 100%;
+  position: fixed;
+  top: 0;
+  left: 0;
+  padding: 20px;
+  z-index: 999;
+}
+
+header.colorChange .logo {
+  fill: white;
+}
+
+header .info {
+  display: flex;
+}
+
+header .info a {
+  display: block;
+  font-family: "Orbit", Arial, Helvetica, sans-serif;
+  font-size: 0.95rem;
+  margin: 0 10px;
+}
+
+/* navigation */
+.global-nav {
+  position: fixed;
+  top: 50%;
+  right: 20px;
+  transform: translateY(-50%);
+  z-index: 99;
+  font-weight: bold;
+}
+
+.global-nav li a {
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+  margin: 5px;
+  color: inherit;
+}
+
+.global-nav li a .dot {
+  width: 12px;
+  height: 12px;
+  border: 1px solid #333;
+  border-radius: 50%;
+  text-indent: -9999px;
+}
+
+.global-nav li a .menu-label {
+  margin-right: 10px;
+  opacity: 0;
+  transition: 0.2s;
+}
+
+.global-nav li a:hover .menu-label,
+.global-nav li a.active .menu-label {
+  opacity: 1;
+}
+
+.global-nav li a.active .dot {
+  transform: scale(1.5);
+  border: 1px solid white;
+}
+
+.global-nav li:nth-child(1) a.active .dot {
+  background-color: #e3d9bf;
+}
+
+.global-nav li:nth-child(2) a.active .dot {
+  background-color: #00394f;
+}
+
+.global-nav li:nth-child(3) a.active .dot {
+  background-color: #be2934;
+}
+
+.global-nav li:nth-child(4) a.active .dot {
+  background-color: #69375c;
+}
+
+/* main.container */
+.container {
+  width: 100%;
+  height: 100vh;
+}
+
+.container .box {
+  width: 100%;
+  height: 100%;
+  display: grid;
+  place-content: center;
+  position: relative;
+  overflow: hidden;
+}
+
+.container .box1 {
+  background: #e3d9bf url(./img/bg1.png) no-repeat fixed 80% -40%;
+}
+.container .box2 {
+  background: #00394f url(./img/Sesame-Flax-Seeds_0.png) no-repeat fixed 50%;
+}
+.container .box3 {
+  background: #be2934 url(./img/Sesame\ Red\ Quinoa\ 2.png) no-repeat fixed 50%;
+}
+.container .box4 {
+  background: #69375c url(./img/Sesame-Speculoos.png) no-repeat fixed 50%;
+}
+
+/* 텍스트 */
+.container .box .txt-wrapper {
+  width: 70vw;
+  margin: 0 auto;
+  position: relative;
+}
+.container .box .txt-wrapper h2 {
+  color: #00394f;
+  font-size: 7rem;
+  line-height: 1;
+  letter-spacing: 0.3rem;
+}
+.container .box .txt-wrapper h2 + p {
+  font-family: "Orbit", sans-serif;
+  line-height: 1.6;
+  width: 400px;
+  position: absolute;
+  bottom: -10%;
+  left: 40%;
+  font-size: 0.9rem;
+}
+
+.container .box .txt-wrapper h3 {
+  font-size: 3rem;
+  color: white;
+}
+
+.container .box .txt-wrapper .circle {
+  border: 3px solid white;
+  border-radius: 50%;
+  width: 100px;
+  height: 100px;
+  color: white;
+  font-size: 2rem;
+  text-align: center;
+  display: flex;
+  align-items: center;
+  line-height: 1;
+  margin-top: 20px;
+}
+
+/* 움직이는 이미지 */
+.container .box img {
+  position: absolute;
+}
+
+.container .box .box2-left,
+.container .box .box3-left,
+.container .box .box4-left {
+  left: -200px;
+  top: 0;
+}
+.container .box .box2-right,
+.container .box .box3-right,
+.container .box .box4-right {
+  right: -50px;
+  bottom: -50px;
+}
