@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+  <meta charset="UTF-8">
+  <title>pixabay3-ajax</title>
+  <style>
+    .result-container {
+      border-top: 3px solid #000;
+      margin-top: 20px;
+    }
+  </style>
+  <script src="../common/jquery-3.7.0.min.js"></script>
+</head>
+
+<body>
+  <form>
+    <input type="search" id="search-item">
+    <button type="submit" id="search-btn">검색</button>
+  </form>
+  <div class="result-container">
+  </div>
+
+
+  <script>
+    const searchPixabay = (value) => {
+      const API_KEY = '38167227-4320349c69e552cb863970136';
+      const URL = `https://pixabay.com/api/?key=${API_KEY}&q=${encodeURIComponent(value)}`;
+
+      $.ajax({
+        url: URL,
+        dataType: "json",
+        method: "GET",
+        success: function (data) {
+          console.log(data.hits);
+
+          // 기존 검색 결과 비움
+          $('.result-container').empty();
+
+          data.hits.forEach(image => {
+            const previewURL = image.previewURL;
+
+            const img = $('<img>').attr({
+              'src': previewURL, 'alt': image.tags
+            });
+            $('.result-container').append(img);
+          });
+
+          // 검색 후 비움
+          $('#search-item').val('');
+        },
+        error: function (error) {
+          console.log('에러', error)
+        }
+      })
+    }
+
+    $('#search-btn').on('click', function (e) {
+      e.preventDefault();
+
+      // .val(); 인풋의 입력값을 가져오거나 리턴
+      const userValue = $('#search-item').val();
+
+      if (userValue.length > 0) {
+        searchPixabay(userValue);
+      }
+
+      searchPixabay(userValue);
+    });
+  </script>
+</body>
+
+</html>

@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+  <meta charset="UTF-8">
+  <title>kakaoAPI2-fetch</title>
+  <style>
+    ul {
+      list-style: none;
+      margin: 10px;
+      padding: 20px;
+    }
+
+    li {
+      border-bottom: 1px solid #333;
+    }
+  </style>
+  <script src="../common/jquery-3.7.0.min.js"></script>
+</head>
+
+<body>
+  <h1>kakao API - fetch</h1>
+  <ul id="kakao"></ul>
+
+  <script>
+    const API_KEY = '21f4e9e4e856f59c28c24e608c03c432';
+    const URL = `https://dapi.kakao.com/v3/search/book?target=title&query=백희나`;
+
+    fetch(URL, {
+      method: "GET", // 데이터 전달 방식
+      data: { query: "백희나" }, // 보낼 데이터
+      headers: { Authorization: `KakaoAK ${API_KEY}` }
+    }).then(res => res.json()).then(data => {
+      console.log(data.documents);
+
+      // 화면에 보여질 수 5개
+      const results = data.documents.slice(0, 5);
+
+      results.forEach(item => {
+        let li = $('<li>');
+        $('<h3>').text(item.title).appendTo(li);
+        $('<p>').text(item.contents.substring(0, 60)).append('...').appendTo(li);
+        $('<img>').attr({ 'src': item.thumbnail, 'alt': item.title }).appendTo(li);
+
+        $('#kakao').append(li);
+      })
+    });
+  </script>
+</body>
+
+</html>
