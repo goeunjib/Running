@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+  <meta charset="UTF-8">
+  <title>구조분해할당</title>
+</head>
+
+<body>
+  <script>
+    /*
+      구조분해, 구조분해할당, 비구조할당
+
+      생성)
+        객체명 = {키: 값}
+    
+      기본 사용)
+        객체명.키
+        객체명['키']
+
+      구조분해할당)
+        const { 키 } = 객체명
+    */
+
+    const menu = {
+      id: 1,
+      coffee: '라떼',
+      price: 4000,
+      size: 'tall'
+    }
+
+    console.log(menu.id, menu.coffee, menu.price, menu.size);
+
+    // 구조분해
+    const { id, coffee, price, size } = menu;
+    console.log(id, coffee, size, price);
+  </script>
+</body>
+
+</html>

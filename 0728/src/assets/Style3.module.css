@@ -1,0 +1,26 @@
+.wrapper {
+  text-align: center;
+  padding: 10px 20px;
+  width: 70vw;
+  margin: 50px auto;
+  border: 1px solid #000;
+}
+
+.wrapper h2 {
+  background-color: orange;
+  padding: 5px 10px;
+}
+
+.listStyle {
+  text-align: left;
+  line-height: 1.6;
+  font-size: 1.2rem;
+}
+
+.textDecoration {
+  text-decoration: underline;
+}
+
+:global .shadow {
+  box-shadow: 10px 10px orangered;
+}

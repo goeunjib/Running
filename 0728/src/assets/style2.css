@@ -1,0 +1,10 @@
+.wrapper {
+  margin: 50px auto;
+  border: 1px solid #000;
+  width: 60%;
+  text-align: center;
+}
+
+.wrapper .title {
+  color: lightseagreen
+}

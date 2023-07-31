@@ -1,0 +1,36 @@
+// 변수 선언
+$orange: orange;
+$tomato: tomato;
+$teal: teal;
+$salmon: salmon;
+$lightskyblue: lightskyblue;
+
+.wrapper {
+  ul {
+    display: flex;
+    justify-content: space-evenly;
+    list-style: none;
+    padding: 0;
+    margin: 0;
+
+    .box {
+      width: 100px;
+      height: 100px;
+      &.orange {
+        background-color: $orange;
+      }
+      &.tomato {
+        background-color: $tomato;
+      }
+      &.teal {
+        background-color: $teal;
+      }
+      &.salmon {
+        background-color: $salmon;
+      }
+      &.lightskyblue {
+        background-color: $lightskyblue;
+      }
+    }
+  }
+}

@@ -1,0 +1,27 @@
+.container {
+  width: 80vw;
+  margin: 50px auto;
+  border: 3px solid teal;
+}
+
+.container ul {
+  margin: 10px;
+  padding: 10px;
+  list-style: none;
+}
+
+.container ul li {
+  height: 20vh;
+}
+
+.orange {
+  background-color: orange;
+}
+
+.maroon {
+  background-color: maroon;
+}
+
+.lightseagreen {
+  background-color: lightseagreen;
+}
