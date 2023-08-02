@@ -1,0 +1,10 @@
+.titleWrapper {
+  padding: 150px 20px;
+}
+
+.title {
+  font-weight: 700;
+  font-size: 4.5rem;
+  line-height: 1;
+  text-align: left;
+}

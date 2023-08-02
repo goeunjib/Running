@@ -1,0 +1,14 @@
+@import url('./assets/styles/minireset.min.css');
+
+body {
+  /* height: 300vh; */
+  margin: 0;
+  font-family: 'Roboto', sans-serif;
+  font-weight: 400;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+
+  text-align: center;
+  line-height: 1.5;
+  text-transform: capitalize;
+}
